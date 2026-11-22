@@ -42,35 +42,42 @@ TARGETS = {
             r"^v2rayNG_.*(?<!fdroid)_universal\.apk$",
             r"^v2rayNG_.*universal\.apk$",
             r"^v2rayNG_.*arm64-v8a\.apk$"
-        ]
+        ],
+        "link_pattern": r"https://github\.com/2dust/v2rayNG/releases/download/[^\s\"\'><\)]+"
     },
     "Happ": {
         "repo": "Happ-proxy/happ-android",
         "patterns": [
             r"^Happ\.apk$",
             r"^Happ.*\.apk$"
-        ]
+        ],
+        "link_pattern": r"https://github\.com/Happ-proxy/happ-android/releases/download/[^\s\"\'><\)]+"
     },
     "NekoBox": {
         "repo": "MatsuriDayo/NekoBoxForAndroid",
         "patterns": [
             r"^NekoBox-.*universal\.apk$",
             r"^NekoBox-.*arm64-v8a\.apk$"
-        ]
+        ],
+        "link_pattern": r"https://github\.com/MatsuriDayo/NekoBoxForAndroid/releases/download/[^\s\"\'><\)]+"
     },
     "SingBox": {
         "repo": "SagerNet/sing-box",
         "patterns": [
+            r"^SFA-[\d\.]+-universal\.apk$",
+            r"^SFA-.*(?<!legacy-)universal\.apk$",
             r"^SFA-.*universal\.apk$",
             r"^SFA-.*arm64-v8a\.apk$"
-        ]
+        ],
+        "link_pattern": r"https://github\.com/SagerNet/sing-box/releases/download/[^\s\"\'><\)]+"
     },
     "Hiddify_Android": {
         "repo": "hiddify/hiddify-app",
         "patterns": [
             r"^Hiddify-Android-universal\.apk$",
             r"^Hiddify-Android-arm64\.apk$"
-        ]
+        ],
+        "link_pattern": r"https://github\.com/hiddify/hiddify-app/releases/download/[^\s\"\'><\)]+\.apk"
     },
     "Hiddify_Windows": {
         "repo": "hiddify/hiddify-app",
@@ -78,21 +85,24 @@ TARGETS = {
             r"^Hiddify-Windows-Setup-x64\.exe$",
             r"^Hiddify-Windows-.*\.exe$",
             r"^Hiddify-Windows-.*\.zip$"
-        ]
+        ],
+        "link_pattern": r"https://github\.com/hiddify/hiddify-app/releases/download/[^\s\"\'><\)]+\.exe"
     },
     "v2rayN": {
         "repo": "2dust/v2rayN",
         "patterns": [
             r"^v2rayN-windows-64\.zip$",
             r"^v2rayN-With-Core\.zip$"
-        ]
+        ],
+        "link_pattern": r"https://github\.com/2dust/v2rayN/releases/download/[^\s\"\'><\)]+"
     },
     "NekoRay": {
         "repo": "MatsuriDayo/nekoray",
         "patterns": [
             r"^nekoray-.*windows64\.zip$",
             r"^nekoray-.*\.zip$"
-        ]
+        ],
+        "link_pattern": r"https://github\.com/MatsuriDayo/nekoray/releases/download/[^\s\"\'><\)]+"
     }
 }
 
@@ -165,12 +175,9 @@ def update_readme(results):
     # Replace specific download links if present
     for key, info in results.items():
         url = info["download_url"]
-        tag = info["tag"]
-        # Replace marker-based or specific pattern URLs
-        # e.g. https://github.com/2dust/v2rayNG/releases/download/...
-        repo_prefix = info["repo"]
-        pattern = rf"https://github\.com/{re.escape(repo_prefix)}/releases/download/[^\s\)\"\'>]+"
-        content = re.sub(pattern, url, content)
+        pattern = TARGETS.get(key, {}).get("link_pattern")
+        if pattern:
+            content = re.sub(pattern, url, content)
 
     with open(README_PATH, "w", encoding="utf-8") as f:
         f.write(content)
@@ -186,12 +193,9 @@ def update_html(results):
 
     for key, info in results.items():
         url = info["download_url"]
-        repo_prefix = info["repo"]
-        # Replace download hrefs for that repo
-        pattern = rf"https://github\.com/{re.escape(repo_prefix)}/releases/download/[^\s\"\'><]+"
-        content = re.sub(pattern, url, content)
-        # Also replace release page link if on direct download button
-        # e.g. href="https://github.com/2dust/v2rayNG/releases" -> href="{url}"
+        pattern = TARGETS.get(key, {}).get("link_pattern")
+        if pattern:
+            content = re.sub(pattern, url, content)
 
     with open(HTML_PATH, "w", encoding="utf-8") as f:
         f.write(content)
