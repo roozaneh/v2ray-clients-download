@@ -69,38 +69,30 @@
   <style>
     body {
       font-family: 'Vazirmatn', sans-serif;
-      background-color: #080d1a;
-      color: #f1f5f9;
+      background-color: #f8fafc;
+      color: #334155;
       overflow-x: hidden;
       line-height: 1.7;
     }
-    .glass-panel {
-      background: rgba(15, 23, 42, 0.7);
-      backdrop-filter: blur(16px);
-      -webkit-backdrop-filter: blur(16px);
-      border: 1px solid rgba(51, 65, 85, 0.5);
+    .clean-card {
+      background: #ffffff;
+      border: 1px solid #e2e8f0;
+      border-radius: 1.5rem;
+      box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.04), 0 1px 2px -1px rgba(0, 0, 0, 0.04);
+      transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
     }
-    .glass-card {
-      background: rgba(13, 20, 36, 0.75);
-      backdrop-filter: blur(14px);
-      -webkit-backdrop-filter: blur(14px);
-      border: 1px solid rgba(51, 65, 85, 0.45);
-      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    .clean-card:hover {
+      border-color: #cbd5e1;
+      box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.06), 0 8px 10px -6px rgba(0, 0, 0, 0.04);
+      transform: translateY(-2px);
     }
-    .glass-card:hover {
-      border-color: rgba(16, 185, 129, 0.45);
-      box-shadow: 0 16px 36px -10px rgba(5, 150, 105, 0.18);
-      transform: translateY(-3px);
-    }
-    .glow-accent {
-      box-shadow: 0 0 35px -5px rgba(16, 185, 129, 0.25);
-    }
-    .ambient-radial {
-      background: radial-gradient(circle at 50% 0%, rgba(5, 150, 105, 0.15) 0%, rgba(8, 13, 26, 0) 70%);
+    .soft-radial {
+      background: radial-gradient(ellipse at 50% -10%, rgba(16, 185, 129, 0.07) 0%, rgba(248, 250, 252, 0) 65%);
     }
     .code-block {
-      background: #060a14;
-      border: 1px solid rgba(51, 65, 85, 0.6);
+      background: #0f172a;
+      border: 1px solid #1e293b;
+      color: #e2e8f0;
       font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
       direction: ltr;
       text-align: left;
@@ -110,14 +102,14 @@
       width: 8px;
     }
     ::-webkit-scrollbar-track {
-      background: #080d1a;
+      background: #f1f5f9;
     }
     ::-webkit-scrollbar-thumb {
-      background: #1e293b;
+      background: #cbd5e1;
       border-radius: 4px;
     }
     ::-webkit-scrollbar-thumb:hover {
-      background: #059669;
+      background: #94a3b8;
     }
   </style>
 
@@ -217,13 +209,13 @@
   <!-- GoatCounter Analytics -->
   <script data-goatcounter="https://roozaneh.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
 </head>
-<body class="min-h-screen text-slate-100 selection:bg-brand-500 selection:text-white">
+<body class="min-h-screen text-slate-700 bg-slate-50 selection:bg-brand-500 selection:text-white">
 
   <!-- Ambient Radial Glow -->
-  <div class="fixed inset-0 pointer-events-none z-0 ambient-radial"></div>
+  <div class="fixed inset-0 pointer-events-none z-0 soft-radial"></div>
 
   <!-- Header / Navigation -->
-  <header class="sticky top-0 z-50 backdrop-blur-xl bg-slate-950/85 border-b border-slate-800/80 transition-all">
+  <header class="sticky top-0 z-50 backdrop-blur-xl bg-white/90 border-b border-slate-200/90 transition-all shadow-xs">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
       
       <!-- Logo & Brand -->
@@ -235,15 +227,15 @@
         </div>
         <div>
           <div class="flex items-center gap-2">
-            <span class="text-xl font-black tracking-tight text-white">روزنه نت</span>
-            <span class="text-[11px] font-bold px-2 py-0.5 rounded-full bg-brand-500/10 text-brand-400 border border-brand-500/25">مرجع رسمی کلاینت‌ها</span>
+            <span class="text-xl font-black tracking-tight text-slate-900">روزنه نت</span>
+            <span class="text-[11px] font-bold px-2 py-0.5 rounded-full bg-brand-50 text-brand-700 border border-brand-200">مرجع رسمی کلاینت‌ها</span>
           </div>
           <span class="text-xs text-slate-400 font-medium block -mt-0.5">Roozaneh Net Client Hub</span>
         </div>
       </a>
 
       <!-- Desktop Nav -->
-      <nav class="hidden lg:flex items-center gap-7 text-sm font-medium text-slate-300">
+      <nav class="hidden lg:flex items-center gap-7 text-sm font-medium text-slate-700">
         <a href="#downloads" class="hover:text-brand-400 transition-colors">دانلود کلاینت‌ها</a>
         <a href="#whitepaper" class="hover:text-brand-400 transition-colors">دانشنامه فنی و DPI</a>
         <a href="#tutorial" class="hover:text-brand-400 transition-colors">آموزش راه‌اندازی</a>
@@ -268,19 +260,19 @@
     <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
       
       <!-- Verification Header Pill -->
-      <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-slate-900 border border-slate-700/80 text-slate-300 text-xs sm:text-sm font-medium mb-8 shadow-sm">
+      <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white border border-slate-200 text-slate-600 text-xs sm:text-sm font-medium mb-8 shadow-xs">
         <span class="flex h-2 w-2 rounded-full bg-brand-400 animate-pulse"></span>
-        <span class="text-brand-300 font-bold">تایید اصالت:</span>
+        <span class="text-brand-600 font-bold">تایید اصالت:</span>
         <span>تمام فایل‌ها مستقیماً از سورس رسمی و بدون دستکاری گیت‌هاب استخراج می‌شوند</span>
       </div>
 
       <!-- Main Headline -->
-      <h1 class="text-3xl sm:text-5xl md:text-6xl font-black tracking-tight text-white leading-tight sm:leading-snug md:leading-tight max-w-4xl mx-auto mb-6">
-        پرتال جامع دانلود مستقیم کلاینت‌های <span class="text-transparent bg-clip-text bg-gradient-to-r from-brand-400 via-teal-300 to-emerald-400">V2Ray و Xray</span>
+      <h1 class="text-3xl sm:text-5xl md:text-6xl font-black tracking-tight text-slate-900 leading-tight sm:leading-snug md:leading-tight max-w-4xl mx-auto mb-6">
+        پرتال جامع دانلود مستقیم کلاینت‌های <span class="text-transparent bg-clip-text bg-gradient-to-r from-brand-600 via-teal-600 to-emerald-600">V2Ray و Xray</span>
       </h1>
 
       <!-- Subtitle -->
-      <p class="text-base sm:text-lg md:text-xl text-slate-300 max-w-3xl mx-auto leading-relaxed mb-10">
+      <p class="text-base sm:text-lg md:text-xl text-slate-600 max-w-3xl mx-auto leading-relaxed mb-10">
         پرتال رسمی و امن دریافت آخرین نسخه‌های نرم‌افزارهای متن‌باز V2Ray، Xray و Sing-box برای اندروید، آیفون، ویندوز و مک. 
         فایل‌های خام باینری مستقیم از مخازن گیت‌هاب رسمی بدون واسطه، بدون بدافزار و همراه با دانشنامه فنی دور زدن DPI.
       </p>
@@ -295,7 +287,7 @@
           </svg>
         </a>
         <a href="#whitepaper"
-           class="w-full sm:w-auto px-8 py-4 rounded-full bg-slate-800/90 hover:bg-slate-700/90 text-slate-200 border border-slate-700 font-semibold text-base transition-all hover:-translate-y-0.5 flex items-center justify-center gap-2">
+           class="w-full sm:w-auto px-8 py-4 rounded-full bg-white hover:bg-slate-50 text-slate-700 border border-slate-300 font-semibold text-base transition-all shadow-xs hover:-translate-y-0.5 flex items-center justify-center gap-2">
           <span>دانشنامه فنی و حل مشکلات</span>
           <svg class="w-5 h-5 text-slate-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
@@ -305,126 +297,77 @@
 
       <!-- Trust Pillars Grid -->
       <div class="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-5xl mx-auto text-right">
-        <div class="glass-card rounded-2xl p-5 border border-slate-800/80">
+        <div class="clean-card rounded-2xl p-5 border border-slate-200 bg-white">
           <div class="flex items-center gap-2.5 mb-2">
             <div class="w-8 h-8 rounded-lg bg-brand-500/10 text-brand-400 flex items-center justify-center font-bold">🛡️</div>
-            <div class="font-bold text-sm text-white">اصالت سورس گیت‌هاب</div>
+            <div class="font-bold text-sm text-slate-900">اصالت سورس گیت‌هاب</div>
           </div>
-          <p class="text-xs text-slate-400 leading-relaxed">فایل‌های خام باینری بدون بدافزار، تروجان یا ماینر مخفی.</p>
+          <p class="text-xs text-slate-500 leading-relaxed">فایل‌های خام باینری بدون بدافزار، تروجان یا ماینر مخفی.</p>
         </div>
-        <div class="glass-card rounded-2xl p-5 border border-slate-800/80">
+        <div class="clean-card rounded-2xl p-5 border border-slate-200 bg-white">
           <div class="flex items-center gap-2.5 mb-2">
             <div class="w-8 h-8 rounded-lg bg-teal-500/10 text-teal-400 flex items-center justify-center font-bold">🔄</div>
-            <div class="font-bold text-sm text-white">قانون عدم سوختن حجم</div>
+            <div class="font-bold text-sm text-slate-900">قانون عدم سوختن حجم</div>
           </div>
-          <p class="text-xs text-slate-400 leading-relaxed">انتقال ۱۰۰٪ حجم مصرف‌نشده به دوره جدید (Data Rollover).</p>
+          <p class="text-xs text-slate-500 leading-relaxed">انتقال ۱۰۰٪ حجم مصرف‌نشده به دوره جدید (Data Rollover).</p>
         </div>
-        <div class="glass-card rounded-2xl p-5 border border-slate-800/80">
+        <div class="clean-card rounded-2xl p-5 border border-slate-200 bg-white">
           <div class="flex items-center gap-2.5 mb-2">
             <div class="w-8 h-8 rounded-lg bg-emerald-500/10 text-emerald-400 flex items-center justify-center font-bold">⚡</div>
-            <div class="font-bold text-sm text-white">پورت اختصاصی ۱۰G</div>
+            <div class="font-bold text-sm text-slate-900">پورت اختصاصی ۱۰G</div>
           </div>
-          <p class="text-xs text-slate-400 leading-relaxed">پایداری ۹۹.۹۸٪ و پینگ زیر ۶۰ میلی‌ثانیه برای بازی و یوتیوب.</p>
+          <p class="text-xs text-slate-500 leading-relaxed">پایداری ۹۹.۹۸٪ و پینگ زیر ۶۰ میلی‌ثانیه برای بازی و یوتیوب.</p>
         </div>
-        <div class="glass-card rounded-2xl p-5 border border-slate-800/80">
+        <div class="clean-card rounded-2xl p-5 border border-slate-200 bg-white">
           <div class="flex items-center gap-2.5 mb-2">
             <div class="w-8 h-8 rounded-lg bg-cyan-500/10 text-cyan-400 flex items-center justify-center font-bold">🎁</div>
-            <div class="font-bold text-sm text-white">۱۰۰٪ حریم خصوصی</div>
+            <div class="font-bold text-sm text-slate-900">۱۰۰٪ حریم خصوصی</div>
           </div>
-          <p class="text-xs text-slate-400 leading-relaxed">کلاینت‌های بدون لاگ و مبتنی بر مجوزهای آزاد بین‌المللی.</p>
+          <p class="text-xs text-slate-500 leading-relaxed">کلاینت‌های بدون لاگ و مبتنی بر مجوزهای آزاد بین‌المللی.</p>
         </div>
       </div>
 
     </div>
   </section>
 
-  <!-- Google Play Removal & Corporate Trust Notice Banner -->
-  <section class="py-6 relative z-10">
-    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="glass-card rounded-3xl p-6 sm:p-7 border border-amber-500/30 bg-amber-950/15 relative overflow-hidden">
-        <div class="flex flex-col md:flex-row items-start md:items-center justify-between gap-6">
-          <div class="flex items-start gap-4">
-            <div class="w-12 h-12 rounded-2xl bg-amber-500/20 text-amber-400 flex items-center justify-center text-xl shrink-0 mt-0.5">
-              ⚠️
-            </div>
-            <div>
-              <h2 class="text-lg font-black text-amber-300 mb-1">
-                اطلاعیه مهم امنیتی: حقیقت حذف v2rayNG از گوگل‌پلی
-              </h2>
-              <p class="text-slate-300 text-xs sm:text-sm leading-relaxed max-w-3xl">
-                نرم‌افزار رسمی <strong>v2rayNG</strong> به دلیل سیاست‌های سخت‌گیرانه VpnService گوگل از پلی‌استور حذف گردیده است. نسخه‌های موجود فعلی در گوگل‌پلی همگی برنامه‌های تقلبی، ناامن و حاوی تبلیغات آزاردهنده هستند. تنها نسخه اصلی، نسخه رسمی توسعه‌دهنده معتبر (<code class="text-amber-300 bg-amber-500/10 px-1.5 py-0.5 rounded">2dust</code>) در پلتفرم گیت‌هاب است که باینری خام یونیورسال آن در جدول زیر با لینک مستقیم و امن قرار گرفته است.
-              </p>
-            </div>
-          </div>
-          <div class="shrink-0 w-full md:w-auto">
-            <a href="#whitepaper-sec-4" class="block text-center px-4 py-2 rounded-xl bg-amber-500/20 hover:bg-amber-500/30 text-amber-300 text-xs font-bold border border-amber-500/40 transition-colors">
-              مطالعه تحلیل امنیتی
-            </a>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
+  
 
   <!-- App Download Catalog & OS Filters -->
-  <section id="downloads" class="py-16 md:py-24 relative z-10 border-t border-slate-800/80 bg-slate-900/40">
+  <section id="downloads" class="py-16 md:py-24 relative z-10 border-t border-slate-200 bg-white">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       
       <!-- Section Header -->
       <div class="text-center max-w-3xl mx-auto mb-10">
-        <span class="px-3.5 py-1 rounded-full text-xs font-bold bg-brand-500/10 text-brand-400 border border-brand-500/20 mb-3 inline-block">نسخه‌های تاییدشده و پایدار</span>
-        <h2 class="text-2xl sm:text-4xl font-black text-white mb-3">
+        <span class="px-3.5 py-1 rounded-full text-xs font-bold bg-brand-50 text-brand-700 border border-brand-200 mb-3 inline-block">نسخه‌های تاییدشده و پایدار</span>
+        <h2 class="text-2xl sm:text-4xl font-black text-slate-900 mb-3">
           بانک دانلود مستقیم کلاینت‌ها به تفکیک سیستم‌عامل
         </h2>
-        <p class="text-slate-400 text-xs sm:text-base leading-relaxed">
+        <p class="text-slate-600 text-xs sm:text-base leading-relaxed">
           برای تجربه بالاترین سرعت و سازگاری با شبکه ایران، نسخه مناسب دستگاه خود را انتخاب فرمایید:
         </p>
       </div>
 
-      <!-- Device Auto-Detection Notification Bar -->
-      <div id="device-detect-container" class="max-w-2xl mx-auto mb-8 transition-all hidden">
-        <div class="glass-card rounded-2xl px-5 py-4 border border-brand-500/40 bg-gradient-to-r from-brand-950/50 via-slate-900/80 to-slate-900/80 flex items-center justify-between gap-4 shadow-lg shadow-brand-500/5">
-          <div class="flex items-center gap-3 text-right">
-            <span class="text-3xl shrink-0" id="detected-device-icon">📱</span>
-            <div>
-              <div class="text-white text-xs sm:text-sm font-bold flex items-center gap-2">
-                <span>دستگاه شما:</span>
-                <span class="text-brand-400 font-black" id="detected-device-label">در حال بررسی...</span>
-                <span class="px-2 py-0.5 rounded-md bg-brand-500/20 text-brand-300 text-[10px] font-bold">شناسایی هوشمند</span>
-              </div>
-              <p class="text-slate-400 text-[11px] sm:text-xs mt-0.5">
-                کلاینت‌های متناسب با سیستم‌عامل شما به صورت خودکار با اولویت در ابتدای لیست چیده شدند.
-              </p>
-            </div>
-          </div>
-          <button onclick="filterOS(window.currentDetectedOS)" class="shrink-0 px-4 py-2 rounded-xl bg-brand-600/25 hover:bg-brand-600 text-brand-300 hover:text-white text-xs font-bold border border-brand-500/35 transition-all flex items-center gap-1.5 shadow-sm">
-            <span>فقط کلاینت‌های من</span>
-            <span>←</span>
-          </button>
-        </div>
-      </div>
-
       <!-- OS Filter Tabs -->
       <div class="flex items-center justify-center flex-wrap gap-2 mb-12" id="filter-tabs">
-        <button onclick="filterOS('all')" class="filter-btn active px-5 py-2.5 rounded-full text-xs sm:text-sm font-semibold transition-all bg-brand-600 text-white shadow-md shadow-brand-600/30" data-target="all">همه سیستم‌عامل‌ها</button>
-        <button onclick="filterOS('android')" class="filter-btn px-5 py-2.5 rounded-full text-xs sm:text-sm font-semibold transition-all bg-slate-800 text-slate-300 hover:bg-slate-700" data-target="android">🤖 اندروید (Android)</button>
-        <button onclick="filterOS('ios')" class="filter-btn px-5 py-2.5 rounded-full text-xs sm:text-sm font-semibold transition-all bg-slate-800 text-slate-300 hover:bg-slate-700" data-target="ios">🍏 آیفون (iOS)</button>
-        <button onclick="filterOS('windows')" class="filter-btn px-5 py-2.5 rounded-full text-xs sm:text-sm font-semibold transition-all bg-slate-800 text-slate-300 hover:bg-slate-700" data-target="windows">💻 ویندوز (Windows)</button>
-        <button onclick="filterOS('mac')" class="filter-btn px-5 py-2.5 rounded-full text-xs sm:text-sm font-semibold transition-all bg-slate-800 text-slate-300 hover:bg-slate-700" data-target="mac">🍎 مک (macOS)</button>
-        <button onclick="filterOS('linux')" class="filter-btn px-5 py-2.5 rounded-full text-xs sm:text-sm font-semibold transition-all bg-slate-800 text-slate-300 hover:bg-slate-700" data-target="linux">🐧 لینوکس (Linux)</button>
+        <button onclick="filterOS('all')" class="filter-btn active px-5 py-2.5 rounded-full text-xs sm:text-sm font-semibold transition-all bg-brand-600 text-white border border-brand-600 shadow-xs" data-target="all">همه سیستم‌عامل‌ها</button>
+        <button onclick="filterOS('android')" class="filter-btn px-5 py-2.5 rounded-full text-xs sm:text-sm font-semibold transition-all bg-white text-slate-700 hover:bg-slate-50 border border-slate-200" data-target="android">🤖 اندروید (Android)</button>
+        <button onclick="filterOS('ios')" class="filter-btn px-5 py-2.5 rounded-full text-xs sm:text-sm font-semibold transition-all bg-white text-slate-700 hover:bg-slate-50 border border-slate-200" data-target="ios">🍏 آیفون (iOS)</button>
+        <button onclick="filterOS('windows')" class="filter-btn px-5 py-2.5 rounded-full text-xs sm:text-sm font-semibold transition-all bg-white text-slate-700 hover:bg-slate-50 border border-slate-200" data-target="windows">💻 ویندوز (Windows)</button>
+        <button onclick="filterOS('mac')" class="filter-btn px-5 py-2.5 rounded-full text-xs sm:text-sm font-semibold transition-all bg-white text-slate-700 hover:bg-slate-50 border border-slate-200" data-target="mac">🍎 مک (macOS)</button>
+        <button onclick="filterOS('linux')" class="filter-btn px-5 py-2.5 rounded-full text-xs sm:text-sm font-semibold transition-all bg-white text-slate-700 hover:bg-slate-50 border border-slate-200" data-target="linux">🐧 لینوکس (Linux)</button>
       </div>
 
       <!-- App Cards Grid -->
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
 
         <!-- Card 1: v2rayNG (Android Suggested - Universal APK) -->
-        <div class="app-card glass-card rounded-3xl p-6 flex flex-col justify-between border-2 border-brand-500/35 relative" data-os="android">
+        <div class="app-card clean-card rounded-3xl p-6 flex flex-col justify-between border border-slate-200 bg-white relative" data-os="android">
           <div class="absolute -top-3 right-6 px-3 py-0.5 rounded-full bg-brand-600 text-white font-bold text-[10px] tracking-wide shadow-md">
             پیشنهادی اول اندروید
           </div>
           <div>
             <div class="flex items-start justify-between gap-4 mb-4 mt-1">
-              <div class="w-14 h-14 rounded-2xl overflow-hidden shadow-lg border border-slate-700/80 bg-slate-800 shrink-0 flex items-center justify-center p-0.5">
+              <div class="w-14 h-14 rounded-2xl overflow-hidden shadow-lg border border-slate-200 bg-slate-50 shrink-0 flex items-center justify-center p-0.5">
                 <img src="assets/icons/v2rayng.png" alt="لوگوی رسمی کلاینت v2rayNG" class="w-full h-full object-cover rounded-xl" loading="lazy">
               </div>
               <div class="flex flex-col items-end gap-1">
@@ -432,38 +375,38 @@
                 <span class="text-[11px] text-slate-400">حجم: ۶۸.۵ MB (Universal)</span>
               </div>
             </div>
-            <h3 class="text-xl font-bold text-white mb-2">v2rayNG (نسخه رسمی اندروید)</h3>
-            <p class="text-slate-300 text-xs sm:text-sm leading-relaxed mb-4">
+            <h3 class="text-xl font-bold text-slate-900 mb-2">v2rayNG (نسخه رسمی اندروید)</h3>
+            <p class="text-slate-600 text-xs sm:text-sm leading-relaxed mb-4">
               استانداردترین و محبوب‌ترین نرم‌افزار اندروید در ایران. پشتیبانی کامل از پروتکل‌های VLESS Reality، قابلیت تنظیم فرگمنت همراه اول و ایرانسل و تست پینگ Real Delay.
             </p>
-            <div class="p-2.5 rounded-xl bg-amber-500/10 border border-amber-500/20 text-amber-300 text-xs mb-4 flex items-center gap-2">
+            <div class="p-2.5 rounded-xl bg-amber-50 border border-amber-200 text-amber-800 text-xs mb-4 flex items-center gap-2">
               <span>⚠️</span>
               <span><strong>امنیت:</strong> نسخه Universal رسمی گیت‌هاب ۲dust (بدون بدافزار).</span>
             </div>
             <div class="flex flex-wrap gap-1.5 mb-6">
-              <span class="px-2.5 py-0.5 rounded-lg bg-slate-800/80 text-slate-300 text-[11px]">۱۰۰٪ گوشی‌های اندروید</span>
-              <span class="px-2.5 py-0.5 rounded-lg bg-slate-800/80 text-slate-300 text-[11px]">Xray Core</span>
-              <span class="px-2.5 py-0.5 rounded-lg bg-slate-800/80 text-slate-300 text-[11px]">Reality + Fragment</span>
+              <span class="px-2.5 py-0.5 rounded-lg bg-slate-100 text-slate-700 text-[11px]">۱۰۰٪ گوشی‌های اندروید</span>
+              <span class="px-2.5 py-0.5 rounded-lg bg-slate-100 text-slate-700 text-[11px]">Xray Core</span>
+              <span class="px-2.5 py-0.5 rounded-lg bg-slate-100 text-slate-700 text-[11px]">Reality + Fragment</span>
             </div>
           </div>
-          <div class="space-y-2 pt-3 border-t border-slate-800">
+          <div class="space-y-2 pt-3 border-t border-slate-100">
             <a href="https://github.com/2dust/v2rayNG/releases/download/2.3.15/v2rayNG_2.3.15_universal.apk"
                class="w-full py-3 rounded-2xl bg-brand-600 hover:bg-brand-500 text-white font-bold text-xs sm:text-sm transition-all flex items-center justify-center gap-2 shadow-md shadow-brand-600/20">
               <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"/></svg>
               <span>دانلود مستقیم (سازگار با تمامی گوشی‌ها)</span>
             </a>
             <a href="apps/v2rayng.html"
-               class="w-full py-2.5 rounded-2xl bg-slate-800/80 hover:bg-slate-700/80 text-brand-400 font-semibold text-xs transition-all flex items-center justify-center gap-1.5">
+               class="w-full py-2.5 rounded-2xl bg-slate-50 hover:bg-slate-100 text-slate-700 border border-slate-200 font-semibold text-xs transition-all flex items-center justify-center gap-1.5">
               <span>اطلاعات بیشتر، راهنمای راه‌اندازی و سایر معماری‌ها ←</span>
             </a>
           </div>
         </div>
 
         <!-- Card 2: Happ (Android Modern & Ultra-Light) -->
-        <div class="app-card glass-card rounded-3xl p-6 flex flex-col justify-between" data-os="android">
+        <div class="app-card clean-card rounded-3xl p-6 flex flex-col justify-between border border-slate-200 bg-white relative" data-os="android">
           <div>
             <div class="flex items-start justify-between gap-4 mb-4">
-              <div class="w-14 h-14 rounded-2xl overflow-hidden shadow-lg border border-slate-700/80 bg-slate-800 shrink-0 flex items-center justify-center p-0.5">
+              <div class="w-14 h-14 rounded-2xl overflow-hidden shadow-lg border border-slate-200 bg-slate-50 shrink-0 flex items-center justify-center p-0.5">
                 <img src="assets/icons/happ.png" alt="لوگوی رسمی کلاینت Happ" class="w-full h-full object-cover rounded-xl" loading="lazy">
               </div>
               <div class="flex flex-col items-end gap-1">
@@ -471,37 +414,37 @@
                 <span class="text-[11px] text-slate-400">حجم: ۶۶.۱ MB</span>
               </div>
             </div>
-            <h3 class="text-xl font-bold text-white mb-2">Happ (کلاینت نسل جدید و سبک)</h3>
-            <p class="text-slate-300 text-xs sm:text-sm leading-relaxed mb-4">
+            <h3 class="text-xl font-bold text-slate-900 mb-2">Happ (کلاینت نسل جدید و سبک)</h3>
+            <p class="text-slate-600 text-xs sm:text-sm leading-relaxed mb-4">
               پدیده سال ۲۰۲۶ با رابط کاربری مینیمال، سرعت اتصال باورنکردنی و بازیابی خودکار اینترنت پس از قطعی. ایده‌آل برای کاربرانی که به دنبال سادگی مطلق هستند.
             </p>
             <div class="flex flex-wrap gap-1.5 mb-6">
-              <span class="px-2.5 py-0.5 rounded-lg bg-slate-800/80 text-slate-300 text-[11px]">محیط مدرن</span>
-              <span class="px-2.5 py-0.5 rounded-lg bg-slate-800/80 text-slate-300 text-[11px]">بدون تبلیغات</span>
-              <span class="px-2.5 py-0.5 rounded-lg bg-slate-800/80 text-slate-300 text-[11px]">اتصال هوشمند تک‌کلیک</span>
+              <span class="px-2.5 py-0.5 rounded-lg bg-slate-100 text-slate-700 text-[11px]">محیط مدرن</span>
+              <span class="px-2.5 py-0.5 rounded-lg bg-slate-100 text-slate-700 text-[11px]">بدون تبلیغات</span>
+              <span class="px-2.5 py-0.5 rounded-lg bg-slate-100 text-slate-700 text-[11px]">اتصال هوشمند تک‌کلیک</span>
             </div>
           </div>
-          <div class="space-y-2 pt-3 border-t border-slate-800">
+          <div class="space-y-2 pt-3 border-t border-slate-100">
             <a href="https://github.com/Happ-proxy/happ-android/releases/download/4.11.2/Happ.apk"
                class="w-full py-3 rounded-2xl bg-teal-600 hover:bg-teal-500 text-white font-bold text-xs sm:text-sm transition-all flex items-center justify-center gap-2 shadow-md shadow-teal-600/20">
               <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"/></svg>
               <span>دانلود مستقیم (سازگار با تمامی گوشی‌ها)</span>
             </a>
             <a href="apps/happ.html"
-               class="w-full py-2.5 rounded-2xl bg-slate-800/80 hover:bg-slate-700/80 text-teal-400 font-semibold text-xs transition-all flex items-center justify-center gap-1.5">
+               class="w-full py-2.5 rounded-2xl bg-slate-50 hover:bg-slate-100 text-slate-700 border border-slate-200 font-semibold text-xs transition-all flex items-center justify-center gap-1.5">
               <span>اطلاعات بیشتر و راهنمای راه‌اندازی ←</span>
             </a>
           </div>
         </div>
 
         <!-- Card 3: Streisand (iOS Suggested - App Store) -->
-        <div class="app-card glass-card rounded-3xl p-6 flex flex-col justify-between border-2 border-brand-500/35 relative" data-os="ios">
+        <div class="app-card clean-card rounded-3xl p-6 flex flex-col justify-between border border-slate-200 bg-white relative" data-os="ios">
           <div class="absolute -top-3 right-6 px-3 py-0.5 rounded-full bg-brand-600 text-white font-bold text-[10px] tracking-wide shadow-md">
             پیشنهادی اول آیفون
           </div>
           <div>
             <div class="flex items-start justify-between gap-4 mb-4 mt-1">
-              <div class="w-14 h-14 rounded-2xl overflow-hidden shadow-lg border border-slate-700/80 bg-slate-800 shrink-0 flex items-center justify-center p-0.5">
+              <div class="w-14 h-14 rounded-2xl overflow-hidden shadow-lg border border-slate-200 bg-slate-50 shrink-0 flex items-center justify-center p-0.5">
                 <img src="assets/icons/streisand.png" alt="لوگوی رسمی کلاینت Streisand" class="w-full h-full object-cover rounded-xl" loading="lazy">
               </div>
               <div class="flex flex-col items-end gap-1">
@@ -509,36 +452,36 @@
                 <span class="text-[11px] text-slate-400">iOS 14.0 به بالا</span>
               </div>
             </div>
-            <h3 class="text-xl font-bold text-white mb-2">Streisand (کلاینت تخصصی آیفون)</h3>
-            <p class="text-slate-300 text-xs sm:text-sm leading-relaxed mb-4">
+            <h3 class="text-xl font-bold text-slate-900 mb-2">Streisand (کلاینت تخصصی آیفون)</h3>
+            <p class="text-slate-600 text-xs sm:text-sm leading-relaxed mb-4">
               سبک‌ترین و پایدارترین کلاینت رایگان iOS در اپ‌استور. هماهنگ با پردازنده‌های اپل، مصرف باتری ناچیز، بدون تبلیغات و پشتیبانی کامل از پروتکل نوین VLESS Reality.
             </p>
             <div class="flex flex-wrap gap-1.5 mb-6">
-              <span class="px-2.5 py-0.5 rounded-lg bg-slate-800/80 text-slate-300 text-[11px]">رایگان در App Store</span>
-              <span class="px-2.5 py-0.5 rounded-lg bg-slate-800/80 text-slate-300 text-[11px]">Sing-box Core</span>
-              <span class="px-2.5 py-0.5 rounded-lg bg-slate-800/80 text-slate-300 text-[11px]">پایداری بی‌نظیر</span>
+              <span class="px-2.5 py-0.5 rounded-lg bg-slate-100 text-slate-700 text-[11px]">رایگان در App Store</span>
+              <span class="px-2.5 py-0.5 rounded-lg bg-slate-100 text-slate-700 text-[11px]">Sing-box Core</span>
+              <span class="px-2.5 py-0.5 rounded-lg bg-slate-100 text-slate-700 text-[11px]">پایداری بی‌نظیر</span>
             </div>
           </div>
-          <div class="space-y-2 pt-3 border-t border-slate-800">
+          <div class="space-y-2 pt-3 border-t border-slate-100">
             <a href="https://apps.apple.com/app/streisand/id6450534064" target="_blank" rel="noopener noreferrer"
                class="w-full py-3 rounded-2xl bg-brand-600 hover:bg-brand-500 text-white font-bold text-xs sm:text-sm transition-all flex items-center justify-center gap-2 shadow-md shadow-brand-600/20">
               <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z"/></svg>
               <span>دریافت مستقیم از App Store اپل</span>
             </a>
-            <a href="apps/streisand.html" class="w-full py-2.5 rounded-2xl bg-slate-800/80 hover:bg-slate-700/80 text-brand-400 font-semibold text-xs transition-all flex items-center justify-center gap-1.5">
+            <a href="apps/streisand.html" class="w-full py-2.5 rounded-2xl bg-slate-50 hover:bg-slate-100 text-slate-700 border border-slate-200 font-semibold text-xs transition-all flex items-center justify-center gap-1.5">
               <span>راهنمای راه‌اندازی در آیفون و آیپد ←</span>
             </a>
           </div>
         </div>
 
         <!-- Card 4: v2rayN (Windows Suggested - Complete with Core) -->
-        <div class="app-card glass-card rounded-3xl p-6 flex flex-col justify-between border-2 border-blue-500/35 relative" data-os="windows">
+        <div class="app-card clean-card rounded-3xl p-6 flex flex-col justify-between border border-slate-200 bg-white relative" data-os="windows">
           <div class="absolute -top-3 right-6 px-3 py-0.5 rounded-full bg-blue-600 text-white font-bold text-[10px] tracking-wide shadow-md">
             پیشنهادی اول ویندوز
           </div>
           <div>
             <div class="flex items-start justify-between gap-4 mb-4 mt-1">
-              <div class="w-14 h-14 rounded-2xl overflow-hidden shadow-lg border border-slate-700/80 bg-slate-800 shrink-0 flex items-center justify-center p-0.5">
+              <div class="w-14 h-14 rounded-2xl overflow-hidden shadow-lg border border-slate-200 bg-slate-50 shrink-0 flex items-center justify-center p-0.5">
                 <img src="assets/icons/v2rayn.png" alt="لوگوی رسمی کلاینت v2rayN" class="w-full h-full object-cover rounded-xl" loading="lazy">
               </div>
               <div class="flex flex-col items-end gap-1">
@@ -546,33 +489,33 @@
                 <span class="text-[11px] text-slate-400">حجم: ۱۶۰.۹ MB (With Core)</span>
               </div>
             </div>
-            <h3 class="text-xl font-bold text-white mb-2">v2rayN (کامل‌ترین نسخه ویندوز)</h3>
-            <p class="text-slate-300 text-xs sm:text-sm leading-relaxed mb-4">
+            <h3 class="text-xl font-bold text-slate-900 mb-2">v2rayN (کامل‌ترین نسخه ویندوز)</h3>
+            <p class="text-slate-600 text-xs sm:text-sm leading-relaxed mb-4">
               نرم‌افزار جامع کامپیوتر مجهز به هسته Xray، قابلیت System Proxy و حالت Tun Mode. مناسب گیمرها برای عبور ۱۰۰٪ ترافیک کل سیستم از تونل ضد فیلتر.
             </p>
             <div class="flex flex-wrap gap-1.5 mb-6">
-              <span class="px-2.5 py-0.5 rounded-lg bg-slate-800/80 text-slate-300 text-[11px]">ویندوز ۱۰ و ۱۱ (64bit)</span>
-              <span class="px-2.5 py-0.5 rounded-lg bg-slate-800/80 text-slate-300 text-[11px]">System Proxy</span>
-              <span class="px-2.5 py-0.5 rounded-lg bg-slate-800/80 text-slate-300 text-[11px]">حالت پیشرفته TUN Mode</span>
+              <span class="px-2.5 py-0.5 rounded-lg bg-slate-100 text-slate-700 text-[11px]">ویندوز ۱۰ و ۱۱ (64bit)</span>
+              <span class="px-2.5 py-0.5 rounded-lg bg-slate-100 text-slate-700 text-[11px]">System Proxy</span>
+              <span class="px-2.5 py-0.5 rounded-lg bg-slate-100 text-slate-700 text-[11px]">حالت پیشرفته TUN Mode</span>
             </div>
           </div>
-          <div class="space-y-2 pt-3 border-t border-slate-800">
+          <div class="space-y-2 pt-3 border-t border-slate-100">
             <a href="https://github.com/2dust/v2rayN/releases/download/7.25.6/v2rayN-windows-64.zip"
                class="w-full py-3 rounded-2xl bg-blue-600 hover:bg-blue-500 text-white font-bold text-xs sm:text-sm transition-all flex items-center justify-center gap-2 shadow-md shadow-blue-600/20">
               <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"/></svg>
               <span>دانلود مستقیم فایل Zip ویندوز ۶۴ بیت</span>
             </a>
-            <a href="apps/v2rayn.html" class="w-full py-2.5 rounded-2xl bg-slate-800/80 hover:bg-slate-700/80 text-blue-400 font-semibold text-xs transition-all flex items-center justify-center gap-1.5">
+            <a href="apps/v2rayn.html" class="w-full py-2.5 rounded-2xl bg-slate-50 hover:bg-slate-100 text-slate-700 border border-slate-200 font-semibold text-xs transition-all flex items-center justify-center gap-1.5">
               <span>راهنمای فعال‌سازی Tun Mode و سایر معماری‌ها ←</span>
             </a>
           </div>
         </div>
 
         <!-- Card 5: NekoBox (Android Gaming & Low Ping) -->
-        <div class="app-card glass-card rounded-3xl p-6 flex flex-col justify-between" data-os="android">
+        <div class="app-card clean-card rounded-3xl p-6 flex flex-col justify-between border border-slate-200 bg-white relative" data-os="android">
           <div>
             <div class="flex items-start justify-between gap-4 mb-4">
-              <div class="w-14 h-14 rounded-2xl overflow-hidden shadow-lg border border-slate-700/80 bg-slate-800 shrink-0 flex items-center justify-center p-0.5">
+              <div class="w-14 h-14 rounded-2xl overflow-hidden shadow-lg border border-slate-200 bg-slate-50 shrink-0 flex items-center justify-center p-0.5">
                 <img src="assets/icons/nekobox.png" alt="لوگوی رسمی کلاینت NekoBox" class="w-full h-full object-cover rounded-xl" loading="lazy">
               </div>
               <div class="flex flex-col items-end gap-1">
@@ -580,33 +523,33 @@
                 <span class="text-[11px] text-slate-400">حجم: ۱۴.۵ MB (arm64)</span>
               </div>
             </div>
-            <h3 class="text-xl font-bold text-white mb-2">NekoBox (مخصوص پینگ و گیمینگ)</h3>
-            <p class="text-slate-300 text-xs sm:text-sm leading-relaxed mb-4">
+            <h3 class="text-xl font-bold text-slate-900 mb-2">NekoBox (مخصوص پینگ و گیمینگ)</h3>
+            <p class="text-slate-600 text-xs sm:text-sm leading-relaxed mb-4">
               کلاینت تخصصی اندروید بر پایه هسته قدرتمند Sing-box با بهینه‌سازی تاخیر و پینگ، گزینه‌ای بی‌نظیر برای بازی‌های آنلاین و تریدینگ ارز دیجیتال.
             </p>
             <div class="flex flex-wrap gap-1.5 mb-6">
-              <span class="px-2.5 py-0.5 rounded-lg bg-slate-800/80 text-slate-300 text-[11px]">پینگ فوق‌العاده پایین</span>
-              <span class="px-2.5 py-0.5 rounded-lg bg-slate-800/80 text-slate-300 text-[11px]">Sing-box Core</span>
-              <span class="px-2.5 py-0.5 rounded-lg bg-slate-800/80 text-slate-300 text-[11px]">مناسب arm64-v8a</span>
+              <span class="px-2.5 py-0.5 rounded-lg bg-slate-100 text-slate-700 text-[11px]">پینگ فوق‌العاده پایین</span>
+              <span class="px-2.5 py-0.5 rounded-lg bg-slate-100 text-slate-700 text-[11px]">Sing-box Core</span>
+              <span class="px-2.5 py-0.5 rounded-lg bg-slate-100 text-slate-700 text-[11px]">مناسب arm64-v8a</span>
             </div>
           </div>
-          <div class="space-y-2 pt-3 border-t border-slate-800">
+          <div class="space-y-2 pt-3 border-t border-slate-100">
             <a href="https://github.com/MatsuriDayo/NekoBoxForAndroid/releases/download/1.4.2/NekoBox-1.4.2-arm64-v8a.apk"
                class="w-full py-3 rounded-2xl bg-slate-800 hover:bg-slate-700 text-white font-bold text-xs sm:text-sm transition-all flex items-center justify-center gap-2">
               <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"/></svg>
               <span>دانلود مستقیم فایل APK از گیت‌هاب</span>
             </a>
-            <a href="apps/nekobox.html" class="w-full py-2.5 rounded-2xl bg-slate-800/80 hover:bg-slate-700/80 text-purple-400 font-semibold text-xs transition-all flex items-center justify-center gap-1.5">
+            <a href="apps/nekobox.html" class="w-full py-2.5 rounded-2xl bg-slate-50 hover:bg-slate-100 text-slate-700 border border-slate-200 font-semibold text-xs transition-all flex items-center justify-center gap-1.5">
               <span>اطلاعات بیشتر و نسخه‌های ۳۲ بیت و شبیه‌ساز ←</span>
             </a>
           </div>
         </div>
 
         <!-- Card 6: V2Box (iOS & macOS Easy) -->
-        <div class="app-card glass-card rounded-3xl p-6 flex flex-col justify-between" data-os="ios mac">
+        <div class="app-card clean-card rounded-3xl p-6 flex flex-col justify-between border border-slate-200 bg-white relative" data-os="ios mac">
           <div>
             <div class="flex items-start justify-between gap-4 mb-4">
-              <div class="w-14 h-14 rounded-2xl overflow-hidden shadow-lg border border-slate-700/80 bg-slate-800 shrink-0 flex items-center justify-center p-0.5">
+              <div class="w-14 h-14 rounded-2xl overflow-hidden shadow-lg border border-slate-200 bg-slate-50 shrink-0 flex items-center justify-center p-0.5">
                 <img src="assets/icons/v2box.png" alt="لوگوی رسمی کلاینت V2Box" class="w-full h-full object-cover rounded-xl" loading="lazy">
               </div>
               <div class="flex flex-col items-end gap-1">
@@ -614,33 +557,33 @@
                 <span class="text-[11px] text-slate-400">آیفون، آیپد و مک</span>
               </div>
             </div>
-            <h3 class="text-xl font-bold text-white mb-2">V2Box (آیفون، آیپد و مک)</h3>
-            <p class="text-slate-300 text-xs sm:text-sm leading-relaxed mb-4">
+            <h3 class="text-xl font-bold text-slate-900 mb-2">V2Box (آیفون، آیپد و مک)</h3>
+            <p class="text-slate-600 text-xs sm:text-sm leading-relaxed mb-4">
               نرم‌افزار رایگان و فوق‌العاده کاربرپسند برای کاربران اکوسیستم اپل با اسکنر کیو‌آرکد لحظه‌ای، بروزرسانی خودکار سابسکریپشن و رابط کاربری چشم‌نواز.
             </p>
             <div class="flex flex-wrap gap-1.5 mb-6">
-              <span class="px-2.5 py-0.5 rounded-lg bg-slate-800/80 text-slate-300 text-[11px]">رایگان در App Store</span>
-              <span class="px-2.5 py-0.5 rounded-lg bg-slate-800/80 text-slate-300 text-[11px]">پشتیبانی از macOS</span>
-              <span class="px-2.5 py-0.5 rounded-lg bg-slate-800/80 text-slate-300 text-[11px]">تست پینگ سریع</span>
+              <span class="px-2.5 py-0.5 rounded-lg bg-slate-100 text-slate-700 text-[11px]">رایگان در App Store</span>
+              <span class="px-2.5 py-0.5 rounded-lg bg-slate-100 text-slate-700 text-[11px]">پشتیبانی از macOS</span>
+              <span class="px-2.5 py-0.5 rounded-lg bg-slate-100 text-slate-700 text-[11px]">تست پینگ سریع</span>
             </div>
           </div>
-          <div class="space-y-2 pt-3 border-t border-slate-800">
+          <div class="space-y-2 pt-3 border-t border-slate-100">
             <a href="https://apps.apple.com/app/v2box-v2ray-client/id6446814690" target="_blank" rel="noopener noreferrer"
                class="w-full py-3 rounded-2xl bg-slate-800 hover:bg-slate-700 text-white font-bold text-xs sm:text-sm transition-all flex items-center justify-center gap-2">
               <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z"/></svg>
               <span>دریافت رایگان از App Store</span>
             </a>
-            <a href="apps/v2box.html" class="w-full py-2.5 rounded-2xl bg-slate-800/80 hover:bg-slate-700/80 text-brand-400 font-semibold text-xs transition-all flex items-center justify-center gap-1.5">
+            <a href="apps/v2box.html" class="w-full py-2.5 rounded-2xl bg-slate-50 hover:bg-slate-100 text-slate-700 border border-slate-200 font-semibold text-xs transition-all flex items-center justify-center gap-1.5">
               <span>راهنمای تصویری راه‌اندازی در آیفون و مک ←</span>
             </a>
           </div>
         </div>
 
         <!-- Card 7: Hiddify App (Multi-platform & Persian) -->
-        <div class="app-card glass-card rounded-3xl p-6 flex flex-col justify-between" data-os="android windows mac linux">
+        <div class="app-card clean-card rounded-3xl p-6 flex flex-col justify-between border border-slate-200 bg-white relative" data-os="android windows mac linux">
           <div>
             <div class="flex items-start justify-between gap-4 mb-4">
-              <div class="w-14 h-14 rounded-2xl overflow-hidden shadow-lg border border-slate-700/80 bg-slate-800 shrink-0 flex items-center justify-center p-0.5">
+              <div class="w-14 h-14 rounded-2xl overflow-hidden shadow-lg border border-slate-200 bg-slate-50 shrink-0 flex items-center justify-center p-0.5">
                 <img src="assets/icons/hiddify.png" alt="لوگوی رسمی کلاینت Hiddify" class="w-full h-full object-cover rounded-xl" loading="lazy">
               </div>
               <div class="flex flex-col items-end gap-1">
@@ -648,37 +591,37 @@
                 <span class="text-[11px] text-slate-400">چندسکویی (Cross-Platform)</span>
               </div>
             </div>
-            <h3 class="text-xl font-bold text-white mb-2">Hiddify App (رابط کاملاً فارسی)</h3>
-            <p class="text-slate-300 text-xs sm:text-sm leading-relaxed mb-4">
+            <h3 class="text-xl font-bold text-slate-900 mb-2">Hiddify App (رابط کاملاً فارسی)</h3>
+            <p class="text-slate-600 text-xs sm:text-sm leading-relaxed mb-4">
               کلاینت چندسکویی پیشرفته با پشتیبانی بومی از زبان فارسی، هسته مدرن Sing-box، هوشمندسازی مسیردهی و تنظیم خودکار پروتکل‌های ضد فیلتر.
             </p>
             <div class="flex flex-wrap gap-1.5 mb-6">
-              <span class="px-2.5 py-0.5 rounded-lg bg-slate-800/80 text-slate-300 text-[11px]">رابط تماماً فارسی</span>
-              <span class="px-2.5 py-0.5 rounded-lg bg-slate-800/80 text-slate-300 text-[11px]">Sing-box Core</span>
-              <span class="px-2.5 py-0.5 rounded-lg bg-slate-800/80 text-slate-300 text-[11px]">اندروید و ویندوز</span>
+              <span class="px-2.5 py-0.5 rounded-lg bg-slate-100 text-slate-700 text-[11px]">رابط تماماً فارسی</span>
+              <span class="px-2.5 py-0.5 rounded-lg bg-slate-100 text-slate-700 text-[11px]">Sing-box Core</span>
+              <span class="px-2.5 py-0.5 rounded-lg bg-slate-100 text-slate-700 text-[11px]">اندروید و ویندوز</span>
             </div>
           </div>
-          <div class="space-y-2 pt-3 border-t border-slate-800">
+          <div class="space-y-2 pt-3 border-t border-slate-100">
             <a href="https://github.com/hiddify/hiddify-app/releases/download/v5.9.15/Hiddify-Android-universal.apk"
                class="w-full py-2.5 rounded-2xl bg-cyan-600 hover:bg-cyan-500 text-white font-bold text-xs transition-all flex items-center justify-center gap-1.5">
               <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"/></svg>
               <span>دانلود APK اندروید (سازگار با همه گوشی‌ها)</span>
             </a>
             <a href="https://github.com/hiddify/hiddify-app/releases/download/v5.9.15/Hiddify-Windows-Setup-x64.exe"
-               class="w-full py-2 rounded-2xl bg-slate-800 hover:bg-slate-700 text-slate-300 font-medium text-xs transition-all flex items-center justify-center gap-1.5">
+               class="w-full py-2 rounded-2xl bg-slate-800 hover:bg-slate-700 text-slate-700 font-medium text-xs transition-all flex items-center justify-center gap-1.5">
               <span>دانلود مستقیم نسخه Setup ویندوز (x64)</span>
             </a>
-            <a href="apps/hiddify.html" class="w-full py-2 rounded-2xl bg-slate-800/80 hover:bg-slate-700/80 text-cyan-400 font-semibold text-xs transition-all flex items-center justify-center gap-1.5">
+            <a href="apps/hiddify.html" class="w-full py-2.5 rounded-2xl bg-slate-50 hover:bg-slate-100 text-slate-700 border border-slate-200 font-semibold text-xs transition-all flex items-center justify-center gap-1.5">
               <span>نسخه پرتابل، مک، لینوکس و راهنمای راه‌اندازی ←</span>
             </a>
           </div>
         </div>
 
         <!-- Card 8: NekoRay (Windows Tun) -->
-        <div class="app-card glass-card rounded-3xl p-6 flex flex-col justify-between" data-os="windows linux">
+        <div class="app-card clean-card rounded-3xl p-6 flex flex-col justify-between border border-slate-200 bg-white relative" data-os="windows linux">
           <div>
             <div class="flex items-start justify-between gap-4 mb-4">
-              <div class="w-14 h-14 rounded-2xl overflow-hidden shadow-lg border border-slate-700/80 bg-slate-800 shrink-0 flex items-center justify-center p-0.5">
+              <div class="w-14 h-14 rounded-2xl overflow-hidden shadow-lg border border-slate-200 bg-slate-50 shrink-0 flex items-center justify-center p-0.5">
                 <img src="assets/icons/nekoray.png" alt="لوگوی رسمی کلاینت NekoRay" class="w-full h-full object-cover rounded-xl" loading="lazy">
               </div>
               <div class="flex flex-col items-end gap-1">
@@ -686,33 +629,33 @@
                 <span class="text-[11px] text-slate-400">حجم: ۳۹.۸ MB</span>
               </div>
             </div>
-            <h3 class="text-xl font-bold text-white mb-2">NekoRay (کلاینت تخصصی Tun)</h3>
-            <p class="text-slate-300 text-xs sm:text-sm leading-relaxed mb-4">
+            <h3 class="text-xl font-bold text-slate-900 mb-2">NekoRay (کلاینت تخصصی Tun)</h3>
+            <p class="text-slate-600 text-xs sm:text-sm leading-relaxed mb-4">
               ابزار قدرتمند کامپیوتر بر پایه هسته Sing-box بدون نیاز به نصب، مناسب برای اتصال سریع در ویندوز و لینوکس و روتینگ تخصصی بسته‌های UDP.
             </p>
             <div class="flex flex-wrap gap-1.5 mb-6">
-              <span class="px-2.5 py-0.5 rounded-lg bg-slate-800/80 text-slate-300 text-[11px]">حالت TUN Mode</span>
-              <span class="px-2.5 py-0.5 rounded-lg bg-slate-800/80 text-slate-300 text-[11px]">بدون نیاز به نصب (پرتابل)</span>
-              <span class="px-2.5 py-0.5 rounded-lg bg-slate-800/80 text-slate-300 text-[11px]">ویندوز و لینوکس</span>
+              <span class="px-2.5 py-0.5 rounded-lg bg-slate-100 text-slate-700 text-[11px]">حالت TUN Mode</span>
+              <span class="px-2.5 py-0.5 rounded-lg bg-slate-100 text-slate-700 text-[11px]">بدون نیاز به نصب (پرتابل)</span>
+              <span class="px-2.5 py-0.5 rounded-lg bg-slate-100 text-slate-700 text-[11px]">ویندوز و لینوکس</span>
             </div>
           </div>
-          <div class="space-y-2 pt-3 border-t border-slate-800">
+          <div class="space-y-2 pt-3 border-t border-slate-100">
             <a href="https://github.com/MatsuriDayo/nekoray/releases/download/4.0.1/nekoray-4.0.1-2024-12-12-windows64.zip"
                class="w-full py-3 rounded-2xl bg-slate-800 hover:bg-slate-700 text-white font-bold text-xs sm:text-sm transition-all flex items-center justify-center gap-2">
               <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"/></svg>
               <span>دانلود مستقیم فایل Zip ویندوز ۶۴ بیت</span>
             </a>
-            <a href="apps/nekoray.html" class="w-full py-2.5 rounded-2xl bg-slate-800/80 hover:bg-slate-700/80 text-indigo-400 font-semibold text-xs transition-all flex items-center justify-center gap-1.5">
+            <a href="apps/nekoray.html" class="w-full py-2.5 rounded-2xl bg-slate-50 hover:bg-slate-100 text-slate-700 border border-slate-200 font-semibold text-xs transition-all flex items-center justify-center gap-1.5">
               <span>راهنمای تنظیم Tun Mode و نسخه لینوکس ←</span>
             </a>
           </div>
         </div>
 
         <!-- Card 9: Sing-box (Universal & Official Core) -->
-        <div class="app-card glass-card rounded-3xl p-6 flex flex-col justify-between" data-os="android">
+        <div class="app-card clean-card rounded-3xl p-6 flex flex-col justify-between border border-slate-200 bg-white relative" data-os="android">
           <div>
             <div class="flex items-start justify-between gap-4 mb-4">
-              <div class="w-14 h-14 rounded-2xl overflow-hidden shadow-lg border border-slate-700/80 bg-slate-800 shrink-0 flex items-center justify-center p-0.5">
+              <div class="w-14 h-14 rounded-2xl overflow-hidden shadow-lg border border-slate-200 bg-slate-50 shrink-0 flex items-center justify-center p-0.5">
                 <img src="assets/icons/singbox.png" alt="لوگوی رسمی کلاینت Sing-box" class="w-full h-full object-cover rounded-xl" loading="lazy">
               </div>
               <div class="flex flex-col items-end gap-1">
@@ -720,23 +663,23 @@
                 <span class="text-[11px] text-slate-400">حجم: ۱۲۱.۴ MB (Universal)</span>
               </div>
             </div>
-            <h3 class="text-xl font-bold text-white mb-2">Sing-box (کلاینت رسمی SagerNet)</h3>
-            <p class="text-slate-300 text-xs sm:text-sm leading-relaxed mb-4">
+            <h3 class="text-xl font-bold text-slate-900 mb-2">Sing-box (کلاینت رسمی SagerNet)</h3>
+            <p class="text-slate-600 text-xs sm:text-sm leading-relaxed mb-4">
               کلاینت مرجع و توسعه‌یافته توسط تیم اصلی SagerNet بر پایه هسته بی‌نظیر Sing-box با بهینه‌ترین مصرف رم و پردازنده در بین تمام کلاینت‌ها.
             </p>
             <div class="flex flex-wrap gap-1.5 mb-6">
-              <span class="px-2.5 py-0.5 rounded-lg bg-slate-800/80 text-slate-300 text-[11px]">هسته استاندارد Go</span>
-              <span class="px-2.5 py-0.5 rounded-lg bg-slate-800/80 text-slate-300 text-[11px]">نسخه استاندارد Universal</span>
-              <span class="px-2.5 py-0.5 rounded-lg bg-slate-800/80 text-slate-300 text-[11px]">کمترین مصرف رم</span>
+              <span class="px-2.5 py-0.5 rounded-lg bg-slate-100 text-slate-700 text-[11px]">هسته استاندارد Go</span>
+              <span class="px-2.5 py-0.5 rounded-lg bg-slate-100 text-slate-700 text-[11px]">نسخه استاندارد Universal</span>
+              <span class="px-2.5 py-0.5 rounded-lg bg-slate-100 text-slate-700 text-[11px]">کمترین مصرف رم</span>
             </div>
           </div>
-          <div class="space-y-2 pt-3 border-t border-slate-800">
+          <div class="space-y-2 pt-3 border-t border-slate-100">
             <a href="https://github.com/SagerNet/sing-box/releases/download/v1.14.4/SFA-1.14.4-universal.apk"
                class="w-full py-3 rounded-2xl bg-amber-600 hover:bg-amber-500 text-white font-bold text-xs sm:text-sm transition-all flex items-center justify-center gap-2 shadow-md shadow-amber-600/20">
               <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"/></svg>
               <span>دانلود مستقیم (سازگار با تمامی گوشی‌ها)</span>
             </a>
-            <a href="apps/singbox.html" class="w-full py-2.5 rounded-2xl bg-slate-800/80 hover:bg-slate-700/80 text-amber-400 font-semibold text-xs transition-all flex items-center justify-center gap-1.5">
+            <a href="apps/singbox.html" class="w-full py-2.5 rounded-2xl bg-slate-50 hover:bg-slate-100 text-slate-700 border border-slate-200 font-semibold text-xs transition-all flex items-center justify-center gap-1.5">
               <span>اطلاعات بیشتر و نسخه‌های ۳۲ و ۶۴ بیت ←</span>
             </a>
           </div>
@@ -748,15 +691,15 @@
   </section>
 
   <!-- Testing Utility Intermission -->
-  <section class="py-12 relative z-10">
+  <section class="py-12 relative z-10 bg-slate-50">
     <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="glass-card rounded-3xl p-8 sm:p-10 border border-slate-800 relative overflow-hidden bg-slate-900/60">
+      <div class="clean-card rounded-3xl p-8 sm:p-10 border border-slate-200 relative overflow-hidden bg-white shadow-xs">
         <div class="relative z-10 flex flex-col md:flex-row items-center justify-between gap-6">
           <div class="max-w-2xl text-center md:text-right">
-            <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-slate-800 text-slate-300 text-xs font-semibold mb-3 border border-slate-700">
+            <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-50 text-emerald-700 text-xs font-semibold mb-3 border border-emerald-200">
               ⚡ اعتبارسنجی اتصال
             </div>
-            <h3 class="text-xl sm:text-2xl font-black text-white mb-2">
+            <h3 class="text-xl sm:text-2xl font-black text-slate-900 mb-2">
               پس از نصب کلاینت، به سرور برای تست اتصال نیاز دارید؟
             </h3>
             <p class="text-slate-400 text-xs sm:text-sm leading-relaxed">
@@ -765,7 +708,7 @@
           </div>
           <div class="shrink-0">
             <a href="https://t.me/RoozanehNetBot?start=gh_download" target="_blank" rel="noopener noreferrer"
-               class="px-6 py-3 rounded-2xl bg-slate-800 hover:bg-slate-700 text-brand-400 font-bold text-sm transition-all border border-slate-700 inline-flex items-center gap-2">
+               class="px-6 py-3 rounded-2xl bg-brand-600 hover:bg-brand-700 text-white font-bold text-sm transition-all shadow-xs inline-flex items-center gap-2">
               <span>دریافت کانفیگ تست در تلگرام</span>
               <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm5.894 8.221l-1.97 9.28c-.145.658-.537.818-1.084.508l-3-2.21-1.446 1.394c-.16.16-.295.295-.605.295l.213-3.053 5.56-5.023c.242-.213-.054-.333-.373-.121l-6.871 4.326-2.962-.924c-.643-.204-.657-.643.136-.953l11.57-4.461c.537-.197 1.006.128.832.946z"/></svg>
             </a>
@@ -776,12 +719,12 @@
   </section>
 
   <!-- Step-by-Step Setup Tutorial -->
-  <section id="tutorial" class="py-16 md:py-24 relative z-10 border-t border-slate-800/80 bg-slate-900/30">
+  <section id="tutorial" class="py-16 md:py-24 relative z-10 border-t border-slate-200 bg-white">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       
       <div class="text-center max-w-3xl mx-auto mb-16">
-        <span class="px-3.5 py-1 rounded-full text-xs font-bold bg-brand-500/10 text-brand-400 border border-brand-500/20 mb-3 inline-block">راه‌اندازی فوری</span>
-        <h2 class="text-2xl sm:text-4xl font-black text-white mb-3">
+        <span class="px-3.5 py-1 rounded-full text-xs font-bold bg-brand-50 text-brand-700 border border-brand-200 mb-3 inline-block">راه‌اندازی فوری</span>
+        <h2 class="text-2xl sm:text-4xl font-black text-slate-900 mb-3">
           آموزش اتصال سریع در ۳ مرحله (کمتر از ۳۰ ثانیه)
         </h2>
         <p class="text-slate-400 text-xs sm:text-base">
@@ -792,34 +735,34 @@
       <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
         
         <!-- Step 1 -->
-        <div class="glass-card rounded-3xl p-8 relative">
-          <div class="w-12 h-12 rounded-2xl bg-brand-500/20 text-brand-400 font-black text-xl flex items-center justify-center mb-6 border border-brand-500/30">
+        <div class="clean-card rounded-3xl p-8 relative bg-white border border-slate-200 shadow-xs">
+          <div class="w-12 h-12 rounded-2xl bg-brand-50 text-brand-600 font-black text-xl flex items-center justify-center mb-6 border border-brand-200">
             ۱
           </div>
-          <h3 class="text-xl font-bold text-white mb-3">دانلود نرم‌افزار</h3>
-          <p class="text-slate-300 text-xs sm:text-sm leading-relaxed">
+          <h3 class="text-xl font-bold text-slate-900 mb-3">دانلود نرم‌افزار</h3>
+          <p class="text-slate-700 text-xs sm:text-sm leading-relaxed">
             کلاینت متناسب با دستگاه خود را از جدول بالا دریافت و نصب فرمایید (v2rayNG برای اندروید، Streisand برای آیفون، v2rayN برای ویندوز).
           </p>
         </div>
 
         <!-- Step 2 -->
-        <div class="glass-card rounded-3xl p-8 relative">
-          <div class="w-12 h-12 rounded-2xl bg-brand-500/20 text-brand-400 font-black text-xl flex items-center justify-center mb-6 border border-brand-500/30">
+        <div class="clean-card rounded-3xl p-8 relative bg-white border border-slate-200 shadow-xs">
+          <div class="w-12 h-12 rounded-2xl bg-brand-50 text-brand-600 font-black text-xl flex items-center justify-center mb-6 border border-brand-200">
             ۲
           </div>
-          <h3 class="text-xl font-bold text-white mb-3">دریافت کانفیگ یا لینک ساب</h3>
-          <p class="text-slate-300 text-xs sm:text-sm leading-relaxed">
+          <h3 class="text-xl font-bold text-slate-900 mb-3">دریافت کانفیگ یا لینک ساب</h3>
+          <p class="text-slate-700 text-xs sm:text-sm leading-relaxed">
             وارد ربات تلگرامی <a href="https://t.me/RoozanehNetBot?start=gh_download" target="_blank" rel="noopener noreferrer" class="text-brand-400 font-bold hover:underline">@RoozanehNetBot</a> شوید و گزینه دریافت تست رایگان را لمس کنید تا لینک اتصال برای شما کپی شود.
           </p>
         </div>
 
         <!-- Step 3 -->
-        <div class="glass-card rounded-3xl p-8 relative">
-          <div class="w-12 h-12 rounded-2xl bg-brand-500/20 text-brand-400 font-black text-xl flex items-center justify-center mb-6 border border-brand-500/30">
+        <div class="clean-card rounded-3xl p-8 relative bg-white border border-slate-200 shadow-xs">
+          <div class="w-12 h-12 rounded-2xl bg-brand-50 text-brand-600 font-black text-xl flex items-center justify-center mb-6 border border-brand-200">
             ۳
           </div>
-          <h3 class="text-xl font-bold text-white mb-3">افزودن و اتصال فوری</h3>
-          <p class="text-slate-300 text-xs sm:text-sm leading-relaxed">
+          <h3 class="text-xl font-bold text-slate-900 mb-3">افزودن و اتصال فوری</h3>
+          <p class="text-slate-700 text-xs sm:text-sm leading-relaxed">
             در برنامه علامت <strong>+</strong> را لمس کرده و گزینه <strong>Import config from Clipboard</strong> را انتخاب کنید. سپس دکمه اتصال را روشن فرمایید.
           </p>
         </div>
@@ -830,13 +773,13 @@
   </section>
 
   <!-- Comprehensive Long-Form Educational Section (Corporate Whitepaper Layout) -->
-  <article id="whitepaper" class="py-16 md:py-24 relative z-10 border-t border-slate-800/80 bg-slate-900/50">
-    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+  <article id="whitepaper" class="py-16 md:py-24 relative z-10 border-t border-slate-200 bg-slate-50">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 bg-white border border-slate-200 rounded-3xl p-6 sm:p-12 shadow-xs">
       
       <!-- Whitepaper Header -->
-      <div class="border-b border-slate-800 pb-10 mb-12">
+      <div class="border-b border-slate-200 pb-10 mb-12">
         <div class="flex flex-wrap items-center gap-3 text-xs text-slate-400 mb-4">
-          <span class="px-3 py-1 rounded-full bg-brand-500/10 text-brand-400 border border-brand-500/20 font-bold">دانشنامه تخصصی و مستندات فنی</span>
+          <span class="px-3 py-1 rounded-full bg-brand-50 text-brand-700 border border-brand-200 font-bold">دانشنامه تخصصی و مستندات فنی</span>
           <span>•</span>
           <span>مدت زمان مطالعه: ۱۵ دقیقه</span>
           <span>•</span>
@@ -844,21 +787,21 @@
           <span>•</span>
           <span>نویسنده: تیم هوش سئو و تحلیل شبکه روزنه نت</span>
         </div>
-        <h2 class="text-2xl sm:text-4xl md:text-5xl font-black text-white leading-tight mb-6">
+        <h2 class="text-2xl sm:text-4xl md:text-5xl font-black text-slate-900 leading-tight mb-6">
           دانشنامه جامع فنی، راهنمای دور زدن DPI و تحلیل معماری کلاینت‌های V2Ray (نسخه ۲۰۲۶)
         </h2>
-        <p class="text-slate-300 text-sm sm:text-base leading-relaxed">
+        <p class="text-slate-700 text-sm sm:text-base leading-relaxed">
           این مستند تخصصی با هدف تشریح دقیق سازوکار پروتکل‌های نوین ضدسانسور، فیزیک خردسازی بسته‌ها (فرگمنت)، واکاوی علل حذف برنامه‌ها از استورهای جهانی و راهنمای گام‌به‌گام رفع پایدار اختلالات اینترنت تدوین گردیده است.
         </p>
       </div>
 
       <!-- Table of Contents Nav Box -->
-      <nav class="glass-card rounded-3xl p-6 sm:p-8 mb-16 border border-slate-700/60 bg-slate-950/60" aria-label="فهرست مطالب">
-        <h3 class="text-lg font-bold text-white mb-4 flex items-center gap-2">
+      <nav class="clean-card rounded-2xl p-6 sm:p-8 mb-16 border border-slate-200 bg-slate-50" aria-label="فهرست مطالب">
+        <h3 class="text-lg font-bold text-slate-900 mb-4 flex items-center gap-2">
           <span>📑</span>
           <span>فهرست سرفصل‌های دانشنامه فنی (Table of Contents)</span>
         </h3>
-        <ol class="grid grid-cols-1 md:grid-cols-2 gap-3 text-xs sm:text-sm text-slate-300">
+        <ol class="grid grid-cols-1 md:grid-cols-2 gap-3 text-xs sm:text-sm text-slate-700">
           <li>
             <a href="#whitepaper-sec-1" class="hover:text-brand-400 transition-colors flex items-center gap-2">
               <span class="text-brand-400 font-bold">۱.</span>
@@ -907,16 +850,16 @@
       <!-- Section 1 -->
       <section id="whitepaper-sec-1" class="mb-20 scroll-mt-28">
         <div class="flex items-center gap-3 mb-6">
-          <span class="w-8 h-8 rounded-xl bg-brand-500/20 text-brand-400 flex items-center justify-center font-bold text-sm">۱</span>
-          <h3 class="text-xl sm:text-2xl font-black text-white">تکامل پروتکل‌های تونلینگ؛ چرا VMess منسوخ شد و VLESS Reality پدید آمد؟</h3>
+          <span class="w-8 h-8 rounded-xl bg-brand-50 text-brand-700 border border-brand-200 flex items-center justify-center font-bold text-sm">۱</span>
+          <h3 class="text-xl sm:text-2xl font-black text-slate-900">تکامل پروتکل‌های تونلینگ؛ چرا VMess منسوخ شد و VLESS Reality پدید آمد؟</h3>
         </div>
 
-        <p class="text-slate-300 text-sm sm:text-base leading-relaxed mb-6">
+        <p class="text-slate-700 text-sm sm:text-base leading-relaxed mb-6">
           برای درک چرایی ظهور پروتکل‌های نوین نظیر <strong>VLESS Reality</strong> و فریم‌ورک‌های فوق‌سبک مانند <strong>Sing-box</strong>، باید تاریخچه رویارویی روش‌های سانسور اینترنت و فناوری‌های ضدسانسور را بررسی کنیم. در فاصله سال‌های ۲۰۱۹ تا ۲۰۲۱، پروتکل‌های نظیر Shadowsocks و VMess با ساختارهای تصادفی‌سازی (Random Padding) فعالیت می‌کردند. اما با تکامل سامانه‌های بازرسی عمیق بسته‌ها (<bdi>Deep Packet Inspection - DPI</bdi>) مجهز به آنالیز آماری آنتروپی، مشخص شد که ترافیک تصادفی خالص خود بزرگترین نشانگر برای فیلترچی است؛ زیرا پروتکل‌های عادی اینترنت جهانی (مانند وب‌سایت‌های عادی HTTPS) دارای هدرهای منظم TLS هستند.
         </p>
 
         <!-- Architecture Timeline Box -->
-        <div class="glass-card rounded-2xl p-6 border border-slate-800 mb-8 code-block text-xs sm:text-sm text-slate-300">
+        <div class="rounded-2xl p-6 border border-slate-800 mb-8 code-block text-xs sm:text-sm text-slate-700">
 <span class="text-brand-400">[دوران اول ۲۰۱۹-۲۰۲۱: امضاهای تصادفی ساختگی]</span>
 Shadowsocks / VMess (با هدرهای تصادفی یا MD5/AES)
   ↳ شناسایی آسان توسط هوش مصنوعی DPI به دلیل آنومالی آنتروپی (Entropy Anomaly)
@@ -930,11 +873,11 @@ VLESS Reality (XTLS Vision) + Sing-box Core + TCP Fragmentation
   ↳ صفر شدن امکان تفکیک ترافیک فیلترشکن از وب‌گردی عادی یاهو، مایکروسافت و اپل
         </div>
 
-        <h4 class="text-lg font-bold text-white mb-3">شاهکار مهندسی: مکانیزم دزدی هویت Reality (TLS Impersonation)</h4>
-        <p class="text-slate-300 text-sm sm:text-base leading-relaxed mb-4">
+        <h4 class="text-lg font-bold text-slate-900 mb-3">شاهکار مهندسی: مکانیزم دزدی هویت Reality (TLS Impersonation)</h4>
+        <p class="text-slate-700 text-sm sm:text-base leading-relaxed mb-4">
           بزرگترین چالش پروتکل‌های متکی به TLS استاندارد، «نیاز به ثبت دامنه شخصی» بود که فیلترچی در عرض چند ساعت آن دامنه را مسدود می‌کرد. معماری <strong>Reality</strong> این معادله را دگرگون ساخت:
         </p>
-        <ul class="space-y-2.5 text-xs sm:text-sm text-slate-300 mb-8 list-disc list-inside">
+        <ul class="space-y-2.5 text-xs sm:text-sm text-slate-700 mb-8 list-disc list-inside">
           <li><strong>حذف کامل دامنه شخصی:</strong> سرور به هیچ دامنه یا گواهی SSL خریداری‌شده‌ای وابسته نیست.</li>
           <li><strong>سرقت هویت وب‌سایت‌های معتبر جهانی (Target SNI Spoofing):</strong> سرور با دامنه‌های بین‌المللی نظیر <code class="text-brand-300 bg-slate-800 px-1.5 py-0.5 rounded">www.microsoft.com</code> یا <code class="text-brand-300 bg-slate-800 px-1.5 py-0.5 rounded">gateway.icloud.com</code> پیکربندی می‌شود. فیلترچی در فاز Handshake تنها یک ارتباط تجاری استاندارد مایکروسافت یا اپل را مشاهده می‌کند.</li>
           <li><strong>هدایت ربات‌های بازرس (Active Prober Fallback):</strong> اگر کارشناس فیلترینگ یا ربات‌های اسکنر IP سرور را بررسی کنند، سرور Reality به شکل نامحسوس ترافیک را به سایت واقعی مایکروسافت فوروارد می‌کند؛ لذا هویت سرور پنهان باقی می‌ماند.</li>
@@ -942,17 +885,17 @@ VLESS Reality (XTLS Vision) + Sing-box Core + TCP Fragmentation
         </ul>
 
         <!-- Core Comparison Table -->
-        <h4 class="text-lg font-bold text-white mb-3">مقایسه هسته Sing-box Core در برابر Xray Core (ویژه سال ۲۰۲۶)</h4>
+        <h4 class="text-lg font-bold text-slate-900 mb-3">مقایسه هسته Sing-box Core در برابر Xray Core (ویژه سال ۲۰۲۶)</h4>
         <div class="overflow-x-auto mb-6">
           <table class="w-full text-right text-xs sm:text-sm border border-slate-800 rounded-2xl overflow-hidden">
-            <thead class="bg-slate-950 text-slate-200">
+            <thead class="bg-slate-50 text-slate-800 font-bold border-b border-slate-200">
               <tr>
                 <th class="p-3.5 border-b border-slate-800">شاخص ارزیابی</th>
                 <th class="p-3.5 border-b border-slate-800 text-brand-400">هسته Sing-box (پیشرو در ۲۰۲۶)</th>
                 <th class="p-3.5 border-b border-slate-800 text-slate-400">هسته Xray (کلاسیک و باثبات)</th>
               </tr>
             </thead>
-            <tbody class="divide-y divide-slate-800/60 bg-slate-900/40 text-slate-300">
+            <tbody class="divide-y divide-slate-100 bg-white text-slate-700">
               <tr>
                 <td class="p-3.5 font-bold">مصرف حافظه RAM</td>
                 <td class="p-3.5 text-emerald-400 font-semibold">بسیار سبک (۲۰ تا ۳۵ مگابایت)</td>
@@ -981,26 +924,26 @@ VLESS Reality (XTLS Vision) + Sing-box Core + TCP Fragmentation
       <!-- Section 2 -->
       <section id="whitepaper-sec-2" class="mb-20 scroll-mt-28">
         <div class="flex items-center gap-3 mb-6">
-          <span class="w-8 h-8 rounded-xl bg-brand-500/20 text-brand-400 flex items-center justify-center font-bold text-sm">۲</span>
-          <h3 class="text-xl sm:text-2xl font-black text-white">کالبدشکافی عمیق دور زدن DPI و تنظیمات فرگمنت (Fragment) در همراه اول و ایرانسل</h3>
+          <span class="w-8 h-8 rounded-xl bg-brand-50 text-brand-700 border border-brand-200 flex items-center justify-center font-bold text-sm">۲</span>
+          <h3 class="text-xl sm:text-2xl font-black text-slate-900">کالبدشکافی عمیق دور زدن DPI و تنظیمات فرگمنت (Fragment) در همراه اول و ایرانسل</h3>
         </div>
 
-        <p class="text-slate-300 text-sm sm:text-base leading-relaxed mb-4">
+        <p class="text-slate-700 text-sm sm:text-base leading-relaxed mb-4">
           سامانه‌های فیلترینگ اپراتورهای مخابراتی (MCI و MTN) توان پردازشی کافی برای بازگشایی تمامی بسته‌های عبوری را ندارند. در نتیجه، این تجهیزات بر روی آغازین‌ترین بسته ارتباط امن यानी <strong><bdi>ClientHello</bdi></strong> تمرکز می‌کنند. در این بسته فیلدی به نام <strong><bdi>Server Name Indication (SNI)</bdi></strong> وجود دارد. اگر این نام دامنه یا امضای ارتباطی با الگوهای سانسور تطبیق یابد، بسته بلافاصله دراپ (Drop) می‌شود.
         </p>
 
-        <div class="glass-card rounded-3xl p-6 border border-brand-500/25 bg-brand-950/15 mb-6">
+        <div class="clean-card rounded-3xl p-6 border border-brand-200 bg-brand-50/50 mb-6">
           <h4 class="font-bold text-brand-300 text-base mb-2">تکنیک فرگمنت بر چه قاعده‌ای استوار است؟</h4>
-          <p class="text-xs sm:text-sm text-slate-300 leading-relaxed">
+          <p class="text-xs sm:text-sm text-slate-700 leading-relaxed">
             <strong>سخت‌افزارهای DPI به دلیل محدودیت منابع بافر، بسته‌های قطعه‌قطعه‌شده را مجدداً سرهم‌بندی نمی‌کنند (<bdi>No Deep Packet Reassembly</bdi>)!</strong><br>
             اگر کلاینت بتواند بسته ClientHello را به ۲ یا چند قطعه خرد کند و میان ارسال آنها یک تاخیر زمانی ۱۰ تا ۳۰ میلی‌ثانیه‌ای قرار دهد، بخش نخست (فاقد نام دامنه کامل) بدون جلب توجه سنسور عبور می‌کند و قطعه دوم نیز به تنهایی قابل ردیابی نیست. اما در سمت سرور، لایه استاندارد TCP Stack سیستم‌عامل قطعات را ترکیب کرده و تونل با موفقیت برقرار می‌گردد.
           </p>
         </div>
 
-        <h4 class="text-lg font-bold text-white mb-3">تنظیمات بهینه فرگمنت در v2rayNG به تفکیک اپراتور</h4>
+        <h4 class="text-lg font-bold text-slate-900 mb-3">تنظیمات بهینه فرگمنت در v2rayNG به تفکیک اپراتور</h4>
         <div class="overflow-x-auto mb-6">
           <table class="w-full text-right text-xs sm:text-sm border border-slate-800 rounded-2xl overflow-hidden">
-            <thead class="bg-slate-950 text-slate-200">
+            <thead class="bg-slate-50 text-slate-800 font-bold border-b border-slate-200">
               <tr>
                 <th class="p-3 border-b border-slate-800">اپراتور</th>
                 <th class="p-3 border-b border-slate-800">حالت بسته‌ها (Packets)</th>
@@ -1009,7 +952,7 @@ VLESS Reality (XTLS Vision) + Sing-box Core + TCP Fragmentation
                 <th class="p-3 border-b border-slate-800">هدف فنی</th>
               </tr>
             </thead>
-            <tbody class="divide-y divide-slate-800/60 bg-slate-900/40 text-slate-300">
+            <tbody class="divide-y divide-slate-100 bg-white text-slate-700">
               <tr>
                 <td class="p-3 font-bold text-brand-400">همراه اول (MCI)</td>
                 <td class="p-3"><code class="text-teal-300">tlshello</code></td>
@@ -1032,23 +975,23 @@ VLESS Reality (XTLS Vision) + Sing-box Core + TCP Fragmentation
       <!-- Section 3: Fragment JSON Code Snippet -->
       <section id="whitepaper-sec-3" class="mb-20 scroll-mt-28">
         <div class="flex items-center gap-3 mb-6">
-          <span class="w-8 h-8 rounded-xl bg-brand-500/20 text-brand-400 flex items-center justify-center font-bold text-sm">۳</span>
-          <h3 class="text-xl sm:text-2xl font-black text-white">نمونه ساختار پیکربندی فرگمنت در هسته Xray / Sing-box</h3>
+          <span class="w-8 h-8 rounded-xl bg-brand-50 text-brand-700 border border-brand-200 flex items-center justify-center font-bold text-sm">۳</span>
+          <h3 class="text-xl sm:text-2xl font-black text-slate-900">نمونه ساختار پیکربندی فرگمنت در هسته Xray / Sing-box</h3>
         </div>
 
-        <p class="text-slate-300 text-xs sm:text-sm leading-relaxed mb-4">
+        <p class="text-slate-600 text-xs sm:text-sm leading-relaxed mb-4">
           قطعه کد زیر ساختار مهندسی‌شده خردسازی پکت‌ها را در لایه انتقال نشان می‌دهد که در سرورها و کلاینت‌های روزنه نت تعبیه شده است:
         </p>
 
         <div class="relative rounded-2xl overflow-hidden border border-slate-800 mb-6">
-          <div class="bg-slate-950 px-4 py-2.5 flex items-center justify-between border-b border-slate-800">
+          <div class="bg-slate-800 px-4 py-2.5 flex items-center justify-between border-b border-slate-700 text-slate-200">
             <span class="text-xs font-mono text-slate-400">fragment-config.json</span>
             <button onclick="copySnippet()" id="copy-btn" class="px-3 py-1 rounded-lg bg-slate-800 hover:bg-slate-700 text-brand-400 text-xs font-medium transition-colors flex items-center gap-1.5">
               <span>📋</span>
               <span id="copy-text">کپی کد</span>
             </button>
           </div>
-          <pre class="p-4 text-xs sm:text-sm text-slate-300 overflow-x-auto code-block" id="json-code"><code>{
+          <pre class="p-4 text-xs sm:text-sm text-slate-700 overflow-x-auto code-block" id="json-code"><code>{
   "sockopt": {
     "dialerProxy": "fragment",
     "tcpKeepAliveInterval": 15
@@ -1073,28 +1016,28 @@ VLESS Reality (XTLS Vision) + Sing-box Core + TCP Fragmentation
       <!-- Section 4: Security & Google Play Removal -->
       <section id="whitepaper-sec-4" class="mb-20 scroll-mt-28">
         <div class="flex items-center gap-3 mb-6">
-          <span class="w-8 h-8 rounded-xl bg-amber-500/20 text-amber-400 flex items-center justify-center font-bold text-sm">۴</span>
-          <h3 class="text-xl sm:text-2xl font-black text-white">حقیقت حذف v2rayNG از گوگل‌پلی و هشدارهای امنیتی بدافزارها</h3>
+          <span class="w-8 h-8 rounded-xl bg-amber-50 text-amber-700 border border-amber-200 flex items-center justify-center font-bold text-sm">۴</span>
+          <h3 class="text-xl sm:text-2xl font-black text-slate-900">حقیقت حذف v2rayNG از گوگل‌پلی و هشدارهای امنیتی بدافزارها</h3>
         </div>
 
-        <p class="text-slate-300 text-sm sm:text-base leading-relaxed mb-4">
+        <p class="text-slate-700 text-sm sm:text-base leading-relaxed mb-4">
           شرکت گوگل از اواخر سال ۲۰۲۳ سیاست‌های خود را بر روی برنامه‌هایی که از مجوز <code class="text-amber-300 bg-slate-800 px-1.5 py-0.5 rounded">android.permission.BIND_VPN_SERVICE</code> استفاده می‌کنند به شدت سخت‌تر کرد. اپلیکیشن v2rayNG به عنوان یک کلاینت کاملاً متن‌باز و آزاد که اجازه ورود دستی هر سروری را به کاربر می‌دهد، فرم‌های اتوماتیک سیاست حفظ حریم خصوصی گوگل را پر نکرد و انتشار آن توسط توسعه‌دهنده اصلی در پلی‌استور متوقف گردید.
         </p>
 
         <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
-          <div class="glass-card rounded-2xl p-5 border border-red-500/30 bg-red-950/15">
+          <div class="clean-card rounded-2xl p-5 border border-red-200 bg-red-50/60">
             <h4 class="text-red-400 font-bold text-sm mb-2">⚠️ خطرات نسخه‌های جعلی گوگل‌پلی و کانال‌های تلگرام:</h4>
-            <ul class="space-y-2 text-xs text-slate-300 list-disc list-inside">
+            <ul class="space-y-2 text-xs text-slate-700 list-disc list-inside">
               <li>تزریق ماینرهای مخفی ارز دیجیتال و داغ شدن شدید پردازنده گوشی</li>
               <li>سرقت سشن‌های تلگرام و کوکی‌های ورود مرورگرها</li>
               <li>شنود ترافیک حساس و نمایش تبلیغات اجباری و پاپ‌آپ‌های ویروسی</li>
             </ul>
           </div>
-          <div class="glass-card rounded-2xl p-5 border border-emerald-500/30 bg-emerald-950/15">
+          <div class="clean-card rounded-2xl p-5 border border-emerald-200 bg-emerald-50/60">
             <h4 class="text-emerald-400 font-bold text-sm mb-2">✅ ملاک اصالت فایل امن:</h4>
-            <ul class="space-y-2 text-xs text-slate-300 list-disc list-inside">
+            <ul class="space-y-2 text-xs text-slate-700 list-disc list-inside">
               <li>انتشار در مخزن رسمی توسعه‌دهنده معتبر: <code class="text-brand-300">github.com/2dust/v2rayNG</code></li>
-              <li>فایل نسخه <strong class="text-white">Universal APK</strong> با امضای رسمی توسعه‌دهنده</li>
+              <li>فایل نسخه <strong class="text-slate-900">Universal APK</strong> با امضای رسمی توسعه‌دهنده</li>
               <li>همگام‌سازی لحظه‌ای بدون واسطه در پرتال دانلود روزنه نت</li>
             </ul>
           </div>
@@ -1104,13 +1047,13 @@ VLESS Reality (XTLS Vision) + Sing-box Core + TCP Fragmentation
       <!-- Section 5: Benchmark Matrix Table -->
       <section id="whitepaper-sec-5" class="mb-20 scroll-mt-28">
         <div class="flex items-center gap-3 mb-6">
-          <span class="w-8 h-8 rounded-xl bg-brand-500/20 text-brand-400 flex items-center justify-center font-bold text-sm">۵</span>
-          <h3 class="text-xl sm:text-2xl font-black text-white">بنچمارک و جدول مقایسه جامع کلاینت‌های ۲۰۲۶</h3>
+          <span class="w-8 h-8 rounded-xl bg-brand-50 text-brand-700 border border-brand-200 flex items-center justify-center font-bold text-sm">۵</span>
+          <h3 class="text-xl sm:text-2xl font-black text-slate-900">بنچمارک و جدول مقایسه جامع کلاینت‌های ۲۰۲۶</h3>
         </div>
 
         <div class="overflow-x-auto mb-8">
           <table class="w-full text-right text-xs sm:text-sm border border-slate-800 rounded-2xl overflow-hidden">
-            <thead class="bg-slate-950 text-slate-200">
+            <thead class="bg-slate-50 text-slate-800 font-bold border-b border-slate-200">
               <tr>
                 <th class="p-3 border-b border-slate-800">کلاینت</th>
                 <th class="p-3 border-b border-slate-800">سیستم‌عامل</th>
@@ -1121,7 +1064,7 @@ VLESS Reality (XTLS Vision) + Sing-box Core + TCP Fragmentation
                 <th class="p-3 border-b border-slate-800">منبع دانلود</th>
               </tr>
             </thead>
-            <tbody class="divide-y divide-slate-800/60 bg-slate-900/40 text-slate-300">
+            <tbody class="divide-y divide-slate-100 bg-white text-slate-700">
               <tr>
                 <td class="p-3 font-bold text-brand-400">v2rayNG</td>
                 <td class="p-3">اندروید</td>
@@ -1184,12 +1127,12 @@ VLESS Reality (XTLS Vision) + Sing-box Core + TCP Fragmentation
       <!-- Section 6: Troubleshooting & Decision Tree -->
       <section id="whitepaper-sec-6" class="mb-20 scroll-mt-28">
         <div class="flex items-center gap-3 mb-6">
-          <span class="w-8 h-8 rounded-xl bg-brand-500/20 text-brand-400 flex items-center justify-center font-bold text-sm">۶</span>
-          <h3 class="text-xl sm:text-2xl font-black text-white">پروتکل دترمینستیک عیب‌یابی و حل خطاهای متداول</h3>
+          <span class="w-8 h-8 rounded-xl bg-brand-50 text-brand-700 border border-brand-200 flex items-center justify-center font-bold text-sm">۶</span>
+          <h3 class="text-xl sm:text-2xl font-black text-slate-900">پروتکل دترمینستیک عیب‌یابی و حل خطاهای متداول</h3>
         </div>
 
         <!-- Decision Tree Box -->
-        <div class="glass-card rounded-2xl p-6 border border-slate-800 mb-8 code-block text-xs sm:text-sm text-slate-300">
+        <div class="rounded-2xl p-6 border border-slate-800 mb-8 code-block text-xs sm:text-sm text-slate-700">
 <span class="text-brand-400">[فلوچارت هوشمند عیب‌یابی اتصال]</span>
   │
   ├─► آیا پینگ -1 یا Timeout می‌دهد؟ ──► [تست Real Delay به جای ICMP یا فعال‌سازی فرگمنت]
@@ -1202,42 +1145,42 @@ VLESS Reality (XTLS Vision) + Sing-box Core + TCP Fragmentation
         </div>
 
         <div class="space-y-4">
-          <div class="glass-card rounded-2xl p-5 border border-slate-800">
-            <h4 class="text-white font-bold text-sm mb-2 flex items-center gap-2">
+          <div class="clean-card rounded-2xl p-5 border border-slate-200 bg-slate-50">
+            <h4 class="text-slate-900 font-bold text-sm mb-2 flex items-center gap-2">
               <span class="text-brand-400">●</span>
               <span>خطای اول: خطای پینگ منفی یک (Ping -1 ms / 10000ms / Timeout)</span>
             </h4>
-            <p class="text-slate-300 text-xs sm:text-sm leading-relaxed">
+            <p class="text-slate-700 text-xs sm:text-sm leading-relaxed">
               <strong>راهکار:</strong> یک‌بار حالت پرواز (Airplane Mode) را ۵ ثانیه فعال کرده و خاموش کنید تا آی‌پی دکل تجدید شود. سپس در برنامه نوع تست را از حالت ICMP به <strong>Real Delay</strong> تغییر دهید. در صورت پایداری قطعی، فرگمنت را فعال کنید.
             </p>
           </div>
 
-          <div class="glass-card rounded-2xl p-5 border border-slate-800">
-            <h4 class="text-white font-bold text-sm mb-2 flex items-center gap-2">
+          <div class="clean-card rounded-2xl p-5 border border-slate-200 bg-slate-50">
+            <h4 class="text-slate-900 font-bold text-sm mb-2 flex items-center gap-2">
               <span class="text-brand-400">●</span>
               <span>خطای دوم: عدم تطابق زمان (Time Desync / Handshake Expired)</span>
             </h4>
-            <p class="text-slate-300 text-xs sm:text-sm leading-relaxed">
+            <p class="text-slate-700 text-xs sm:text-sm leading-relaxed">
               <strong>راهکار:</strong> پروتکل‌های Reality به اختلاف زمان بیش از ۹۰ ثانیه با ساعت جهانی (UTC) حساسند. در تنظیمات گوشی بخش Date & Time، گزینه <strong>Automatic Network Time</strong> را روشن کنید. ساعت نباید دستی تنظیم شده باشد.
             </p>
           </div>
 
-          <div class="glass-card rounded-2xl p-5 border border-slate-800">
-            <h4 class="text-white font-bold text-sm mb-2 flex items-center gap-2">
+          <div class="clean-card rounded-2xl p-5 border border-slate-200 bg-slate-50">
+            <h4 class="text-slate-900 font-bold text-sm mb-2 flex items-center gap-2">
               <span class="text-brand-400">●</span>
               <span>خطای سوم: مسدودی و مسمومیت دی‌ان‌اس (DNS Poisoning)</span>
             </h4>
-            <p class="text-slate-300 text-xs sm:text-sm leading-relaxed">
+            <p class="text-slate-700 text-xs sm:text-sm leading-relaxed">
               <strong>راهکار:</strong> در تنظیمات v2rayNG در بخش Remote DNS، آدرس ضد فیلتر کلودفلر <code class="text-teal-300 bg-slate-800 px-1 rounded">https://1.1.1.1/dns-query</code> را وارد کنید و گزینه DNS over HTTPS را فعال فرمایید.
             </p>
           </div>
 
-          <div class="glass-card rounded-2xl p-5 border border-slate-800">
-            <h4 class="text-white font-bold text-sm mb-2 flex items-center gap-2">
+          <div class="clean-card rounded-2xl p-5 border border-slate-200 bg-slate-50">
+            <h4 class="text-slate-900 font-bold text-sm mb-2 flex items-center gap-2">
               <span class="text-brand-400">●</span>
               <span>خطای چهارم: اخطار گوگل پلی پروتکت (Play Protect Warning)</span>
             </h4>
-            <p class="text-slate-300 text-xs sm:text-sm leading-relaxed">
+            <p class="text-slate-700 text-xs sm:text-sm leading-relaxed">
               <strong>راهکار:</strong> هنگام نصب فایل Universal APK، روی گزینه <strong>جزئیات بیشتر (More Details)</strong> کلیک کرده و <strong>نصب در هر شرایطی (Install Anyway)</strong> را بزنید. فایل گیت‌هاب کاملاً پاک و متن‌باز است.
             </p>
           </div>
@@ -1247,26 +1190,26 @@ VLESS Reality (XTLS Vision) + Sing-box Core + TCP Fragmentation
       <!-- Section 7: Roozaneh Net Strategic Values -->
       <section id="whitepaper-sec-7" class="scroll-mt-28">
         <div class="flex items-center gap-3 mb-6">
-          <span class="w-8 h-8 rounded-xl bg-brand-500/20 text-brand-400 flex items-center justify-center font-bold text-sm">۷</span>
-          <h3 class="text-xl sm:text-2xl font-black text-white">ارزش‌های راهبردی روزنه نت (Data Rollover و تست هدیه)</h3>
+          <span class="w-8 h-8 rounded-xl bg-brand-50 text-brand-700 border border-brand-200 flex items-center justify-center font-bold text-sm">۷</span>
+          <h3 class="text-xl sm:text-2xl font-black text-slate-900">ارزش‌های راهبردی روزنه نت (Data Rollover و تست هدیه)</h3>
         </div>
 
-        <p class="text-slate-300 text-sm sm:text-base leading-relaxed mb-6">
+        <p class="text-slate-700 text-sm sm:text-base leading-relaxed mb-6">
           شبکه روزنه نت فراتر از یک ارائه‌دهنده معمولی اشتراک، به عنوان یک زیرساخت تخصصی ضدسانسور طراحی شده است که دو ارزش بنیادین زیر را برای مشترکین تضمین می‌نماید:
         </p>
 
         <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-          <div class="glass-card rounded-3xl p-6 border border-teal-500/30">
+          <div class="clean-card rounded-3xl p-6 border border-teal-200 bg-teal-50/50">
             <div class="text-2xl mb-3">🔄</div>
-            <h4 class="text-lg font-bold text-white mb-2">قانون عدم سوختن حجم (Data Rollover Guarantee)</h4>
-            <p class="text-xs sm:text-sm text-slate-300 leading-relaxed">
+            <h4 class="text-lg font-bold text-slate-900 mb-2">قانون عدم سوختن حجم (Data Rollover Guarantee)</h4>
+            <p class="text-xs sm:text-sm text-slate-700 leading-relaxed">
               در صورتی که اشتراک خود را پیش از پایان تاریخ انقضا تمدید فرمایید، ۱۰۰٪ ترافیک مصرف‌نشده از دوره گذشته مستقیم به اشتراک جدید شما افزوده خواهد شد و حتی یک مگابایت از هزینه‌ای که پرداخت فرموده‌اید هدر نمی‌رود.
             </p>
           </div>
-          <div class="glass-card rounded-3xl p-6 border border-brand-500/30">
+          <div class="clean-card rounded-3xl p-6 border border-brand-200 bg-brand-50/50">
             <div class="text-2xl mb-3">🎁</div>
-            <h4 class="text-lg font-bold text-white mb-2">تست هدیه ۲ الی ۳ گیگابایت بدون قید و شرط</h4>
-            <p class="text-xs sm:text-sm text-slate-300 leading-relaxed">
+            <h4 class="text-lg font-bold text-slate-900 mb-2">تست هدیه ۲ الی ۳ گیگابایت بدون قید و شرط</h4>
+            <p class="text-xs sm:text-sm text-slate-700 leading-relaxed">
               روزنه نت به کیفیت شبکه خود اطمینان کامل دارد. پیش از هرگونه پرداخت وجه، هر کاربر می‌تواند در ربات تلگرامی روزنه نت کانفیگ تست VLESS Reality پرسرعت دریافت کرده و در یوتیوب و بازی‌ها کیفیت را بسنجد.
             </p>
           </div>
@@ -1277,12 +1220,12 @@ VLESS Reality (XTLS Vision) + Sing-box Core + TCP Fragmentation
   </article>
 
   <!-- Interactive FAQ Accordion Section -->
-  <section id="troubleshooting" class="py-16 md:py-24 relative z-10 border-t border-slate-800/80 bg-slate-900/30">
+  <section id="troubleshooting" class="py-16 md:py-24 relative z-10 border-t border-slate-200 bg-white">
     <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
       
       <div class="text-center max-w-2xl mx-auto mb-16">
-        <span class="px-3.5 py-1 rounded-full text-xs font-bold bg-brand-500/10 text-brand-400 border border-brand-500/20 mb-3 inline-block">مرکز پاسخگویی سریع</span>
-        <h2 class="text-2xl sm:text-4xl font-black text-white mb-3">
+        <span class="px-3.5 py-1 rounded-full text-xs font-bold bg-brand-50 text-brand-700 border border-brand-200 mb-3 inline-block">مرکز پاسخگویی سریع</span>
+        <h2 class="text-2xl sm:text-4xl font-black text-slate-900 mb-3">
           سوالات متداول و راهنمای حل سریع خطاها
         </h2>
         <p class="text-slate-400 text-xs sm:text-base">
@@ -1293,81 +1236,81 @@ VLESS Reality (XTLS Vision) + Sing-box Core + TCP Fragmentation
       <div class="space-y-4" id="faq-accordion">
         
         <!-- FAQ 1: Google Play Removal -->
-        <details class="group glass-card rounded-3xl p-6 transition-all [&_summary::-webkit-details-marker]:hidden border border-amber-500/30" open>
-          <summary class="flex items-center justify-between cursor-pointer font-bold text-sm sm:text-base text-white">
+        <details class="group clean-card rounded-2xl p-6 transition-all [&_summary::-webkit-details-marker]:hidden border border-slate-200 bg-white shadow-xs" open>
+          <summary class="flex items-center justify-between cursor-pointer font-bold text-sm sm:text-base text-slate-900">
             <span class="flex items-center gap-3">
-              <span class="w-7 h-7 rounded-xl bg-amber-500/20 text-amber-400 flex items-center justify-center text-xs font-black">!</span>
+              <span class="w-7 h-7 rounded-xl bg-amber-50 text-amber-700 border border-amber-200 flex items-center justify-center text-xs font-black">!</span>
               چرا برنامه v2rayNG در گوگل‌پلی نیست و آیا دانلود مستقیم آن امن است؟
             </span>
             <span class="text-slate-400 group-open:rotate-180 transition-transform">
               <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
             </span>
           </summary>
-          <div class="mt-4 text-slate-300 text-xs sm:text-sm leading-relaxed border-t border-slate-800 pt-4">
+          <div class="mt-4 text-slate-700 text-xs sm:text-sm leading-relaxed border-t border-slate-100 pt-4">
             اپلیکیشن رسمی و متن‌باز <strong>v2rayNG</strong> به دلیل سیاست‌های سخت‌گیرانه گوگل در مورد خط‌مشی VpnService، مدت‌هاست از گوگل‌پلی خارج شده است. تمامی اپلیکیشن‌هایی که با این نام در گوگل‌پلی مشاهده می‌کنید، برنامه‌های تقلبی، پر از تبلیغات یا بدافزار هستند. تنها نسخه اصلی، نسخه رسمی توسعه‌دهنده معتبر (<code class="text-amber-300">2dust</code>) در گیت‌هاب است که فایل نصبی خام یونیورسال آن بدون هیچ تغییری در همین صفحه برای دانلود مستقیم قرار گرفته است.
           </div>
         </details>
 
         <!-- FAQ 2: Ping -1 -->
-        <details class="group glass-card rounded-3xl p-6 transition-all [&_summary::-webkit-details-marker]:hidden">
-          <summary class="flex items-center justify-between cursor-pointer font-bold text-sm sm:text-base text-white">
+        <details class="group clean-card rounded-2xl p-6 transition-all [&_summary::-webkit-details-marker]:hidden border border-slate-200 bg-white shadow-xs">
+          <summary class="flex items-center justify-between cursor-pointer font-bold text-sm sm:text-base text-slate-900">
             <span class="flex items-center gap-3">
-              <span class="w-7 h-7 rounded-xl bg-brand-500/20 text-brand-400 flex items-center justify-center text-xs font-black">۱</span>
+              <span class="w-7 h-7 rounded-xl bg-brand-50 text-brand-700 border border-brand-200 flex items-center justify-center text-xs font-black">۱</span>
               چرا پینگ برنامه منفی یک (-1 ms) یا تایم‌اوت می‌دهد؟
             </span>
             <span class="text-slate-400 group-open:rotate-180 transition-transform">
               <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
             </span>
           </summary>
-          <div class="mt-4 text-slate-300 text-xs sm:text-sm leading-relaxed border-t border-slate-800 pt-4">
+          <div class="mt-4 text-slate-700 text-xs sm:text-sm leading-relaxed border-t border-slate-100 pt-4">
             پینگ منفی ۱ در اکثر اوقات به این معنی است که اپراتور بسته‌های تست ICMP را مسدود کرده است در حالی که ترافیک پروتکل باز است. در تنظیمات برنامه روش تست را روی <strong>Real Delay</strong> بگذارید. در صورتی که اتصال برقرار نشد، گزینه <strong>Update Subscription</strong> (بروزرسانی اشتراک) را بزنید تا نودهای تازه و کم‌پینگ بارگذاری شوند.
           </div>
         </details>
 
         <!-- FAQ 3: Time Desync -->
-        <details class="group glass-card rounded-3xl p-6 transition-all [&_summary::-webkit-details-marker]:hidden">
-          <summary class="flex items-center justify-between cursor-pointer font-bold text-sm sm:text-base text-white">
+        <details class="group clean-card rounded-2xl p-6 transition-all [&_summary::-webkit-details-marker]:hidden border border-slate-200 bg-white shadow-xs">
+          <summary class="flex items-center justify-between cursor-pointer font-bold text-sm sm:text-base text-slate-900">
             <span class="flex items-center gap-3">
-              <span class="w-7 h-7 rounded-xl bg-brand-500/20 text-brand-400 flex items-center justify-center text-xs font-black">۲</span>
+              <span class="w-7 h-7 rounded-xl bg-brand-50 text-brand-700 border border-brand-200 flex items-center justify-center text-xs font-black">۲</span>
               اتصال برقرار است ولی هیچ سایتی باز نمی‌شود (مشکل ساعت و DNS)
             </span>
             <span class="text-slate-400 group-open:rotate-180 transition-transform">
               <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
             </span>
           </summary>
-          <div class="mt-4 text-slate-300 text-xs sm:text-sm leading-relaxed border-t border-slate-800 pt-4">
+          <div class="mt-4 text-slate-700 text-xs sm:text-sm leading-relaxed border-t border-slate-100 pt-4">
             پروتکل‌های پیشرفته VLESS Reality شدیداً به زمان سیستم حساس هستند. اگر ساعت دستگاه شما حتی ۳۰ ثانیه با زمان جهانی UTC تفاوت داشته باشد، فرایند احراز هویت TLS انجام نخواهد شد. برای رفع آن، در تنظیمات گوشی بخش Date & Time، گزینه <strong>Automatic Network Time</strong> (تنظیم خودکار ساعت شبکه) را فعال فرمایید.
           </div>
         </details>
 
         <!-- FAQ 4: Battery Optimization -->
-        <details class="group glass-card rounded-3xl p-6 transition-all [&_summary::-webkit-details-marker]:hidden">
-          <summary class="flex items-center justify-between cursor-pointer font-bold text-sm sm:text-base text-white">
+        <details class="group clean-card rounded-2xl p-6 transition-all [&_summary::-webkit-details-marker]:hidden border border-slate-200 bg-white shadow-xs">
+          <summary class="flex items-center justify-between cursor-pointer font-bold text-sm sm:text-base text-slate-900">
             <span class="flex items-center gap-3">
-              <span class="w-7 h-7 rounded-xl bg-brand-500/20 text-brand-400 flex items-center justify-center text-xs font-black">۳</span>
+              <span class="w-7 h-7 rounded-xl bg-brand-50 text-brand-700 border border-brand-200 flex items-center justify-center text-xs font-black">۳</span>
               قطع شدن اتصال با خاموش شدن صفحه گوشی در اندروید
             </span>
             <span class="text-slate-400 group-open:rotate-180 transition-transform">
               <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
             </span>
           </summary>
-          <div class="mt-4 text-slate-300 text-xs sm:text-sm leading-relaxed border-t border-slate-800 pt-4">
+          <div class="mt-4 text-slate-700 text-xs sm:text-sm leading-relaxed border-t border-slate-100 pt-4">
             این موضوع ناشی از مدیریت باتری هوشمند اندروید (Battery Optimization) است که برنامه‌های فعال در پس‌زمینه را قطع می‌کند. برای حل آن: وارد تنظیمات گوشی شوید، به بخش برنامه‌ها (Apps) بروید، برنامه مورد نظر (مثلاً v2rayNG) را انتخاب کرده و حالت مصرف باتری را روی <strong>Unrestricted (بدون محدودیت)</strong> قرار دهید.
           </div>
         </details>
 
         <!-- FAQ 5: Data Rollover -->
-        <details class="group glass-card rounded-3xl p-6 transition-all [&_summary::-webkit-details-marker]:hidden">
-          <summary class="flex items-center justify-between cursor-pointer font-bold text-sm sm:text-base text-white">
+        <details class="group clean-card rounded-2xl p-6 transition-all [&_summary::-webkit-details-marker]:hidden border border-slate-200 bg-white shadow-xs">
+          <summary class="flex items-center justify-between cursor-pointer font-bold text-sm sm:text-base text-slate-900">
             <span class="flex items-center gap-3">
-              <span class="w-7 h-7 rounded-xl bg-brand-500/20 text-brand-400 flex items-center justify-center text-xs font-black">۴</span>
+              <span class="w-7 h-7 rounded-xl bg-brand-50 text-brand-700 border border-brand-200 flex items-center justify-center text-xs font-black">۴</span>
               قانون انحصاری «عدم سوختن حجم مشترکین» (Data Rollover) چگونه است؟
             </span>
             <span class="text-slate-400 group-open:rotate-180 transition-transform">
               <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
             </span>
           </summary>
-          <div class="mt-4 text-slate-300 text-xs sm:text-sm leading-relaxed border-t border-slate-800 pt-4">
+          <div class="mt-4 text-slate-700 text-xs sm:text-sm leading-relaxed border-t border-slate-100 pt-4">
             در تمام بسته‌های اشتراک روزنه نت، در صورتی که قبل از پایان تاریخ انقضای سرویس فعلی اشتراک خود را تمدید فرمایید، تمام حجم دست‌نخورده از دوره قبل مستقیم به اشتراک جدید شما منتقل خواهد شد و حتی یک مگابایت هم نمی‌سوزد.
           </div>
         </details>
@@ -1378,12 +1321,12 @@ VLESS Reality (XTLS Vision) + Sing-box Core + TCP Fragmentation
   </section>
 
   <!-- Pricing Plans Section -->
-  <section id="pricing" class="py-16 md:py-24 relative z-10 border-t border-slate-800/80">
+  <section id="pricing" class="py-16 md:py-24 relative z-10 border-t border-slate-200 bg-slate-50">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       
       <div class="text-center max-w-3xl mx-auto mb-16">
-        <span class="px-3.5 py-1 rounded-full text-xs font-bold bg-brand-500/10 text-brand-400 border border-brand-500/20 mb-3 inline-block">تعرفه‌های رسمی روزنه نت</span>
-        <h2 class="text-2xl sm:text-4xl font-black text-white mb-3">
+        <span class="px-3.5 py-1 rounded-full text-xs font-bold bg-brand-50 text-brand-700 border border-brand-200 mb-3 inline-block">تعرفه‌های رسمی روزنه نت</span>
+        <h2 class="text-2xl sm:text-4xl font-black text-slate-900 mb-3">
           کاتالوگ بسته‌ها و تعرفه‌های خرید اشتراک
         </h2>
         <p class="text-slate-400 text-xs sm:text-base">
@@ -1394,19 +1337,19 @@ VLESS Reality (XTLS Vision) + Sing-box Core + TCP Fragmentation
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 items-stretch">
 
         <!-- Plan 0: Free Trial -->
-        <div class="glass-card rounded-3xl p-6 flex flex-col justify-between border border-brand-500/30">
+        <div class="clean-card rounded-3xl p-6 flex flex-col justify-between border border-slate-200 bg-white shadow-xs">
           <div>
             <div class="flex items-center justify-between mb-4">
               <span class="text-2xl">🎁</span>
-              <span class="px-3 py-1 rounded-full text-xs font-bold bg-brand-500/20 text-brand-400 border border-brand-500/30">تست ۳ روزه</span>
+              <span class="px-3 py-1 rounded-full text-xs font-bold bg-brand-50 text-brand-700 border border-brand-200 border border-brand-500/30">تست ۳ روزه</span>
             </div>
-            <h3 class="text-xl font-bold text-white mb-1">بسته هدیه تست</h3>
+            <h3 class="text-xl font-bold text-slate-900 mb-1">بسته هدیه تست</h3>
             <p class="text-xs text-slate-400 mb-4">Free Trial هدیه</p>
             <div class="mb-6">
               <span class="text-3xl font-black text-brand-400">رایگان</span>
               <span class="text-xs text-slate-400 mr-1">/ ۰ تومان</span>
             </div>
-            <ul class="space-y-3 text-xs text-slate-300 mb-6">
+            <ul class="space-y-3 text-xs text-slate-700 mb-6">
               <li class="flex items-center gap-2">
                 <svg class="w-4 h-4 text-brand-400 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
                 <span><strong>۲ الی ۳ گیگابایت</strong> ترافیک پرسرعت</span>
@@ -1428,19 +1371,19 @@ VLESS Reality (XTLS Vision) + Sing-box Core + TCP Fragmentation
         </div>
 
         <!-- Plan 1: Economy -->
-        <div class="glass-card rounded-3xl p-6 flex flex-col justify-between">
+        <div class="clean-card rounded-3xl p-6 flex flex-col justify-between border border-slate-200 bg-white shadow-xs">
           <div>
             <div class="flex items-center justify-between mb-4">
               <span class="text-2xl">🟢</span>
-              <span class="px-3 py-1 rounded-full text-xs font-bold bg-slate-800 text-slate-300">۱ ماهه (۳۰ روز)</span>
+              <span class="px-3 py-1 rounded-full text-xs font-bold bg-slate-100 text-slate-700 border border-slate-200">۱ ماهه (۳۰ روز)</span>
             </div>
-            <h3 class="text-xl font-bold text-white mb-1">بسته اقتصادی</h3>
+            <h3 class="text-xl font-bold text-slate-900 mb-1">بسته اقتصادی</h3>
             <p class="text-xs text-slate-400 mb-4">Economy Plan</p>
             <div class="mb-6">
-              <span class="text-3xl font-black text-white">۲۱۵,۰۰۰</span>
+              <span class="text-3xl font-black text-slate-900">۲۱۵,۰۰۰</span>
               <span class="text-xs text-slate-400 mr-1">تومان</span>
             </div>
-            <ul class="space-y-3 text-xs text-slate-300 mb-6">
+            <ul class="space-y-3 text-xs text-slate-700 mb-6">
               <li class="flex items-center gap-2">
                 <svg class="w-4 h-4 text-brand-400 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
                 <span><strong>۲۵ گیگابایت</strong> ترافیک بین‌الملل</span>
@@ -1462,22 +1405,22 @@ VLESS Reality (XTLS Vision) + Sing-box Core + TCP Fragmentation
         </div>
 
         <!-- Plan 2: Standard (Most Popular) -->
-        <div class="glass-card rounded-3xl p-6 flex flex-col justify-between border-2 border-brand-500/50 glow-accent relative">
+        <div class="clean-card rounded-3xl p-6 flex flex-col justify-between border-2 border-brand-500 bg-white shadow-md relative">
           <div class="absolute -top-3 left-1/2 -translate-x-1/2 px-4 py-1 rounded-full bg-brand-500 text-white font-black text-[11px] shadow-md uppercase tracking-wider">
             پرفروش‌ترین انتخاب
           </div>
           <div>
             <div class="flex items-center justify-between mb-4 mt-2">
               <span class="text-2xl">🔵</span>
-              <span class="px-3 py-1 rounded-full text-xs font-bold bg-brand-500/20 text-brand-400">۱ ماهه (۳۰ روز)</span>
+              <span class="px-3 py-1 rounded-full text-xs font-bold bg-brand-50 text-brand-700 border border-brand-200">۱ ماهه (۳۰ روز)</span>
             </div>
-            <h3 class="text-xl font-bold text-white mb-1">بسته استاندارد</h3>
+            <h3 class="text-xl font-bold text-slate-900 mb-1">بسته استاندارد</h3>
             <p class="text-xs text-slate-400 mb-4">Standard Plan</p>
             <div class="mb-6">
               <span class="text-3xl font-black text-brand-400">۲۹۵,۰۰۰</span>
               <span class="text-xs text-slate-400 mr-1">تومان</span>
             </div>
-            <ul class="space-y-3 text-xs text-slate-300 mb-6">
+            <ul class="space-y-3 text-xs text-slate-700 mb-6">
               <li class="flex items-center gap-2">
                 <svg class="w-4 h-4 text-brand-400 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
                 <span><strong>۴۵ گیگابایت</strong> ترافیک بدون افت سرعت</span>
@@ -1499,19 +1442,19 @@ VLESS Reality (XTLS Vision) + Sing-box Core + TCP Fragmentation
         </div>
 
         <!-- Plan 3: Pro VIP -->
-        <div class="glass-card rounded-3xl p-6 flex flex-col justify-between">
+        <div class="clean-card rounded-3xl p-6 flex flex-col justify-between border border-slate-200 bg-white shadow-xs">
           <div>
             <div class="flex items-center justify-between mb-4">
               <span class="text-2xl">🟣</span>
-              <span class="px-3 py-1 rounded-full text-xs font-bold bg-slate-800 text-slate-300">۱ ماهه (۳۰ روز)</span>
+              <span class="px-3 py-1 rounded-full text-xs font-bold bg-slate-100 text-slate-700 border border-slate-200">۱ ماهه (۳۰ روز)</span>
             </div>
-            <h3 class="text-xl font-bold text-white mb-1">بسته حرفه‌ای VIP</h3>
+            <h3 class="text-xl font-bold text-slate-900 mb-1">بسته حرفه‌ای VIP</h3>
             <p class="text-xs text-slate-400 mb-4">Pro VIP Plan</p>
             <div class="mb-6">
-              <span class="text-3xl font-black text-white">۳۹۵,۰۰۰</span>
+              <span class="text-3xl font-black text-slate-900">۳۹۵,۰۰۰</span>
               <span class="text-xs text-slate-400 mr-1">تومان</span>
             </div>
-            <ul class="space-y-3 text-xs text-slate-300 mb-6">
+            <ul class="space-y-3 text-xs text-slate-700 mb-6">
               <li class="flex items-center gap-2">
                 <svg class="w-4 h-4 text-brand-400 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
                 <span><strong>۷۵ گیگابایت</strong> ترافیک اختصاصی</span>
@@ -1538,12 +1481,12 @@ VLESS Reality (XTLS Vision) + Sing-box Core + TCP Fragmentation
   </section>
 
   <!-- Network Ecosystem & Sister Portals Hub -->
-  <section id="ecosystem" class="py-16 md:py-24 relative z-10 border-t border-slate-800/80 bg-slate-900/30">
+  <section id="ecosystem" class="py-16 md:py-24 relative z-10 border-t border-slate-200 bg-white">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       
       <div class="text-center max-w-3xl mx-auto mb-16">
-        <span class="px-3.5 py-1 rounded-full text-xs font-bold bg-brand-500/10 text-brand-400 border border-brand-500/20 mb-3 inline-block">اکوسیستم تخصصی روزنه نت</span>
-        <h2 class="text-2xl sm:text-4xl font-black text-white mb-3">
+        <span class="px-3.5 py-1 rounded-full text-xs font-bold bg-brand-50 text-brand-700 border border-brand-200 mb-3 inline-block">اکوسیستم تخصصی روزنه نت</span>
+        <h2 class="text-2xl sm:text-4xl font-black text-slate-900 mb-3">
           پرتال‌ها و مخازن رسمی شبکه روزنه نت
         </h2>
         <p class="text-slate-400 text-xs sm:text-base">
@@ -1554,36 +1497,36 @@ VLESS Reality (XTLS Vision) + Sing-box Core + TCP Fragmentation
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
 
         <a href="https://roozaneh.github.io/kharid-vpn-filter-shekan/" target="_blank" rel="noopener"
-           class="glass-card rounded-3xl p-6 group block">
+           class="clean-card rounded-3xl p-6 group block border border-slate-200 bg-white shadow-xs hover:border-brand-300 hover:shadow-md transition-all">
           <div class="text-3xl mb-4 group-hover:scale-110 transition-transform">🛒</div>
-          <h3 class="text-lg font-bold text-white mb-2 group-hover:text-brand-400 transition-colors">خرید VPN پرسرعت</h3>
+          <h3 class="text-lg font-bold text-slate-900 mb-2 group-hover:text-brand-400 transition-colors">خرید VPN پرسرعت</h3>
           <p class="text-slate-400 text-xs leading-relaxed">
             راهنمای جامع خرید اشتراک وی پی ان و فیلتر شکن بدون قطعی همراه اول و ایرانسل.
           </p>
         </a>
 
         <a href="https://roozaneh.github.io/v2ray-configs-iran/" target="_blank" rel="noopener"
-           class="glass-card rounded-3xl p-6 group block">
+           class="clean-card rounded-3xl p-6 group block border border-slate-200 bg-white shadow-xs hover:border-brand-300 hover:shadow-md transition-all">
           <div class="text-3xl mb-4 group-hover:scale-110 transition-transform">📶</div>
-          <h3 class="text-lg font-bold text-white mb-2 group-hover:text-brand-400 transition-colors">کانفیگ اپراتوری</h3>
+          <h3 class="text-lg font-bold text-slate-900 mb-2 group-hover:text-brand-400 transition-colors">کانفیگ اپراتوری</h3>
           <p class="text-slate-400 text-xs leading-relaxed">
             کانفیگ‌های اختصاصی V2Ray همراه اول، ایرانسل، تنظیمات فرگمنت و پینگ پایین.
           </p>
         </a>
 
         <a href="https://roozaneh.github.io/iran-tunnel-v2ray-netmeli/" target="_blank" rel="noopener"
-           class="glass-card rounded-3xl p-6 group block">
+           class="clean-card rounded-3xl p-6 group block border border-slate-200 bg-white shadow-xs hover:border-brand-300 hover:shadow-md transition-all">
           <div class="text-3xl mb-4 group-hover:scale-110 transition-transform">🛡️</div>
-          <h3 class="text-lg font-bold text-white mb-2 group-hover:text-brand-400 transition-colors">فیلتر شکن اینترنت ملی</h3>
+          <h3 class="text-lg font-bold text-slate-900 mb-2 group-hover:text-brand-400 transition-colors">فیلتر شکن اینترنت ملی</h3>
           <p class="text-slate-400 text-xs leading-relaxed">
             تانل سرور ایران، ریورس پراکسی و روش‌های اتصال در شرایط قطعی اینترنت بین‌الملل.
           </p>
         </a>
 
         <a href="https://roozaneh.github.io/" target="_blank" rel="noopener"
-           class="glass-card rounded-3xl p-6 group block">
+           class="clean-card rounded-3xl p-6 group block border border-slate-200 bg-white shadow-xs hover:border-brand-300 hover:shadow-md transition-all">
           <div class="text-3xl mb-4 group-hover:scale-110 transition-transform">🌐</div>
-          <h3 class="text-lg font-bold text-white mb-2 group-hover:text-brand-400 transition-colors">هاب مرکزی روزنه نت</h3>
+          <h3 class="text-lg font-bold text-slate-900 mb-2 group-hover:text-brand-400 transition-colors">هاب مرکزی روزنه نت</h3>
           <p class="text-slate-400 text-xs leading-relaxed">
             مشاهده پرتال اصلی و درگاه جامع خدمات و ارتباطات شبکه روزنه نت.
           </p>
@@ -1595,7 +1538,7 @@ VLESS Reality (XTLS Vision) + Sing-box Core + TCP Fragmentation
   </section>
 
   <!-- Corporate Footer -->
-  <footer class="border-t border-slate-800/80 bg-slate-950 py-12 relative z-10 text-slate-400 text-xs">
+  <footer class="border-t border-slate-200 bg-slate-100 py-12 relative z-10 text-slate-600 text-xs">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="flex flex-col md:flex-row items-center justify-between gap-6 pb-8 border-b border-slate-800">
         <div class="flex items-center gap-3">
@@ -1603,11 +1546,11 @@ VLESS Reality (XTLS Vision) + Sing-box Core + TCP Fragmentation
             R
           </div>
           <div>
-            <div class="text-white font-bold text-sm">روزنه نت (Roozaneh Net)</div>
+            <div class="text-slate-900 font-bold text-sm">روزنه نت (Roozaneh Net)</div>
             <div class="text-slate-500 text-[11px]">پایداری، سرعت و امنیت در اتصال به اینترنت آزاد</div>
           </div>
         </div>
-        <div class="flex flex-wrap items-center justify-center gap-6 text-slate-300">
+        <div class="flex flex-wrap items-center justify-center gap-6 text-slate-700">
           <a href="https://github.com/roozaneh/kharid-vpn-filter-shekan/issues/2" target="_blank" rel="noopener noreferrer" class="hover:text-brand-400 text-amber-300 font-bold transition-colors">📌 خرید کانفیگ V2Ray (ایشو رسمی)</a>
           <a href="https://t.me/RoozanehNetBot?start=gh_download" target="_blank" rel="noopener noreferrer" class="hover:text-brand-400 transition-colors">ربات دریافت تست هدیه</a>
           <a href="https://t.me/RoozanehNet" target="_blank" rel="noopener noreferrer" class="hover:text-brand-400 transition-colors">کانال اطلاع‌رسانی</a>
@@ -1622,12 +1565,12 @@ VLESS Reality (XTLS Vision) + Sing-box Core + TCP Fragmentation
     </div>
   </footer>
 
-  <!-- Interactive JavaScript Helpers -->
+    <!-- Interactive JavaScript Helpers -->
   <script>
-    // Smart OS Auto-Detection & Priority Sorting
+    // Smart OS Auto-Detection & Quiet Priority Sorting (Flat & Soft Light Mode)
     const OS_CONFIG = {
       android: { label: 'اندروید (Android)', icon: '🤖', filterKey: 'android' },
-      ios: { label: 'آیفون و آیپد (iOS)', icon: '🍏', filterKey: 'ios' },
+      ios: { label: 'آیفون (iOS)', icon: '🍏', filterKey: 'ios' },
       windows: { label: 'ویندوز (Windows)', icon: '💻', filterKey: 'windows' },
       mac: { label: 'مک (macOS)', icon: '🍎', filterKey: 'mac' },
       linux: { label: 'لینوکس (Linux)', icon: '🐧', filterKey: 'linux' }
@@ -1652,19 +1595,8 @@ VLESS Reality (XTLS Vision) + Sing-box Core + TCP Fragmentation
       window.currentDetectedOS = detected;
       const info = OS_CONFIG[detected];
 
-      // 1. Show detected OS Banner
-      const banner = document.getElementById('device-detect-container');
-      const iconEl = document.getElementById('detected-device-icon');
-      const labelEl = document.getElementById('detected-device-label');
-      
-      if (banner && iconEl && labelEl) {
-        iconEl.innerText = info.icon;
-        labelEl.innerText = info.label;
-        banner.classList.remove('hidden');
-      }
-
-      // 2. Prioritize & Reorder matching cards to the top
-      const grid = document.querySelector('.grid.grid-cols-1.md\\:grid-cols-2.lg\\:grid-cols-3') || document.querySelector('.grid');
+      // 1. Reorder DOM so user-matching cards appear at the top
+      const grid = document.querySelector('.app-card')?.parentElement || document.querySelector('.grid');
       if (grid) {
         const cards = Array.from(grid.querySelectorAll('.app-card'));
         const matchingCards = [];
@@ -1673,27 +1605,36 @@ VLESS Reality (XTLS Vision) + Sing-box Core + TCP Fragmentation
         cards.forEach(card => {
           const cardOS = card.getAttribute('data-os') || '';
           if (cardOS.includes(detected)) {
-            // Attach personal device recommendation pill
+            // Subtle, elegant soft recommendation badge
             if (!card.querySelector('.device-match-badge')) {
               const badge = document.createElement('div');
-              badge.className = 'device-match-badge inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-brand-500/15 border border-brand-500/35 text-brand-300 text-[11px] font-bold mb-3 shadow-sm';
-              badge.innerHTML = `<span>${info.icon}</span><span>پیشنهاد اول برای دستگاه شما</span>`;
+              badge.className = 'device-match-badge inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-brand-50 border border-brand-200 text-brand-700 text-[11px] font-bold mb-3 shadow-xs';
+              badge.innerHTML = `<span>${info.icon}</span><span>سازگار با سیستم شما</span>`;
               const titleEl = card.querySelector('h3');
               if (titleEl) {
                 titleEl.parentNode.insertBefore(badge, titleEl);
               }
             }
-            card.classList.add('border-brand-500/60', 'glow-accent');
+            card.classList.add('border-brand-500/40', 'ring-1', 'ring-brand-500/20');
             matchingCards.push(card);
           } else {
             otherCards.push(card);
           }
         });
 
-        // Re-append: user-matching cards first, then other platform cards
+        // Re-append: matching first, then others
         matchingCards.forEach(c => grid.appendChild(c));
         otherCards.forEach(c => grid.appendChild(c));
       }
+
+      // 2. Mark the user's OS tab with a subtle badge and prioritize it
+      const matchingTab = document.querySelector(`.filter-btn[data-target="${detected}"]`);
+      if (matchingTab) {
+        matchingTab.innerHTML = `${info.icon} ${info.label} <span class="text-[10px] bg-brand-100 text-brand-800 px-1.5 py-0.5 rounded-full font-bold mr-1">دستگاه شما</span>`;
+      }
+
+      // Automatically show the user's OS client list in priority
+      filterOS(detected);
     }
 
     if (document.readyState === 'loading') {
@@ -1702,16 +1643,16 @@ VLESS Reality (XTLS Vision) + Sing-box Core + TCP Fragmentation
       initAutoDevicePrioritization();
     }
 
-    // OS Card Filter
+    // OS Card Filter (Light Mode Tabs)
     function filterOS(os) {
       const tabs = document.querySelectorAll('.filter-btn');
       tabs.forEach(tab => {
         if (tab.getAttribute('data-target') === os) {
-          tab.classList.remove('bg-slate-800', 'text-slate-300');
-          tab.classList.add('bg-brand-600', 'text-white', 'shadow-md', 'shadow-brand-600/30');
+          tab.classList.remove('bg-white', 'text-slate-700', 'border-slate-200');
+          tab.classList.add('bg-brand-600', 'text-white', 'border-brand-600', 'shadow-xs');
         } else {
-          tab.classList.add('bg-slate-800', 'text-slate-300');
-          tab.classList.remove('bg-brand-600', 'text-white', 'shadow-md', 'shadow-brand-600/30');
+          tab.classList.remove('bg-brand-600', 'text-white', 'border-brand-600', 'shadow-xs');
+          tab.classList.add('bg-white', 'text-slate-700', 'border-slate-200');
         }
       });
 
