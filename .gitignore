@@ -1,0 +1,6 @@
+__pycache__/
+*.pyc
+*.secret.*
+HANDOFF.md
+FINANCIAL_REPORT.md
+.DS_Store
