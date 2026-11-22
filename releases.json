@@ -1,0 +1,69 @@
+{
+  "last_updated": "2026-11-22T17:51:32.341176+00:00",
+  "clients": {
+    "v2rayNG": {
+      "repo": "2dust/v2rayNG",
+      "tag": "2.3.15",
+      "asset_name": "v2rayNG_2.3.15_universal.apk",
+      "download_url": "https://github.com/2dust/v2rayNG/releases/download/2.3.15/v2rayNG_2.3.15_universal.apk",
+      "size_mb": 68.54,
+      "updated_at": "2026-11-01T06:59:44Z"
+    },
+    "Happ": {
+      "repo": "Happ-proxy/happ-android",
+      "tag": "4.11.2",
+      "asset_name": "Happ.apk",
+      "download_url": "https://github.com/Happ-proxy/happ-android/releases/download/4.11.2/Happ.apk",
+      "size_mb": 66.14,
+      "updated_at": "2026-11-16T07:25:15Z"
+    },
+    "NekoBox": {
+      "repo": "MatsuriDayo/NekoBoxForAndroid",
+      "tag": "1.4.2",
+      "asset_name": "NekoBox-1.4.2-arm64-v8a.apk",
+      "download_url": "https://github.com/MatsuriDayo/NekoBoxForAndroid/releases/download/1.4.2/NekoBox-1.4.2-arm64-v8a.apk",
+      "size_mb": 14.55,
+      "updated_at": "2026-02-09T03:54:59Z"
+    },
+    "SingBox": {
+      "repo": "SagerNet/sing-box",
+      "tag": "v1.14.4",
+      "asset_name": "SFA-1.14.4-legacy-android-5-universal.apk",
+      "download_url": "https://github.com/SagerNet/sing-box/releases/download/v1.14.4/SFA-1.14.4-legacy-android-5-universal.apk",
+      "size_mb": 101.93,
+      "updated_at": "2026-10-23T15:21:47Z"
+    },
+    "Hiddify_Android": {
+      "repo": "hiddify/hiddify-app",
+      "tag": "v5.9.15",
+      "asset_name": "Hiddify-Android-universal.apk",
+      "download_url": "https://github.com/hiddify/hiddify-app/releases/download/v5.9.15/Hiddify-Android-universal.apk",
+      "size_mb": 179.27,
+      "updated_at": "2026-11-19T07:45:14Z"
+    },
+    "Hiddify_Windows": {
+      "repo": "hiddify/hiddify-app",
+      "tag": "v5.9.15",
+      "asset_name": "Hiddify-Windows-Setup-x64.exe",
+      "download_url": "https://github.com/hiddify/hiddify-app/releases/download/v5.9.15/Hiddify-Windows-Setup-x64.exe",
+      "size_mb": 48.84,
+      "updated_at": "2026-11-19T07:45:06Z"
+    },
+    "v2rayN": {
+      "repo": "2dust/v2rayN",
+      "tag": "7.25.6",
+      "asset_name": "v2rayN-windows-64.zip",
+      "download_url": "https://github.com/2dust/v2rayN/releases/download/7.25.6/v2rayN-windows-64.zip",
+      "size_mb": 160.91,
+      "updated_at": "2026-10-11T06:03:41Z"
+    },
+    "NekoRay": {
+      "repo": "MatsuriDayo/nekoray",
+      "tag": "4.0.1",
+      "asset_name": "nekoray-4.0.1-2024-12-12-windows64.zip",
+      "download_url": "https://github.com/MatsuriDayo/nekoray/releases/download/4.0.1/nekoray-4.0.1-2024-12-12-windows64.zip",
+      "size_mb": 39.79,
+      "updated_at": "2024-12-12T08:19:13Z"
+    }
+  }
+}

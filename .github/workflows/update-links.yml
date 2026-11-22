@@ -1,0 +1,45 @@
+name: Sync Latest Client Releases & Update Links
+
+on:
+  schedule:
+    # Run every 6 hours automatically (00:00, 06:00, 12:00, 18:00 UTC)
+    - cron: '0 */6 * * *'
+  workflow_dispatch:
+    # Allows manual trigger at any time from GitHub Actions UI
+
+permissions:
+  contents: write
+
+jobs:
+  sync-releases:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Execute Release Synchronizer
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          python scripts/update_releases.py
+
+      - name: Commit and Push if updated
+        run: |
+          git config --local user.name "github-actions[bot]"
+          git config --local user.email "github-actions[bot]@users.noreply.github.com"
+          
+          if [ -n "$(git status --porcelain)" ]; then
+            echo "Changes detected, committing updates..."
+            git add README.md index.html releases.json
+            git commit -m "chore(releases): auto-sync latest direct download links [skip ci]"
+            git push origin main
+          else
+            echo "All release links are already up-to-date. No commit needed."
+          fi
