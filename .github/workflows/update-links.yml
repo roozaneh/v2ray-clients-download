@@ -37,7 +37,7 @@ jobs:
           
           if [ -n "$(git status --porcelain)" ]; then
             echo "Changes detected, committing updates..."
-            git add README.md index.html releases.json
+            git add README.md index.html releases.json apps/
             git commit -m "chore(releases): auto-sync latest direct download links [skip ci]"
             git push origin main
           else

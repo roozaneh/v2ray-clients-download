@@ -16,6 +16,7 @@ WORKSPACE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 README_PATH = os.path.join(WORKSPACE_DIR, "README.md")
 HTML_PATH = os.path.join(WORKSPACE_DIR, "index.html")
 JSON_PATH = os.path.join(WORKSPACE_DIR, "releases.json")
+APPS_DIR = os.path.join(WORKSPACE_DIR, "apps")
 
 # GitHub Token resolution
 TOKEN = os.environ.get("GITHUB_TOKEN")
@@ -43,7 +44,7 @@ TARGETS = {
             r"^v2rayNG_.*universal\.apk$",
             r"^v2rayNG_.*arm64-v8a\.apk$"
         ],
-        "link_pattern": r"https://github\.com/2dust/v2rayNG/releases/download/[^\s\"\'><\)]+"
+        "link_pattern": r"https://github\.com/2dust/v2rayNG/releases/download/[^/]+/[^\s\"\'><\)]*_universal\.apk"
     },
     "Happ": {
         "repo": "Happ-proxy/happ-android",
@@ -51,7 +52,7 @@ TARGETS = {
             r"^Happ\.apk$",
             r"^Happ.*\.apk$"
         ],
-        "link_pattern": r"https://github\.com/Happ-proxy/happ-android/releases/download/[^\s\"\'><\)]+"
+        "link_pattern": r"https://github\.com/Happ-proxy/happ-android/releases/download/[^/]+/Happ\.apk"
     },
     "NekoBox": {
         "repo": "MatsuriDayo/NekoBoxForAndroid",
@@ -59,7 +60,7 @@ TARGETS = {
             r"^NekoBox-.*universal\.apk$",
             r"^NekoBox-.*arm64-v8a\.apk$"
         ],
-        "link_pattern": r"https://github\.com/MatsuriDayo/NekoBoxForAndroid/releases/download/[^\s\"\'><\)]+"
+        "link_pattern": r"https://github\.com/MatsuriDayo/NekoBoxForAndroid/releases/download/[^/]+/NekoBox-[^\s\"\'><\)]*-arm64-v8a\.apk"
     },
     "SingBox": {
         "repo": "SagerNet/sing-box",
@@ -69,7 +70,7 @@ TARGETS = {
             r"^SFA-.*universal\.apk$",
             r"^SFA-.*arm64-v8a\.apk$"
         ],
-        "link_pattern": r"https://github\.com/SagerNet/sing-box/releases/download/[^\s\"\'><\)]+"
+        "link_pattern": r"https://github\.com/SagerNet/sing-box/releases/download/[^/]+/SFA-[^\s\"\'><\)]*-universal\.apk"
     },
     "Hiddify_Android": {
         "repo": "hiddify/hiddify-app",
@@ -77,7 +78,7 @@ TARGETS = {
             r"^Hiddify-Android-universal\.apk$",
             r"^Hiddify-Android-arm64\.apk$"
         ],
-        "link_pattern": r"https://github\.com/hiddify/hiddify-app/releases/download/[^\s\"\'><\)]+\.apk"
+        "link_pattern": r"https://github\.com/hiddify/hiddify-app/releases/download/[^/]+/Hiddify-Android-universal\.apk"
     },
     "Hiddify_Windows": {
         "repo": "hiddify/hiddify-app",
@@ -86,7 +87,7 @@ TARGETS = {
             r"^Hiddify-Windows-.*\.exe$",
             r"^Hiddify-Windows-.*\.zip$"
         ],
-        "link_pattern": r"https://github\.com/hiddify/hiddify-app/releases/download/[^\s\"\'><\)]+\.exe"
+        "link_pattern": r"https://github\.com/hiddify/hiddify-app/releases/download/[^/]+/Hiddify-Windows-Setup-x64\.exe"
     },
     "v2rayN": {
         "repo": "2dust/v2rayN",
@@ -94,7 +95,7 @@ TARGETS = {
             r"^v2rayN-windows-64\.zip$",
             r"^v2rayN-With-Core\.zip$"
         ],
-        "link_pattern": r"https://github\.com/2dust/v2rayN/releases/download/[^\s\"\'><\)]+"
+        "link_pattern": r"https://github\.com/2dust/v2rayN/releases/download/[^/]+/v2rayN-windows-64\.zip"
     },
     "NekoRay": {
         "repo": "MatsuriDayo/nekoray",
@@ -102,7 +103,7 @@ TARGETS = {
             r"^nekoray-.*windows64\.zip$",
             r"^nekoray-.*\.zip$"
         ],
-        "link_pattern": r"https://github\.com/MatsuriDayo/nekoray/releases/download/[^\s\"\'><\)]+"
+        "link_pattern": r"https://github\.com/MatsuriDayo/nekoray/releases/download/[^/]+/nekoray-[^\s\"\'><\)]*-windows64\.zip"
     }
 }
 
@@ -202,12 +203,39 @@ def update_html(results):
     print("Updated index.html direct links")
 
 
+def update_apps_html(results):
+    if not os.path.exists(APPS_DIR):
+        return
+
+    import glob
+    app_files = glob.glob(os.path.join(APPS_DIR, "*.html"))
+    for app_path in app_files:
+        with open(app_path, "r", encoding="utf-8") as f:
+            content = f.read()
+
+        changed = False
+        for key, info in results.items():
+            url = info["download_url"]
+            pattern = TARGETS.get(key, {}).get("link_pattern")
+            if pattern:
+                new_content = re.sub(pattern, url, content)
+                if new_content != content:
+                    content = new_content
+                    changed = True
+
+        if changed:
+            with open(app_path, "w", encoding="utf-8") as f:
+                f.write(content)
+            print(f"Updated {os.path.basename(app_path)} direct links")
+
+
 if __name__ == "__main__":
     resolved = resolve_all_assets()
     if resolved:
         update_json(resolved)
         update_readme(resolved)
         update_html(resolved)
+        update_apps_html(resolved)
         print("Synchronization completed successfully.")
     else:
         print("No releases resolved. Aborting update.")
