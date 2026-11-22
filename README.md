@@ -21,7 +21,7 @@
 > [🛍️ وب‌سایت خرید VPN و تست](https://roozaneh.github.io/kharid-vpn-filter-shekan/) • [📡 وب‌سایت کانفیگ‌های ایران](https://roozaneh.github.io/v2ray-configs-iran/) • [🛡️ وب‌سایت تانل اینترنت ملی](https://roozaneh.github.io/iran-tunnel-v2ray-netmeli/) • [📲 وب‌سایت دانلود نرم‌افزارها](https://roozaneh.github.io/v2ray-clients-download/)
 > 
 > 📌 **دانشنامه رسمی خرید کانفیگ و استعلام قیمت در گیت‌هاب:**  
-> [📖 مطالعه راهنمای جامع خرید کانفیگ V2RayNG و فیلترشکن V2Ray (ایشو رسمی شماره ۱)](https://github.com/roozaneh/kharid-vpn-filter-shekan/issues/1)
+> [📖 مطالعه راهنمای جامع خرید کانفیگ V2RayNG و فیلترشکن V2Ray (ایشو رسمی شماره ۱)](https://github.com/roozaneh/kharid-vpn-filter-shekan/issues/2)
 
 ### ⚡ شروع سریع در ۳ گام ساده (اتصال در ۳۰ ثانیه):
 <kbd> ۱. دانلود مستقیم فایل با یک کلیک </kbd> ➔ <kbd> ۲. دریافت ۲ تا ۳ گیگابایت تست رایگان </kbd> ➔ <kbd> ۳. کپی لینک و اتصال فوری </kbd>
