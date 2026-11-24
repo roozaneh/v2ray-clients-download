@@ -8,7 +8,7 @@
 > بدون سردرگمی بین پردازنده‌های مختلف؛ فقط با **یک کلیک** نسخه کامل و یونیورسال (<bdi>Universal APK</bdi>) سازگار با تمامی مدل‌های گوشی را دریافت کنید، همراه با آموزش تصویری و **۲ الی ۳ گیگابایت کانفیگ پرسرعت تست رایگان هدیه روزنه نت**.
 
 [![Live Website](https://img.shields.io/badge/🌐_مشاهده_وب‌سایت_رسمی-کلیک_کنید-059669?style=for-the-badge&logo=googlechrome&logoColor=white)](https://roozaneh.github.io/v2ray-clients-download/)
-[![Telegram Bot](https://img.shields.io/badge/ربات_دریافت_کانفیگ_و_تست-@RoozanehNetBot-0088cc?style=for-the-badge&logo=telegram&logoColor=white)](https://t.me/RoozanehNetBot?start=gh_download)
+[![Telegram Bot](https://img.shields.io/badge/ربات_دریافت_کانفیگ_و_تست-@RoozanehNetBot-0088cc?style=for-the-badge&logo=telegram&logoColor=white)](https://t.me/RoozanehNetBot?start=dl_clients)
 [![Support](https://img.shields.io/badge/پشتیبانی_۲۴_ساعته-آنلاین-brightgreen?style=for-the-badge)](https://t.me/RoozanehHelp)
 [![Channel](https://img.shields.io/badge/کانال_روزنه_نت-@RoozanehNet-2CA5E0?style=for-the-badge&logo=telegram)](https://t.me/RoozanehNet)
 [![Auto Sync](https://img.shields.io/badge/بروزرسانی_خودکار_لینک‌ها-فعال_با_اکشن-success?style=for-the-badge&logo=githubactions&logoColor=white)](https://github.com/roozaneh/v2ray-clients-download/actions)
@@ -26,7 +26,7 @@
 ### ⚡ شروع سریع در ۳ گام ساده (اتصال در ۳۰ ثانیه):
 <kbd> ۱. دانلود مستقیم فایل با یک کلیک </kbd> ➔ <kbd> ۲. دریافت ۲ تا ۳ گیگابایت تست رایگان </kbd> ➔ <kbd> ۳. کپی لینک و اتصال فوری </kbd>
 
-**[🎁 برای دریافت آنی ۲ الی ۳ گیگابایت کانفیگ تست رایگان روزنه نت اینجا کلیک کنید ←](https://t.me/RoozanehNetBot?start=gh_download)**
+**[🎁 برای دریافت آنی ۲ الی ۳ گیگابایت کانفیگ تست رایگان روزنه نت اینجا کلیک کنید ←](https://t.me/RoozanehNetBot?start=dl_clients)**
 
 </div>
 
@@ -81,7 +81,7 @@
 > [!TIP]
 > **🎁 پس از دانلود، کانفیگ تست از کجا دریافت کنیم؟**  
 > برای دریافت **۲ الی ۳ گیگابایت کانفیگ پرسرعت تست رایگان** با آی‌پی تمیز و بدون قطعی، فقط کافیست وارد ربات رسمی تلگرام روزنه نت شوید:  
-> 👉 **[ورود به ربات تلگرام و دریافت تست رایگان ۲ الی ۳ گیگابایتی (<bdi>@RoozanehNetBot</bdi>)](https://t.me/RoozanehNetBot?start=gh_download)**
+> 👉 **[ورود به ربات تلگرام و دریافت تست رایگان ۲ الی ۳ گیگابایتی (<bdi>@RoozanehNetBot</bdi>)](https://t.me/RoozanehNetBot?start=dl_clients)**
 
 ---
 
@@ -89,7 +89,7 @@
 
 ### آموزش اتصال با برنامه <bdi>v2rayNG</bdi>:
 1. روی لینک مستقیم نسخه یونیورسال در جدول بالا کلیک کرده و فایل <bdi>APK</bdi> را دانلود و نصب فرمایید.
-2. وارد **[ربات تلگرام روزنه نت](https://t.me/RoozanehNetBot?start=gh_download)** شوید و دکمه «دریافت تست رایگان» را بزنید.
+2. وارد **[ربات تلگرام روزنه نت](https://t.me/RoozanehNetBot?start=dl_clients)** شوید و دکمه «دریافت تست رایگان» را بزنید.
 3. کد کانفیگ اختصاصی ارسالی (با پیشوند `vless://`) را کپی کنید.
 4. وارد برنامه **<bdi>v2rayNG</bdi>** شوید، روی علامت **+** در بالای صفحه ضربه بزنید و گزینه **<bdi>Import config from Clipboard</bdi>** را انتخاب نمایید.
 5. روی دایره دکمه اتصال در پایین صفحه بزنید تا متصل شوید. با ضربه روی کارت کانفیگ، تست پینگ واقعی سرور نمایش داده می‌شود.
@@ -106,7 +106,7 @@
 
 ### آموزش اتصال با برنامه <bdi>Streisand</bdi> یا <bdi>V2Box</bdi>:
 1. از جدول بالا، اپلیکیشن مورد نظر را به صورت ۱۰۰٪ رایگان از اپ استور اپل دریافت نمایید.
-2. لینک هوشمند سابسکریپشن دریافتی از **[ربات تلگرام روزنه نت](https://t.me/RoozanehNetBot?start=gh_download)** را کپی کنید.
+2. لینک هوشمند سابسکریپشن دریافتی از **[ربات تلگرام روزنه نت](https://t.me/RoozanehNetBot?start=dl_clients)** را کپی کنید.
 3. در برنامه <bdi>Streisand</bdi> علامت **+** بالای صفحه را بزنید، گزینه **<bdi>Add Subscription</bdi>** را انتخاب کرده و لینک را جای‌گذاری (<bdi>Paste</bdi>) نمایید.
 4. سرور دلخواه را انتخاب کرده و دکمه اتصال را لمس کنید. در اولین مرتبه پیام مجوز سیستم‌عامل آیفون را تایید (<bdi>Allow</bdi>) فرمایید.
 
@@ -141,7 +141,7 @@
 | 💎 | **پلن کهکشان (نامحدود ترافیک)** | ۱۲۰ گیگابایت | ۲ ماهه | **۳۲۹,۰۰۰** | پشتیبانی ویژه VIP، قابلیت انتقال حجم ماه قبل |
 | 🛡️ | **پلن سازمانی و ترید** | ۲۵۰ گیگابایت | ۳ ماهه | **۵۹۰,۰۰۰** | آی‌پی ثابت اختصاصی صرافی‌ها، پینگ فوق‌پایین گیمینگ |
 
-**[🛍️ برای خرید فوری اشتراک و اتصال پایدار وارد ربات تلگرام شوید ←](https://t.me/RoozanehNetBot?start=gh_download)**
+**[🛍️ برای خرید فوری اشتراک و اتصال پایدار وارد ربات تلگرام شوید ←](https://t.me/RoozanehNetBot?start=dl_clients)**
 
 ---
 
@@ -160,7 +160,7 @@
 
 ## 📞 راه‌های ارتباطی پایدار
 
-* 🤖 **ربات رسمی سفارش، خرید و تست رایگان:** <bdi>[@RoozanehNetBot](https://t.me/RoozanehNetBot?start=gh_download)</bdi>
+* 🤖 **ربات رسمی سفارش، خرید و تست رایگان:** <bdi>[@RoozanehNetBot](https://t.me/RoozanehNetBot?start=dl_clients)</bdi>
 * 📢 **کانال رسمی اطلاع‌رسانی سرورها:** <bdi>[@RoozanehNet](https://t.me/RoozanehNet)</bdi>
 * 💬 **پشتیبانی فنی ۲۴ ساعته روزنه نت:** <bdi>[@RoozanehHelp](https://t.me/RoozanehHelp)</bdi>
 * 🌐 **پرتال رسمی در گیت‌هاب پیج روزنه:** <bdi>[roozaneh.github.io](https://roozaneh.github.io/)</bdi>
