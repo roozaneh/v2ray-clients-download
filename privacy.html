@@ -1,502 +1,663 @@
 <!DOCTYPE html>
-<html lang="fa" dir="rtl" class="scroll-smooth">
+<html lang="fa" dir="rtl">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>مرکز شفافیت فنی، سیاست حفظ حریم خصوصی و زنجیره اعتماد | روزنه نت</title>
-  <meta name="description" content="سند فنی و شفافیت معماری روزنه نت: خط‌مشی No-Logs، شفاف‌سازی پروتکل Reality و فرگمنت، امنیت ربات تلگرام، محدوده دیتاسنترها و جدول راستی‌آزمایی باینری‌های رسمی گیت‌هاب.">
+  <meta name="description" content="سند فنی و شفافیت معماری روزنه نت: خط‌مشی No-Logs، شفاف‌سازی پروتکل Reality و فرگمنت، امنیت ربات تلگرام، لوکیشن‌های آلمان، هلند، انگلیس، آمریکا و ترکیه و جدول راستی‌آزمایی باینری‌ها.">
   <link rel="canonical" href="https://roozaneh.github.io/v2ray-clients-download/privacy.html">
-  
+
+  <link rel="icon" href="assets/brand/favicon.ico" sizes="any">
+  <link rel="icon" href="assets/brand/favicon.svg" type="image/svg+xml">
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/brand/favicon-32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="assets/brand/favicon-16.png">
+  <link rel="apple-touch-icon" href="assets/brand/apple-touch-icon.png">
+
   <!-- Open Graph -->
   <meta property="og:type" content="article">
   <meta property="og:title" content="مرکز شفافیت فنی و سیاست حفظ حریم خصوصی | روزنه نت">
-  <meta property="og:description" content="شفافیت فنی در معماری No-Logs، پروتکل‌های رمزنگاری، نحوه ذخیره داده‌های مستعار و راستی‌آزمایی باینری‌ها.">
+  <meta property="og:description" content="شفافیت فنی در معماری No-Logs، پروتکل‌های رمزنگاری، نحوه ذخیره داده‌های مستعار، ابزارهای آمارگیری بدون کوکی و راستی‌آزمایی باینری‌ها.">
   <meta property="og:url" content="https://roozaneh.github.io/v2ray-clients-download/privacy.html">
+  <meta property="og:image" content="https://roozaneh.github.io/og.png">
   <meta property="og:locale" content="fa_IR">
   <meta property="og:site_name" content="روزنه نت | Roozaneh Net">
 
-  <!-- Google Fonts: Vazirmatn -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
-  
-  <!-- Tailwind CSS CDN -->
-  <script src="https://cdn.tailwindcss.com"></script>
-  <script>
-    tailwind.config = {
-      darkMode: 'class',
-      theme: {
-        extend: {
-          colors: {
-            brand: {
-              50: '#ecfdf5',
-              100: '#d1fae5',
-              400: '#34d399',
-              500: '#10b981',
-              600: '#059669',
-              700: '#047857',
-              800: '#065f46',
-              900: '#064e3b',
-            }
-          },
-          fontFamily: {
-            sans: ['Vazirmatn', 'sans-serif'],
-          }
-        }
-      }
-    }
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="مرکز شفافیت فنی و سیاست حفظ حریم خصوصی | روزنه نت">
+  <meta name="twitter:description" content="معماری No-Logs، شناسه مستعار UUID، شفافیت پروتکل Reality و زنجیره راستی‌آزمایی باینری‌های رسمی گیت‌هاب.">
+  <meta name="twitter:image" content="https://roozaneh.github.io/og.png">
+
+  <!-- Structured Data: JSON-LD -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "name": "مرکز شفافیت فنی، سیاست حفظ حریم خصوصی و زنجیره اعتماد روزنه نت",
+    "url": "https://roozaneh.github.io/v2ray-clients-download/privacy.html",
+    "description": "سند فنی و شفافیت معماری روزنه نت: خط‌مشی No-Logs، پروتکل Reality و فرگمنت، امنیت ربات تلگرام، شفافیت GoatCounter و Microsoft Clarity و جدول باینری‌های رسمی.",
+    "publisher": {
+      "@type": "Organization",
+      "name": "روزنه نت",
+      "url": "https://roozaneh.github.io/v2ray-clients-download/"
+    },
+    "inLanguage": "fa-IR"
+  }
   </script>
 
+  <link rel="stylesheet" href="assets/css/apple-ui.css">
   <style>
-    body {
-      font-family: 'Vazirmatn', sans-serif;
-      background-color: #f8fafc;
-      color: #334155;
+    .doc-hero {
+      padding-block: 44px 36px;
+      background-color: var(--bg-primary);
+      border-bottom: 1px solid var(--border-subtle);
     }
-    .clean-card {
-      background: #ffffff;
-      border: 1px solid #e2e8f0;
-      box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.04), 0 1px 2px -1px rgba(0, 0, 0, 0.04);
-      transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+    .doc-hero-row {
+      display: flex;
+      flex-direction: column;
+      gap: 18px;
     }
-    .clean-card:hover {
-      border-color: #cbd5e1;
+    @media (min-width: 768px) {
+      .doc-hero-row {
+        flex-direction: row;
+        align-items: flex-end;
+        justify-content: space-between;
+      }
     }
-    .code-snippet {
-      background: #0f172a;
-      color: #e2e8f0;
-      font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
-      direction: ltr;
-      text-align: left;
+    .doc-title {
+      margin: 0 0 10px;
+      font-size: clamp(24px, 3.4vw, 34px);
+      font-weight: 900;
+      line-height: 1.3;
+      color: var(--ink-primary);
+    }
+    .doc-subtitle {
+      margin: 0;
+      max-width: 740px;
+      font-size: 15px;
+      color: var(--ink-secondary);
+      line-height: 1.8;
+    }
+    .doc-main {
+      padding-block: 48px 72px;
+      background-color: var(--bg-secondary);
+    }
+    .doc-layout {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 28px;
+      align-items: start;
+    }
+    @media (min-width: 960px) {
+      .doc-layout {
+        grid-template-columns: 280px 1fr;
+      }
+    }
+    .doc-sidebar {
+      display: none;
+    }
+    @media (min-width: 960px) {
+      .doc-sidebar {
+        display: flex;
+        flex-direction: column;
+        gap: 14px;
+        position: sticky;
+        top: 88px;
+      }
+    }
+    .doc-nav-title {
+      font-size: 13px;
+      font-weight: 800;
+      color: var(--ink-primary);
+      padding-bottom: 10px;
+      margin-bottom: 10px;
+      border-bottom: 1px solid var(--border-subtle);
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .doc-nav {
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+    }
+    .doc-nav a {
+      padding: 7px 10px;
+      border-radius: 10px;
+      font-size: 13px;
+      color: var(--ink-secondary);
+      transition: background-color 0.15s ease, color 0.15s ease;
+    }
+    .doc-nav a:hover {
+      background: var(--bg-secondary);
+      color: var(--ink-primary);
+    }
+    .doc-sections {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+    .doc-section {
+      scroll-margin-top: 88px;
+    }
+    .doc-step-row {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 10px;
+      font-size: 12px;
+      font-weight: 700;
+      color: var(--accent);
+    }
+    .doc-step-num {
+      width: 24px;
+      height: 24px;
+      border-radius: 8px;
+      background: var(--accent-tint);
+      color: var(--accent);
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 800;
+    }
+    .doc-h2 {
+      margin: 0 0 12px;
+      font-size: 20px;
+      font-weight: 800;
+      color: var(--ink-primary);
+      line-height: 1.4;
+    }
+    .doc-p {
+      margin: 0 0 14px;
+      font-size: 14.5px;
+      color: var(--ink-secondary);
+      line-height: 1.85;
+    }
+    .doc-p:last-child {
+      margin-bottom: 0;
+    }
+    .doc-box {
+      background: var(--bg-secondary);
+      border: 1px solid var(--border-subtle);
+      border-radius: 14px;
+      padding: 16px;
+      font-size: 13.5px;
+      color: var(--ink-secondary);
+      line-height: 1.8;
+    }
+    .doc-box-head {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: 8px;
+      margin-bottom: 6px;
+    }
+    .doc-box-title {
+      font-weight: 700;
+      color: var(--ink-primary);
+    }
+    .doc-tag {
+      display: inline-block;
+      padding: 2px 10px;
+      border-radius: var(--radius-pill);
+      font-size: 11px;
+      font-weight: 600;
+      background: var(--bg-primary);
+      border: 1px solid var(--border-hairline);
+      color: var(--ink-secondary);
+      font-family: var(--font-mono);
+    }
+    .doc-tag--ok {
+      background: var(--status-ok-bg);
+      color: var(--status-ok);
+      border-color: rgba(22, 163, 74, 0.2);
+    }
+    .doc-callout-warn {
+      background: var(--status-warn-bg);
+      border: 1px solid rgba(180, 83, 9, 0.22);
+      border-radius: 14px;
+      padding: 16px;
+      font-size: 13.5px;
+      color: var(--ink-primary);
+      line-height: 1.8;
+    }
+    .doc-stack {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+    .doc-cta-strip {
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+      background: var(--bg-secondary);
+      border: 1px solid var(--border-hairline);
+      border-radius: 16px;
+      padding: 18px;
+    }
+    @media (min-width: 640px) {
+      .doc-cta-strip {
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+      }
     }
   </style>
 
   <!-- GoatCounter Analytics -->
   <script data-goatcounter="https://roozaneh.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
-    <!-- Microsoft Clarity Tracking -->
-    <script type=text/javascript>
-        (function(c,l,a,r,i,t,y){
-            c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
-            t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
-            y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
-        })(window, document, "clarity", "script", "zip7qlr39v");
-    </script>
+  <!-- Microsoft Clarity Tracking -->
+  <script type="text/javascript">
+    (function(c,l,a,r,i,t,y){
+      c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+      t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+      y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+    })(window, document, "clarity", "script", "zip7qlr39v");
+  </script>
 </head>
-<body class="min-h-screen text-slate-700 bg-slate-50 selection:bg-brand-500 selection:text-white">
+<body>
 
-  <!-- Header / Navigation -->
-  <header class="sticky top-0 z-50 backdrop-blur-xl bg-white/90 border-b border-slate-200/90 shadow-xs">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
-      
-      <!-- Logo & Breadcrumb -->
-      <div class="flex items-center gap-4">
-        <a href="index.html" class="flex items-center gap-3 group">
-          <div class="w-10 h-10 rounded-xl bg-brand-600 flex items-center justify-center text-white font-black text-lg shadow-sm">
-            R
-          </div>
-          <div>
-            <span class="text-base font-extrabold text-slate-900 tracking-tight block">روزنه نت</span>
-            <span class="text-[11px] text-slate-500 font-medium">مرکز شفافیت فنی و حریم خصوصی</span>
-          </div>
-        </a>
-      </div>
-
-      <!-- Quick Links -->
-      <nav class="hidden md:flex items-center gap-6 text-xs font-semibold text-slate-600">
-        <a href="index.html#downloads" class="hover:text-brand-600 transition-colors">دانلود کلاینت‌ها</a>
-        <a href="index.html#whitepaper" class="hover:text-brand-600 transition-colors">دانشنامه ضد DPI</a>
-        <a href="terms.html" class="hover:text-brand-600 transition-colors">قرارداد و شرایط خدمات</a>
-        <a href="https://t.me/RoozanehNet" target="_blank" rel="noopener noreferrer" class="hover:text-brand-600 transition-colors">کانال اطلاع‌رسانی</a>
+  <!-- Sticky Frosted Header -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="index.html" class="brand-link">
+        <img src="assets/brand/logo-rail.svg" alt="لوگوی روزنه نت" class="brand-logo" width="32" height="32">
+        <span class="brand-meta">
+          <span class="brand-name">روزنه نت</span>
+          <span class="brand-sub"><bdi>Roozaneh Net</bdi></span>
+        </span>
+      </a>
+      <nav class="nav-links" aria-label="منوی اصلی">
+        <a href="index.html#downloads" class="nav-link">دانلود کلاینت‌ها</a>
+        <a href="index.html#whitepaper" class="nav-link">دانشنامه ضد <bdi>DPI</bdi></a>
+        <a href="privacy.html" class="nav-link is-active">حریم خصوصی و شفافیت</a>
+        <a href="terms.html" class="nav-link">شرایط خدمات و <bdi>SLA</bdi></a>
       </nav>
-
-      <!-- Back to Portal Button -->
-      <div>
-        <a href="index.html" class="inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-slate-100 hover:bg-slate-200 text-slate-700 text-xs font-semibold border border-slate-200 transition-colors">
-          <span>بازگشت به پرتال اصلی</span>
-          <svg class="w-4 h-4 rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
-        </a>
+      <div class="header-actions">
+        <a href="https://t.me/RoozanehNetBot?start=dl_clients" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-sm">شروع در تلگرام</a>
+        <button type="button" class="mobile-menu-btn" aria-label="باز کردن منو" aria-expanded="false" onclick="document.getElementById('mobile-nav').classList.toggle('is-open')">☰</button>
+      </div>
+    </div>
+    <div id="mobile-nav" class="mobile-nav">
+      <div class="mobile-nav-list">
+        <a href="index.html#downloads" class="mobile-nav-link">دانلود کلاینت‌ها</a>
+        <a href="index.html#whitepaper" class="mobile-nav-link">دانشنامه ضد <bdi>DPI</bdi></a>
+        <a href="privacy.html" class="mobile-nav-link">حریم خصوصی و شفافیت</a>
+        <a href="terms.html" class="mobile-nav-link">شرایط خدمات و <bdi>SLA</bdi></a>
       </div>
     </div>
   </header>
 
-  <!-- Main Content Layout -->
-  <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-    
-    <!-- Hero / Breadcrumb Bar -->
-    <div class="mb-10">
-      <div class="flex items-center gap-2 text-xs text-slate-500 mb-3">
-        <a href="index.html" class="hover:text-brand-600 transition-colors">پرتال روزنه نت</a>
+  <!-- Hero / Breadcrumb -->
+  <section class="doc-hero">
+    <div class="container">
+      <nav class="breadcrumb" aria-label="مسیر صفحه">
+        <a href="index.html">پرتال روزنه نت</a>
         <span>/</span>
-        <span class="text-slate-800 font-medium">مرکز شفافیت فنی، امنیت و حریم خصوصی</span>
-      </div>
-      <div class="flex flex-col md:flex-row md:items-center justify-between gap-4 pb-6 border-b border-slate-200">
+        <span>مرکز شفافیت فنی و حریم خصوصی</span>
+      </nav>
+      <div class="doc-hero-row">
         <div>
-          <h1 class="text-2xl sm:text-3xl font-black text-slate-900 tracking-tight mb-2">
-            مرکز شفافیت فنی و خط‌مشی حریم خصوصی (<bdi>Transparency & Privacy</bdi>)
-          </h1>
-          <p class="text-xs sm:text-sm text-slate-600 max-w-3xl leading-relaxed">
-            گزارش مهندسی و دقیق از لایه‌های ذخیره‌سازی، سیاست No-Logs، استانداردهای رمزنگاری Reality و فرگمنت، سازوکار ناشناس‌سازی مالی و مانیفست راستی‌آزمایی فایل‌های گیت‌هاب بدون ادعاهای مبالغه‌آمیز.
+          <h1 class="doc-title">مرکز شفافیت فنی و خط‌مشی حریم خصوصی (<bdi>Transparency &amp; Privacy</bdi>)</h1>
+          <p class="doc-subtitle">
+            گزارش مهندسی و دقیق از لایه‌های ذخیره‌سازی، سیاست <bdi>No-Logs</bdi>، استانداردهای رمزنگاری <bdi>Reality</bdi> و فرگمنت، سازوکار ناشناس‌سازی مالی، آمارگیرهای وب‌سایت و مانیفست راستی‌آزمایی فایل‌های گیت‌هاب بدون ادعاهای مبالغه‌آمیز.
           </p>
         </div>
-        <div class="shrink-0 flex items-center gap-3">
-          <div class="px-3 py-1.5 rounded-lg bg-emerald-50 border border-emerald-200 text-emerald-800 text-[11px] font-semibold flex items-center gap-1.5">
-            <span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
-            نسخه بازبینی فنی: ۲.۳ (نوامبر ۲۰۲۶)
-          </div>
+        <div>
+          <span class="status-pill status-pill--ok">نسخه بازبینی فنی: ۲.۴ (نوامبر ۲۰۲۶)</span>
         </div>
       </div>
     </div>
+  </section>
 
-    <!-- Grid: Sticky Sidebar + Deep Content -->
-    <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
-      
-      <!-- Sticky Navigation Sidebar -->
-      <aside class="hidden lg:block lg:col-span-3 sticky top-28 space-y-2 text-xs">
-        <div class="clean-card rounded-2xl p-4">
-          <div class="font-bold text-slate-900 mb-3 pb-2 border-b border-slate-100 flex items-center gap-2">
-            <svg class="w-4 h-4 text-brand-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h7"/></svg>
-            فهرست سرفصل‌های فنی
-          </div>
-          <nav class="space-y-1.5 text-slate-600">
-            <a href="#manifesto" class="block px-2.5 py-1.5 rounded-lg hover:bg-slate-100 hover:text-slate-900 transition-colors">۱. مانیفست شفافیت و اصالت فنی</a>
-            <a href="#chain-of-trust" class="block px-2.5 py-1.5 rounded-lg hover:bg-slate-100 hover:text-slate-900 transition-colors">۲. زنجیره راستی‌آزمایی باینری‌ها</a>
-            <a href="#zero-logs-architecture" class="block px-2.5 py-1.5 rounded-lg hover:bg-slate-100 hover:text-slate-900 transition-colors">۳. معماری No-Logs در لایه‌های سرور</a>
-            <a href="#telegram-bot-data" class="block px-2.5 py-1.5 rounded-lg hover:bg-slate-100 hover:text-slate-900 transition-colors">۴. داده‌های ربات و شناسه مستعار (UUID)</a>
-            <a href="#payments-billing" class="block px-2.5 py-1.5 rounded-lg hover:bg-slate-100 hover:text-slate-900 transition-colors">۵. ناشناس‌سازی مالی و تراکنش‌ها</a>
-            <a href="#retention-policy" class="block px-2.5 py-1.5 rounded-lg hover:bg-slate-100 hover:text-slate-900 transition-colors">۶. چرخه نگهداری و پاکسازی (۳۰ روزه)</a>
-            <a href="#protocols-reality" class="block px-2.5 py-1.5 rounded-lg hover:bg-slate-100 hover:text-slate-900 transition-colors">۷. دقت فنی: Reality، SNI و فرگمنت</a>
-            <a href="#infrastructure-limits" class="block px-2.5 py-1.5 rounded-lg hover:bg-slate-100 hover:text-slate-900 transition-colors">۸. دیتاسنترها و محدوده مسئولیت</a>
-          </nav>
-        </div>
+  <!-- Main Content -->
+  <main class="doc-main">
+    <div class="container">
+      <div class="doc-layout">
 
-        <div class="p-4 rounded-2xl bg-slate-100 border border-slate-200 text-[11px] text-slate-600 leading-relaxed">
-          <div class="font-bold mb-1 flex items-center gap-1.5 text-slate-800">
-            <svg class="w-4 h-4 text-emerald-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>
-            اصل کمینه‌سازی داده‌ها (<bdi>Data Minimization</bdi>)
-          </div>
-          امنیت پایدار از طریق ادعاهای خیالی به دست نمی‌آید، بلکه بر پایه ضبط نکردن داده‌های حساس از اساس شکل می‌گیرد.
-        </div>
-      </aside>
-
-      <!-- Content Sections -->
-      <div class="lg:col-span-9 space-y-8 text-sm leading-relaxed text-slate-700">
-        
-        <!-- Section 1: Manifesto -->
-        <section id="manifesto" class="clean-card rounded-2xl p-6 sm:p-8 scroll-mt-28">
-          <div class="flex items-center gap-2.5 mb-4 text-brand-700 font-bold text-xs">
-            <span class="w-6 h-6 rounded-lg bg-brand-100 text-brand-700 flex items-center justify-center text-xs font-black">۱</span>
-            <span>بخش اول</span>
-          </div>
-          <h2 class="text-lg sm:text-xl font-bold text-slate-900 mb-4">مانیفست شفافیت، راستی‌آزمایی و نفی ادعاهای واهی</h2>
-          <p class="mb-4">
-            در حوزه امنیت شبکه و عبور از فیلترینگ، اصطلاحاتی مانند «امنیت ۱۰۰٪ مطلق» یا «غیرقابل ردیابی در همه شرایط» گزاره‌های تبلیغاتی و فاقد پشتوانه علمی هستند. هیچ سرویس اینترنتی در دنیا نمی‌تواند مصونیت کامل را در تمام لایه‌های مخابراتی تضمین کند.
-          </p>
-          <p class="text-slate-600">
-            تعهد روزنه نت (Roozaneh Net) مبتنی بر <strong>قابل راستی‌آزمایی بودن (<bdi>Verifiability</bdi>)</strong>، <strong>کمینه‌سازی حداکثری داده‌ها (<bdi>Data Minimization</bdi>)</strong>، و <strong>معماری شفاف و قابل بررسی (<bdi>Auditable Architecture</bdi>)</strong> است. در این سند فنی، مرز دقیق میان آنچه در کنترل ماست و آنچه در لایه زیرساخت بالادستی قرار دارد، با صداقت کامل تبیین شده است.
-          </p>
-        </section>
-
-        <!-- Section 2: Binary Transparency & Manifest -->
-        <section id="chain-of-trust" class="clean-card rounded-2xl p-6 sm:p-8 scroll-mt-28">
-          <div class="flex items-center gap-2.5 mb-4 text-brand-700 font-bold text-xs">
-            <span class="w-6 h-6 rounded-lg bg-brand-100 text-brand-700 flex items-center justify-center text-xs font-black">۲</span>
-            <span>بخش دوم</span>
-          </div>
-          <h2 class="text-lg sm:text-xl font-bold text-slate-900 mb-3">زنجیره راستی‌آزمایی باینری‌ها (<bdi>Binary Transparency Manifest</bdi>)</h2>
-          <p class="mb-4 text-slate-600">
-            پرتال روزنه نت نرم‌افزار جدیدی کامپایل نمی‌کند؛ بلکه کلاینت‌های رسمی متن‌باز را با یک ورک‌فلو خودکار هر ۶ ساعت یک‌بار مستقیماً از انتشار رسمی توسعه‌دهندگان بالادستی در گیت‌هاب دریافت و لینک‌دهی می‌کند. جدول زیر آخرین وضعیت همگام‌سازی و منابع معتبر را نشان می‌دهد:
-          </p>
-
-          <!-- Dynamic/Audit Table -->
-          <div class="overflow-x-auto border border-slate-200 rounded-xl mb-4">
-            <table class="w-full text-right text-xs">
-              <thead class="bg-slate-100 text-slate-800 font-bold border-b border-slate-200">
-                <tr>
-                  <th class="p-3">نام نرم‌افزار</th>
-                  <th class="p-3">مخزن رسمی بالادستی (<bdi>Upstream Repo</bdi>)</th>
-                  <th class="p-3">نسخه پایدار</th>
-                  <th class="p-3">فایل باینری خام (<bdi>Raw Asset</bdi>)</th>
-                  <th class="p-3">وضعیت اصالت</th>
-                </tr>
-              </thead>
-              <tbody class="divide-y divide-slate-200 text-slate-600">
-                <tr>
-                  <td class="p-3 font-semibold text-slate-900">v2rayNG</td>
-                  <td class="p-3 font-mono text-[11px]"><a href="https://github.com/2dust/v2rayNG" target="_blank" rel="noopener noreferrer" class="text-brand-600 hover:underline">2dust/v2rayNG</a></td>
-                  <td class="p-3 font-mono text-[11px]">2.3.15</td>
-                  <td class="p-3 font-mono text-[11px]">v2rayNG_2.3.15_universal.apk</td>
-                  <td class="p-3 text-emerald-600 font-medium flex items-center gap-1"><span>✓</span> مستقیم از ریلیز سازنده</td>
-                </tr>
-                <tr>
-                  <td class="p-3 font-semibold text-slate-900">Happ</td>
-                  <td class="p-3 font-mono text-[11px]"><a href="https://github.com/Happ-proxy/happ-android" target="_blank" rel="noopener noreferrer" class="text-brand-600 hover:underline">Happ-proxy/happ-android</a></td>
-                  <td class="p-3 font-mono text-[11px]">4.11.2</td>
-                  <td class="p-3 font-mono text-[11px]">Happ.apk</td>
-                  <td class="p-3 text-emerald-600 font-medium"><span>✓</span> مستقیم از ریلیز سازنده</td>
-                </tr>
-                <tr>
-                  <td class="p-3 font-semibold text-slate-900">v2rayN</td>
-                  <td class="p-3 font-mono text-[11px]"><a href="https://github.com/2dust/v2rayN" target="_blank" rel="noopener noreferrer" class="text-brand-600 hover:underline">2dust/v2rayN</a></td>
-                  <td class="p-3 font-mono text-[11px]">7.25.6</td>
-                  <td class="p-3 font-mono text-[11px]">v2rayN-windows-64.zip</td>
-                  <td class="p-3 text-emerald-600 font-medium"><span>✓</span> مستقیم از ریلیز سازنده</td>
-                </tr>
-                <tr>
-                  <td class="p-3 font-semibold text-slate-900">Hiddify</td>
-                  <td class="p-3 font-mono text-[11px]"><a href="https://github.com/hiddify/hiddify-app" target="_blank" rel="noopener noreferrer" class="text-brand-600 hover:underline">hiddify/hiddify-app</a></td>
-                  <td class="p-3 font-mono text-[11px]">v5.9.15</td>
-                  <td class="p-3 font-mono text-[11px]">Hiddify-Android-universal.apk</td>
-                  <td class="p-3 text-emerald-600 font-medium"><span>✓</span> مستقیم از ریلیز سازنده</td>
-                </tr>
-                <tr>
-                  <td class="p-3 font-semibold text-slate-900">Sing-Box</td>
-                  <td class="p-3 font-mono text-[11px]"><a href="https://github.com/SagerNet/sing-box" target="_blank" rel="noopener noreferrer" class="text-brand-600 hover:underline">SagerNet/sing-box</a></td>
-                  <td class="p-3 font-mono text-[11px]">v1.14.4</td>
-                  <td class="p-3 font-mono text-[11px]">SFA-1.14.4-universal.apk</td>
-                  <td class="p-3 text-emerald-600 font-medium"><span>✓</span> مستقیم از ریلیز سازنده</td>
-                </tr>
-                <tr>
-                  <td class="p-3 font-semibold text-slate-900">NekoBox</td>
-                  <td class="p-3 font-mono text-[11px]"><a href="https://github.com/MatsuriDayo/NekoBoxForAndroid" target="_blank" rel="noopener noreferrer" class="text-brand-600 hover:underline">MatsuriDayo/NekoBoxForAndroid</a></td>
-                  <td class="p-3 font-mono text-[11px]">1.4.2</td>
-                  <td class="p-3 font-mono text-[11px]">NekoBox-1.4.2-arm64-v8a.apk</td>
-                  <td class="p-3 text-emerald-600 font-medium"><span>✓</span> مستقیم از ریلیز سازنده</td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-
-          <div class="p-4 rounded-xl bg-slate-900 text-slate-300 text-xs">
-            <div class="text-slate-400 text-[11px] mb-2 font-mono">تایید صحت چک‌سام فایل با هش رسمی سازنده:</div>
-            <div class="code-snippet p-2.5 rounded-lg text-[12px] overflow-x-auto">
-              sha256sum &lt;Downloaded-File&gt;
+        <!-- Sticky Sidebar -->
+        <aside class="doc-sidebar">
+          <div class="apple-card">
+            <div class="doc-nav-title">
+              <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.75" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h7"/></svg>
+              <span>فهرست سرفصل‌های فنی</span>
             </div>
-            <p class="text-[11px] text-slate-400 mt-2">
-              کاربران می‌توانند پس از دانلود، خروجی هش را مستقیماً با فایل‌های <bdi>sha256sum.txt</bdi> در برگه Releases مخازن بالادستی مقایسه کنند تا اطمینان یابند حتی یک بیت از نرم‌افزار تغییر نیافته است.
+            <nav class="doc-nav" aria-label="سرفصل‌های حریم خصوصی">
+              <a href="#manifesto">۱. مانیفست شفافیت و اصالت فنی</a>
+              <a href="#chain-of-trust">۲. زنجیره راستی‌آزمایی باینری‌ها</a>
+              <a href="#zero-logs-architecture">۳. معماری <bdi>No-Logs</bdi> در لایه‌های سرور</a>
+              <a href="#telegram-bot-data">۴. داده‌های ربات و شناسه مستعار</a>
+              <a href="#payments-billing">۵. ناشناس‌سازی مالی و تراکنش‌ها</a>
+              <a href="#retention-policy">۶. چرخه نگهداری و پاکسازی (۳۰ روزه)</a>
+              <a href="#protocols-reality">۷. پروتکل‌ها و ابزارهای آمارگیری</a>
+              <a href="#infrastructure-limits">۸. دیتاسنترها و محدوده مسئولیت</a>
+            </nav>
+          </div>
+
+          <div class="apple-card apple-card--tint">
+            <div class="doc-box-title mb-4" style="font-size: 13.5px;">اصل کمینه‌سازی داده‌ها (<bdi>Data Minimization</bdi>)</div>
+            <p class="apple-card-desc" style="font-size: 13px;">
+              امنیت پایدار از طریق ادعاهای خیالی به دست نمی‌آید، بلکه بر پایه ضبط نکردن داده‌های حساس از اساس شکل می‌گیرد.
             </p>
           </div>
-        </section>
+        </aside>
 
-        <!-- Section 3: Zero-Logs Architecture -->
-        <section id="zero-logs-architecture" class="clean-card rounded-2xl p-6 sm:p-8 scroll-mt-28">
-          <div class="flex items-center gap-2.5 mb-4 text-brand-700 font-bold text-xs">
-            <span class="w-6 h-6 rounded-lg bg-brand-100 text-brand-700 flex items-center justify-center text-xs font-black">۳</span>
-            <span>بخش سوم</span>
-          </div>
-          <h2 class="text-lg sm:text-xl font-bold text-slate-900 mb-3">تفکیک فنی معماری No-Logs در لایه‌های سرور</h2>
-          <p class="mb-4 text-slate-600">
-            سیاست عدم ثبت لاگ برای اینکه یک شعار توخالی نباشد، باید در تمام لایه‌های نرم‌افزاری و سیستم‌عامل با تنظیمات صریح پیکربندی شود:
-          </p>
+        <!-- Document Sections -->
+        <div class="doc-sections">
 
-          <div class="space-y-3 text-xs">
-            <div class="p-4 rounded-xl bg-slate-50 border border-slate-200">
-              <div class="flex items-center justify-between mb-1">
-                <strong class="text-slate-900">۱. لایه هسته شبکه (Xray Core):</strong>
-                <span class="px-2 py-0.5 rounded font-mono text-[10px] bg-emerald-100 text-emerald-800">loglevel: "none"</span>
-              </div>
-              <p class="text-slate-600 leading-normal">
-                در محیط عملیاتی (Production)، هسته Xray با سطح لاگ <bdi>none</bdi> اجرا می‌شود. هیچ فایلی به عنوان <bdi>access.log</bdi> ایجاد نمی‌گردد و مقاصد وب‌گردی، آدرس‌های URL یا ارتباط بسته‌ها در دیسک نوشته نمی‌شوند. تنها در موارد استثنایی رفع اشکال فنی و باگ روتینگ، دیباگ موقت صرفاً در سطح حافظه رم (RAM) و برای بازه زمانی کوتاه فعال و بلافاصله مسدود می‌گردد.
-              </p>
+          <!-- Section 1 -->
+          <section id="manifesto" class="apple-card doc-section">
+            <div class="doc-step-row">
+              <span class="doc-step-num">۱</span>
+              <span>بخش اول</span>
+            </div>
+            <h2 class="doc-h2">مانیفست شفافیت، راستی‌آزمایی و نفی ادعاهای واهی</h2>
+            <p class="doc-p">
+              در حوزه امنیت شبکه و عبور از فیلترینگ، اصطلاحاتی مانند «امنیت ۱۰۰٪ مطلق» یا «غیرقابل ردیابی در همه شرایط» گزاره‌های تبلیغاتی و فاقد پشتوانه علمی هستند. هیچ سرویس اینترنتی در دنیا نمی‌تواند مصونیت کامل را در تمام لایه‌های مخابراتی تضمین کند.
+            </p>
+            <p class="doc-p">
+              تعهد روزنه نت (<bdi>Roozaneh Net</bdi>) مبتنی بر <strong>قابل راستی‌آزمایی بودن (<bdi>Verifiability</bdi>)</strong>، <strong>کمینه‌سازی حداکثری داده‌ها (<bdi>Data Minimization</bdi>)</strong> و <strong>معماری شفاف و قابل بررسی (<bdi>Auditable Architecture</bdi>)</strong> است. در این سند فنی، مرز دقیق میان آنچه در کنترل ماست و آنچه در لایه زیرساخت بالادستی قرار دارد با صداقت کامل تبیین شده است.
+            </p>
+          </section>
+
+          <!-- Section 2 -->
+          <section id="chain-of-trust" class="apple-card doc-section">
+            <div class="doc-step-row">
+              <span class="doc-step-num">۲</span>
+              <span>بخش دوم</span>
+            </div>
+            <h2 class="doc-h2">زنجیره راستی‌آزمایی باینری‌ها (<bdi>Binary Transparency Manifest</bdi>)</h2>
+            <p class="doc-p">
+              پرتال روزنه نت نرم‌افزار جدیدی کامپایل نمی‌کند؛ بلکه کلاینت‌های رسمی متن‌باز را با یک ورک‌فلو خودکار هر ۶ ساعت یک‌بار مستقیماً از انتشار رسمی توسعه‌دهندگان بالادستی در گیت‌هاب دریافت و لینک‌دهی می‌کند. جدول زیر آخرین وضعیت همگام‌سازی و منابع معتبر را نشان می‌دهد:
+            </p>
+
+            <div class="table-wrap mb-4">
+              <table class="apple-table">
+                <thead>
+                  <tr>
+                    <th>نام نرم‌افزار</th>
+                    <th>مخزن رسمی بالادستی</th>
+                    <th>نسخه پایدار</th>
+                    <th>فایل باینری خام</th>
+                    <th>وضعیت اصالت</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><strong><bdi>v2rayNG</bdi></strong></td>
+                    <td><a href="https://github.com/2dust/v2rayNG" target="_blank" rel="noopener noreferrer" class="text-accent"><bdi>2dust/v2rayNG</bdi></a></td>
+                    <td><bdi>2.3.15</bdi></td>
+                    <td><bdi>v2rayNG_2.3.15_universal.apk</bdi></td>
+                    <td><span class="status-pill status-pill--ok">مستقیم از سازنده</span></td>
+                  </tr>
+                  <tr>
+                    <td><strong><bdi>Happ</bdi></strong></td>
+                    <td><a href="https://github.com/Happ-proxy/happ-android" target="_blank" rel="noopener noreferrer" class="text-accent"><bdi>Happ-proxy/happ-android</bdi></a></td>
+                    <td><bdi>4.11.2</bdi></td>
+                    <td><bdi>Happ.apk</bdi></td>
+                    <td><span class="status-pill status-pill--ok">مستقیم از سازنده</span></td>
+                  </tr>
+                  <tr>
+                    <td><strong><bdi>v2rayN</bdi></strong></td>
+                    <td><a href="https://github.com/2dust/v2rayN" target="_blank" rel="noopener noreferrer" class="text-accent"><bdi>2dust/v2rayN</bdi></a></td>
+                    <td><bdi>7.25.6</bdi></td>
+                    <td><bdi>v2rayN-windows-64.zip</bdi></td>
+                    <td><span class="status-pill status-pill--ok">مستقیم از سازنده</span></td>
+                  </tr>
+                  <tr>
+                    <td><strong><bdi>Hiddify</bdi></strong></td>
+                    <td><a href="https://github.com/hiddify/hiddify-app" target="_blank" rel="noopener noreferrer" class="text-accent"><bdi>hiddify/hiddify-app</bdi></a></td>
+                    <td><bdi>v5.9.15</bdi></td>
+                    <td><bdi>Hiddify-Android-universal.apk</bdi></td>
+                    <td><span class="status-pill status-pill--ok">مستقیم از سازنده</span></td>
+                  </tr>
+                  <tr>
+                    <td><strong><bdi>Sing-Box</bdi></strong></td>
+                    <td><a href="https://github.com/SagerNet/sing-box" target="_blank" rel="noopener noreferrer" class="text-accent"><bdi>SagerNet/sing-box</bdi></a></td>
+                    <td><bdi>v1.14.4</bdi></td>
+                    <td><bdi>SFA-1.14.4-universal.apk</bdi></td>
+                    <td><span class="status-pill status-pill--ok">مستقیم از سازنده</span></td>
+                  </tr>
+                  <tr>
+                    <td><strong><bdi>NekoBox</bdi></strong></td>
+                    <td><a href="https://github.com/MatsuriDayo/NekoBoxForAndroid" target="_blank" rel="noopener noreferrer" class="text-accent"><bdi>MatsuriDayo/NekoBoxForAndroid</bdi></a></td>
+                    <td><bdi>1.4.2</bdi></td>
+                    <td><bdi>NekoBox-1.4.2-arm64-v8a.apk</bdi></td>
+                    <td><span class="status-pill status-pill--ok">مستقیم از سازنده</span></td>
+                  </tr>
+                </tbody>
+              </table>
             </div>
 
-            <div class="p-4 rounded-xl bg-slate-50 border border-slate-200">
-              <div class="flex items-center justify-between mb-1">
-                <strong class="text-slate-900">۲. لایه سیستم‌عامل و فورواردینگ (Kernel & Firewall):</strong>
-                <span class="px-2 py-0.5 rounded font-mono text-[10px] bg-slate-200 text-slate-800">No Netfilter/Conntrack Logs</span>
+            <div class="doc-box">
+              <div class="doc-box-title mb-4">تایید صحت چک‌سام فایل با هش رسمی سازنده:</div>
+              <div class="code-box mb-4">sha256sum &lt;Downloaded-File&gt;</div>
+              <p class="doc-p" style="font-size: 13px;">
+                کاربران می‌توانند پس از دانلود، خروجی هش را مستقیماً با فایل‌های <bdi>sha256sum.txt</bdi> در برگه <bdi>Releases</bdi> مخازن بالادستی مقایسه کنند تا اطمینان یابند حتی یک بیت از نرم‌افزار تغییر نیافته است.
+              </p>
+            </div>
+          </section>
+
+          <!-- Section 3 -->
+          <section id="zero-logs-architecture" class="apple-card doc-section">
+            <div class="doc-step-row">
+              <span class="doc-step-num">۳</span>
+              <span>بخش سوم</span>
+            </div>
+            <h2 class="doc-h2">تفکیک فنی معماری <bdi>No-Logs</bdi> در لایه‌های سرور</h2>
+            <p class="doc-p">
+              سیاست عدم ثبت لاگ برای اینکه یک شعار توخالی نباشد، باید در تمام لایه‌های نرم‌افزاری و سیستم‌عامل با تنظیمات صریح پیکربندی شود:
+            </p>
+            <div class="doc-stack">
+              <div class="doc-box">
+                <div class="doc-box-head">
+                  <span class="doc-box-title">۱. لایه هسته شبکه (<bdi>Xray Core</bdi>):</span>
+                  <span class="doc-tag doc-tag--ok">loglevel: "none"</span>
+                </div>
+                در محیط عملیاتی (<bdi>Production</bdi>)، هسته <bdi>Xray</bdi> با سطح لاگ <bdi>none</bdi> اجرا می‌شود. هیچ فایلی به عنوان <bdi>access.log</bdi> ایجاد نمی‌گردد و مقاصد وب‌گردی، آدرس‌های <bdi>URL</bdi> یا ارتباط بسته‌ها در دیسک نوشته نمی‌شوند. تنها در موارد استثنایی رفع اشکال فنی، دیباگ موقت صرفاً در حافظه رم (<bdi>RAM</bdi>) و برای بازه زمانی کوتاه فعال و بلافاصله متوقف می‌گردد.
               </div>
-              <p class="text-slate-600 leading-normal">
+              <div class="doc-box">
+                <div class="doc-box-head">
+                  <span class="doc-box-title">۲. لایه سیستم‌عامل و فورواردینگ (<bdi>Kernel &amp; Firewall</bdi>):</span>
+                  <span class="doc-tag">No Netfilter/Conntrack Logs</span>
+                </div>
                 جداول روتینگ لینوکس و فایروال سرورها فاقد لاگ‌های تاریخی اتصال هستند. نگاشت‌های موقت نشست‌ها در حافظه موقت کرنل پس از قطع ارتباط بلافاصله منقضی می‌شوند.
-              </p>
-            </div>
-
-            <div class="p-4 rounded-xl bg-slate-50 border border-slate-200">
-              <div class="flex items-center justify-between mb-1">
-                <strong class="text-slate-900">۳. لایه درخواست‌های نام دامنه (Encrypted DNS):</strong>
-                <span class="px-2 py-0.5 rounded font-mono text-[10px] bg-emerald-100 text-emerald-800">DoH / In-Memory Only</span>
               </div>
-              <p class="text-slate-600 leading-normal">
-                پرس‌وجوهای DNS سرور به صورت رمزنگاری‌شده بر بستر DNS-over-HTTPS (DoH) ارسال می‌شوند و هیچ سابقه‌ای از دامنه‌های مورد جستجو در فایل‌های سیستم ثبت نمی‌گردد.
-              </p>
-            </div>
-          </div>
-        </section>
-
-        <!-- Section 4: Telegram Bot & Pseudonymous UUID -->
-        <section id="telegram-bot-data" class="clean-card rounded-2xl p-6 sm:p-8 scroll-mt-28">
-          <div class="flex items-center gap-2.5 mb-4 text-brand-700 font-bold text-xs">
-            <span class="w-6 h-6 rounded-lg bg-brand-100 text-brand-700 flex items-center justify-center text-xs font-black">۴</span>
-            <span>بخش چهارم</span>
-          </div>
-          <h2 class="text-lg sm:text-xl font-bold text-slate-900 mb-3">داده‌های ربات تلگرام و تفکیک شناسه مستعار (<bdi>Pseudonymous UUID</bdi>)</h2>
-          <p class="mb-4 text-slate-600">
-            برای رعایت حداکثر دقت فنی، اعلام می‌داریم که کانفیگ‌های تولیدشده کاملاً «ناشناس مطلق» نیستند؛ بلکه دارای یک **شناسه مستعار (<bdi>Pseudonymous Identifier / UUID</bdi>)** می‌باشند تا امکان محاسبه حجم مصرفی و تحویل سرویس فراهم باشد:
-          </p>
-
-          <div class="p-4 rounded-xl bg-slate-50 border border-slate-200 text-xs space-y-3 mb-4">
-            <div>
-              <strong class="text-slate-900 block mb-0.5">چه مواردی در دیتابیس ربات تلگرام ذخیره می‌شوند؟</strong>
-              <p class="text-slate-600">
-                جهت نگهداری اشتراک کاربر و عدم مفقودی اکانت، شناسه عددی تلگرام (<bdi>Telegram User ID</bdi>) و یوزرنیم کاربر به صورت کدگذاری‌شده در کنار یک شناسه تصادفی مستعار (UUID)، لینک کانفیگ اختصاصی، میزان ترافیک مصرفی و تاریخ انقضا ذخیره می‌گردند.
-              </p>
-            </div>
-            <div class="border-t border-slate-200 pt-2">
-              <strong class="text-slate-900 block mb-0.5">چه مواردی هرگز در ربات ذخیره نمی‌شوند؟</strong>
-              <p class="text-slate-600">
-                متن گفتگوها، چت‌های رد و بدل شده با ربات، و فایل‌های صوتی یا متنی ارسالی به هیچ عنوان در دیتابیس آرشیو نمی‌شوند. ربات صرفاً دستورات کلیدهای شیشه‌ای را به عنوان ایونت لحظه‌ای پردازش می‌کند.
-              </p>
-            </div>
-          </div>
-        </section>
-
-        <!-- Section 5: Payments & Anonymization -->
-        <section id="payments-billing" class="clean-card rounded-2xl p-6 sm:p-8 scroll-mt-28">
-          <div class="flex items-center gap-2.5 mb-4 text-brand-700 font-bold text-xs">
-            <span class="w-6 h-6 rounded-lg bg-brand-100 text-brand-700 flex items-center justify-center text-xs font-black">۵</span>
-            <span>بخش پنجم</span>
-          </div>
-          <h2 class="text-lg sm:text-xl font-bold text-slate-900 mb-3">ناشناس‌سازی مالی و چرخه پردازش تراکنش‌ها</h2>
-          <p class="mb-4 text-slate-600">
-            روش‌های پرداخت فعلی شامل کارت‌به‌کارت و درگاه‌های ارز دیجیتال (USDT/TRX) می‌باشد. سیاست روزنه نت در حوزه اطلاعات مالی به شرح زیر است:
-          </p>
-
-          <div class="space-y-2.5 text-xs text-slate-600">
-            <div class="p-3.5 rounded-xl bg-slate-50 border border-slate-200 flex items-start gap-3">
-              <span class="w-5 h-5 rounded-md bg-emerald-100 text-emerald-700 flex items-center justify-center font-bold text-xs shrink-0 mt-0.5">✓</span>
-              <div>
-                <strong class="text-slate-900 block mb-0.5">امحا و مبهم‌سازی پس از تایید تراکنش:</strong>
-                در پرداخت‌های کارت‌به‌کارت، پس از احراز عدم جعلی بودن رسید توسط اپراتور مالی، کلیه تصاویر فیش‌ها و سوابق شماره کارت مشترک از دیتابیس فعال حذف شده و تراکنش مبهم‌سازی (<bdi>Obfuscated</bdi>) می‌گردد.
+              <div class="doc-box">
+                <div class="doc-box-head">
+                  <span class="doc-box-title">۳. لایه درخواست‌های نام دامنه (<bdi>Encrypted DNS</bdi>):</span>
+                  <span class="doc-tag doc-tag--ok">DoH / In-Memory Only</span>
+                </div>
+                پرس‌وجوهای <bdi>DNS</bdi> سرور به صورت رمزنگاری‌شده بر بستر <bdi>DNS-over-HTTPS (DoH)</bdi> ارسال می‌شوند و هیچ سابقه‌ای از دامنه‌های مورد جستجو در فایل‌های سیستم ثبت نمی‌گردد.
               </div>
             </div>
-            <div class="p-3.5 rounded-xl bg-slate-50 border border-slate-200 flex items-start gap-3">
-              <span class="w-5 h-5 rounded-md bg-emerald-100 text-emerald-700 flex items-center justify-center font-bold text-xs shrink-0 mt-0.5">✓</span>
-              <div>
-                <strong class="text-slate-900 block mb-0.5">عدم ذخیره شماره کارت بانکی:</strong>
+          </section>
+
+          <!-- Section 4 -->
+          <section id="telegram-bot-data" class="apple-card doc-section">
+            <div class="doc-step-row">
+              <span class="doc-step-num">۴</span>
+              <span>بخش چهارم</span>
+            </div>
+            <h2 class="doc-h2">داده‌های ربات تلگرام و تفکیک شناسه مستعار (<bdi>Pseudonymous UUID</bdi>)</h2>
+            <p class="doc-p">
+              برای رعایت حداکثر دقت فنی، اعلام می‌داریم که کانفیگ‌های تولیدشده کاملاً «ناشناس مطلق» نیستند؛ بلکه دارای یک <strong>شناسه مستعار (<bdi>Pseudonymous Identifier / UUID</bdi>)</strong> می‌باشند تا امکان محاسبه حجم مصرفی و تحویل سرویس فراهم باشد:
+            </p>
+            <div class="doc-stack">
+              <div class="doc-box">
+                <div class="doc-box-title mb-4">چه مواردی در دیتابیس ربات تلگرام ذخیره می‌شوند؟</div>
+                جهت نگهداری اشتراک کاربر و جلوگیری از مفقودی اکانت، شناسه عددی تلگرام (<bdi>Telegram User ID</bdi>) و یوزرنیم کاربر به صورت کدگذاری‌شده در کنار یک شناسه تصادفی مستعار (<bdi>UUID</bdi>)، لینک کانفیگ اختصاصی، میزان ترافیک مصرفی و تاریخ انقضا ذخیره می‌گردند.
+              </div>
+              <div class="doc-box">
+                <div class="doc-box-title mb-4">چه مواردی هرگز در ربات ذخیره نمی‌شوند؟</div>
+                متن گفتگوها، چت‌های رد و بدل شده با ربات و فایل‌های ارسالی به هیچ عنوان در دیتابیس آرشیو نمی‌شوند. ربات صرفاً دستورات کلیدهای شیشه‌ای را به عنوان رویداد لحظه‌ای پردازش می‌کند.
+              </div>
+            </div>
+          </section>
+
+          <!-- Section 5 -->
+          <section id="payments-billing" class="apple-card doc-section">
+            <div class="doc-step-row">
+              <span class="doc-step-num">۵</span>
+              <span>بخش پنجم</span>
+            </div>
+            <h2 class="doc-h2">ناشناس‌سازی مالی و چرخه پردازش تراکنش‌ها</h2>
+            <p class="doc-p">
+              روش‌های پرداخت فعلی شامل کارت‌به‌کارت و درگاه‌های ارز دیجیتال (<bdi>USDT/TRX</bdi>) می‌باشد. سیاست روزنه نت در حوزه اطلاعات مالی به شرح زیر است:
+            </p>
+            <div class="doc-stack">
+              <div class="doc-box">
+                <div class="doc-box-title mb-4">امحا و مبهم‌سازی پس از تایید تراکنش:</div>
+                در پرداخت‌های کارت‌به‌کارت، پس از تایید صحت رسید، کلیه تصاویر فیش‌ها و سوابق شماره کارت مشترک از دیتابیس فعال حذف شده و رکورد تراکنش مبهم‌سازی (<bdi>Obfuscated</bdi>) می‌گردد.
+              </div>
+              <div class="doc-box">
+                <div class="doc-box-title mb-4">عدم ذخیره شماره کارت بانکی:</div>
                 هیچ رکوردی شامل شماره کارت، شماره شبا یا اطلاعات حساب کاربران در سامانه‌های نرم‌افزاری و دیتابیس کانفیگ‌ها ذخیره نمی‌گردد.
               </div>
             </div>
-          </div>
-        </section>
+          </section>
 
-        <!-- Section 6: Retention & Auto-Purge -->
-        <section id="retention-policy" class="clean-card rounded-2xl p-6 sm:p-8 scroll-mt-28">
-          <div class="flex items-center gap-2.5 mb-4 text-brand-700 font-bold text-xs">
-            <span class="w-6 h-6 rounded-lg bg-brand-100 text-brand-700 flex items-center justify-center text-xs font-black">۶</span>
-            <span>بخش ششم</span>
-          </div>
-          <h2 class="text-lg sm:text-xl font-bold text-slate-900 mb-3">چرخه نگهداری داده‌ها و پاکسازی خودکار (<bdi>Retention & Auto-Purge</bdi>)</h2>
-          <p class="mb-4 text-slate-600">
-            برای حل تناقض بین «حفظ حریم خصوصی» و «قانون انتقال حجم باقی‌مانده به دوره بعد»، چرخه دقیق زمانی زیر اعمال می‌شود:
-          </p>
-
-          <div class="grid grid-cols-1 md:grid-cols-2 gap-4 my-4">
-            <div class="p-4 rounded-xl bg-slate-50 border border-slate-200 text-xs">
-              <div class="font-bold text-slate-900 mb-1.5 flex items-center gap-2">
-                <span class="w-2.5 h-2.5 rounded-full bg-emerald-500"></span>
-                بازه فعال و نگهداری ۳۰ روزه پس از انقضا
+          <!-- Section 6 -->
+          <section id="retention-policy" class="apple-card doc-section">
+            <div class="doc-step-row">
+              <span class="doc-step-num">۶</span>
+              <span>بخش ششم</span>
+            </div>
+            <h2 class="doc-h2">چرخه نگهداری داده‌ها و پاکسازی خودکار (<bdi>Retention &amp; Auto-Purge</bdi>)</h2>
+            <p class="doc-p">
+              برای ایجاد تعادل میان «حفظ حریم خصوصی» و «قانون انتقال حجم باقی‌مانده به دوره بعد (<bdi>Data Rollover</bdi>)»، چرخه دقیق زمانی زیر اعمال می‌شود:
+            </p>
+            <div class="bento-grid bento-grid--2">
+              <div class="doc-box">
+                <div class="doc-box-title mb-4">بازه فعال و نگهداری ۳۰ روزه پس از انقضا</div>
+                اطلاعات حجم باقی‌مانده و کانفیگ کاربر تا ۳۰ روز پس از موعد انقضا در سیستم حفظ می‌شود تا در صورت تمدید، ۱۰۰٪ حجم مصرف‌نشده قبلی به دوره جدید منتقل گردد.
               </div>
-              <p class="text-slate-600 leading-normal">
-                اطلاعات حجم باقی‌مانده و کانفیگ کاربر تا ۳۰ روز پس از موعد انقضا در سیستم حفظ می‌شود تا چنانچه کاربر اقدام به تمدید کرد، ۱۰۰٪ حجم مصرف‌نشده قبلی به دوره جدید او منتقل گردد.
-              </p>
-            </div>
-
-            <div class="p-4 rounded-xl bg-slate-50 border border-slate-200 text-xs">
-              <div class="font-bold text-slate-900 mb-1.5 flex items-center gap-2">
-                <span class="w-2.5 h-2.5 rounded-full bg-red-500"></span>
-                پاکسازی دائم و خودکار (<bdi>Permanent Purge</bdi>)
+              <div class="doc-box">
+                <div class="doc-box-title mb-4">پاکسازی دائم و خودکار (<bdi>Permanent Purge</bdi>)</div>
+                در صورتی که ۳۰ روز از انقضای اکانت سپری شود و تمدیدی صورت نپذیرد، در چرخه اسکن دوره‌ای خودکار، کل رکوردها، شناسه مستعار <bdi>UUID</bdi> و نگاشت‌های کانفیگ به صورت غیرقابل بازگشت حذف می‌شوند.
               </div>
-              <p class="text-slate-600 leading-normal">
-                در صورتی که ۳۰ روز از انقضای اکانت سپری شود و تمدیدی صورت نپذیرد، در چرخه اسکن دوره‌ای خودکار، کل رکوردها، شناسه مستعار UUID و نگاشت‌های کانفیگ به صورت غیرقابل بازگشت از دیتابیس حذف می‌شوند.
-              </p>
             </div>
-          </div>
-        </section>
+          </section>
 
-        <!-- Section 7: Protocols, Reality & Fragment -->
-        <section id="protocols-reality" class="clean-card rounded-2xl p-6 sm:p-8 scroll-mt-28">
-          <div class="flex items-center gap-2.5 mb-4 text-brand-700 font-bold text-xs">
-            <span class="w-6 h-6 rounded-lg bg-brand-100 text-brand-700 flex items-center justify-center text-xs font-black">۷</span>
-            <span>بخش هفتم</span>
-          </div>
-          <h2 class="text-lg sm:text-xl font-bold text-slate-900 mb-3">دقت در مفاهیم پروتکل‌ها: Reality، SNI و فرگمنت</h2>
-          <p class="mb-4 text-slate-600">
-            برای جلوگیری از سوءتفاهم‌های رایج در حوزه پروتکل‌های ضد فیلترینگ، تمایز فنی موارد زیر رسماً اعلام می‌گردد:
-          </p>
+          <!-- Section 7 -->
+          <section id="protocols-reality" class="apple-card doc-section">
+            <div class="doc-step-row">
+              <span class="doc-step-num">۷</span>
+              <span>بخش هفتم</span>
+            </div>
+            <h2 class="doc-h2">دقت فنی پروتکل‌ها و شفاف‌سازی ابزارهای آمارگیری وب‌سایت</h2>
+            <p class="doc-p">
+              برای جلوگیری از سوءتفاهم‌های رایج در حوزه پروتکل‌های ضد فیلترینگ و ابزارهای تحلیل ترافیک صفحات وب، موارد زیر رسماً اعلام می‌گردد:
+            </p>
+            <div class="doc-stack">
+              <div class="doc-box">
+                <div class="doc-box-title mb-4">پروتکل <bdi>Reality</bdi> و مسئله <bdi>SNI</bdi>:</div>
+                پروتکل <bdi>Reality</bdi> به تنهایی <bdi>SNI</bdi> را مخفی نمی‌کند؛ بلکه از یک دامنه پوششی معتبر جهانی (<bdi>Decoy SNI</bdi>) استفاده کرده و دست‌تکانی <bdi>TLS</bdi> را پشت گواهی‌های قانونی شبیه‌سازی می‌کند تا ترافیک از نظر ناظر شبکه هم‌شکل ارتباط استاندارد وب باشد.
+              </div>
+              <div class="doc-box">
+                <div class="doc-box-title mb-4">تکنیک تکه‌تکه‌سازی بسته‌ها (<bdi>TLS Fragmentation</bdi>):</div>
+                فرگمنت با شکستن بسته دست‌تکانی اولیه <bdi>TLS ClientHello</bdi>، تطبیق الگو توسط سامانه‌های <bdi>DPI</bdi> اپراتورهای داخلی را دشوارتر می‌سازد. اثربخشی این تکنیک به شرایط پویای شبکه هر اپراتور وابسته است.
+              </div>
+              <div class="doc-box">
+                <div class="doc-box-head">
+                  <span class="doc-box-title">آمارگیر بازدید وب‌سایت (<bdi>GoatCounter</bdi>):</span>
+                  <span class="doc-tag doc-tag--ok">Cookieless Analytics</span>
+                </div>
+                شمارنده بازدید صفحات پرتال روی <bdi>roozaneh.goatcounter.com</bdi> بدون ذخیره کوکی ردیاب اجرا می‌شود و صرفاً آمار تجمیعی بازدید صفحات بدون پروفایل‌سازی فردی ثبت می‌گردد.
+              </div>
+              <div class="doc-box">
+                <div class="doc-box-head">
+                  <span class="doc-box-title">تحلیل تجربه کاربری وب‌سایت (<bdi>Microsoft Clarity</bdi>):</span>
+                  <span class="doc-tag">Tag: zip7qlr39v</span>
+                </div>
+                صفحات عمومی این پرتال برای شناسایی خطاهای رابط کاربری و بهبود تجربه صفحات راهنما از اسکریپت <bdi>Microsoft Clarity</bdi> با شناسه پروژه <bdi>zip7qlr39v</bdi> استفاده می‌کنند. این ابزار صرفاً در صفحات عمومی وب‌سایت اجرا می‌شود و هیچ‌گونه دسترسی به ترافیک تونل <bdi>VPN</bdi>، کانفیگ‌های اشتراک، آدرس‌های <bdi>UUID</bdi> یا پیام‌های ربات تلگرام ندارد.
+              </div>
+            </div>
+          </section>
 
-          <div class="space-y-3 text-xs text-slate-600">
-            <div class="p-3.5 rounded-xl bg-slate-50 border border-slate-200">
-              <strong class="text-slate-900 block mb-1">پروتکل Reality و مسئله SNI:</strong>
-              پروتکل Reality به تنهایی SNI را مخفی نمی‌کند؛ بلکه از یک دامنه پوششی معتبر جهانی (<bdi>Decoy SNI</bdi>) استفاده کرده و دست‌تکانی TLS را در پشت گواهی‌های قانونی شبیه‌سازی می‌کند تا ناظر شبکه تصور کند کاربر در حال مرور یک وب‌سایت مجاز اینترنتی است.
+          <!-- Section 8 -->
+          <section id="infrastructure-limits" class="apple-card doc-section">
+            <div class="doc-step-row">
+              <span class="doc-step-num">۸</span>
+              <span>بخش هشتم</span>
+            </div>
+            <h2 class="doc-h2">زیرساخت دیتاسنترها و محدوده مسئولیت فنی</h2>
+            <p class="doc-p">
+              گره‌های فعال سرورهای روزنه نت در دیتاسنترهای معتبر بین‌المللی شامل <strong>هتزنر (<bdi>Hetzner</bdi>)</strong>، <strong>گوگل کلود (<bdi>Google Cloud</bdi>)</strong>، <strong>اوراکل (<bdi>Oracle Cloud</bdi>)</strong>، <strong>دیجیتال اوشن (<bdi>DigitalOcean</bdi>)</strong> و <strong>یوتا سرور (<bdi>UtaServer</bdi>)</strong> در <strong>۵ کشور آلمان، هلند، انگلیس، آمریکا و ترکیه</strong> مستقر هستند.
+            </p>
+
+            <div class="doc-callout-warn mb-4">
+              <strong style="display: block; margin-bottom: 6px;">توضیح صادقانه درباره مرز نظارت زیرساخت بالادستی:</strong>
+              ما در سطح سیستم‌عامل، کرنل و هسته <bdi>Xray</bdi> تمام لاگ‌ها را مسدود کرده‌ایم. با این حال، مشترکین باید مطلع باشند که شرکت‌های دیتاسنتر بالادستی ممکن است در سطح سوئیچ‌های شبکه و سخت‌افزار روترهای خود مانیتورینگ کلی روی سلامت ترافیک شبکه داشته باشند که این لایه به صورت فنی خارج از محدوده دسترسی نرم‌افزاری هر ارائه‌دهنده سرویسی در دنیاست.
             </div>
 
-            <div class="p-3.5 rounded-xl bg-slate-50 border border-slate-200">
-              <strong class="text-slate-900 block mb-1">تکنیک تکه‌تکه‌سازی بسته‌ها (TLS Fragmentation):</strong>
-              فرگمنت با شکستن بسته دست‌تکانی اولیه <bdi>TLS ClientHello</bdi>، انطباق الگوها توسط برخی فایروال‌های DPI اپراتورهای داخلی را تضعیف و دشوارتر می‌سازد. اثربخشی این تکنیک به خط‌مشی‌های پویای فیلترینگ در هر اپراتور وابسته است و یک راهکار معجزه‌آسای همیشگی نیست.
+            <div class="doc-cta-strip">
+              <div>
+                <div class="doc-box-title" style="font-size: 14px;">کانال رسمی پشتیبانی و پیگیری امنیتی</div>
+                <div style="font-size: 12.5px; color: var(--ink-secondary);">برای پرسش‌های امنیتی یا درخواست حذف فوری اطلاعات با پشتیبانی در ارتباط باشید:</div>
+              </div>
+              <a href="https://t.me/RoozanehHelp" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-sm">
+                ارتباط با پشتیبانی (<bdi>@RoozanehHelp</bdi>)
+              </a>
             </div>
+          </section>
 
-            <div class="p-3.5 rounded-xl bg-slate-50 border border-slate-200">
-              <strong class="text-slate-900 block mb-1">آمارگیر وب‌سایت (GoatCounter):</strong>
-              شمارنده بازدید وب‌سایت ما روی نسخه ابری رسمی (<bdi>roozaneh.goatcounter.com</bdi>) به صورت پیش‌فرض و بدون کوکی ردیاب اجرا می‌شود. تنها آمار تجمیعی بازدید صفحات بدون ردیابی پروفایل فردی ذخیره می‌گردد.
-            </div>
-          </div>
-        </section>
-
-        <!-- Section 8: Infrastructure Limits -->
-        <section id="infrastructure-limits" class="clean-card rounded-2xl p-6 sm:p-8 scroll-mt-28">
-          <div class="flex items-center gap-2.5 mb-4 text-brand-700 font-bold text-xs">
-            <span class="w-6 h-6 rounded-lg bg-brand-100 text-brand-700 flex items-center justify-center text-xs font-black">۸</span>
-            <span>بخش هشتم</span>
-          </div>
-          <h2 class="text-lg sm:text-xl font-bold text-slate-900 mb-3">زیرساخت دیتاسنترها و محدوده مسئولیت فنی</h2>
-          <p class="mb-4 text-slate-600">
-            گره‌های سرورهای روزنه نت در دیتاسنترهای معتبر بین‌المللی شامل <strong>هتزنر (Hetzner)</strong>، <strong>گوگل کلود (Google Cloud)</strong>، <strong>اوراکل (Oracle Cloud)</strong>، <strong>دیجیتال اوشن (DigitalOcean)</strong> و <strong>یوتا سرور (UtaServer)</strong> در کشورهای آلمان، فرانسه، فنلاند و هلند مستقر هستند.
-          </p>
-
-          <div class="p-4 rounded-xl bg-amber-50/70 border border-amber-200/70 text-xs text-amber-900 leading-relaxed mb-4">
-            <strong class="block mb-1 text-amber-950 font-bold">اعتراف صادقانه درباره مرز نظارت زیرساخت:</strong>
-            ما در سطح سیستم‌عامل، کرنل و هسته Xray تمام لاگ‌ها را مسدود کرده‌ایم. با این حال، مشترکین باید مطلع باشند که دیتاسنترهای ارائه‌دهنده سرور (بالادستی) ممکن است در سطح سوئیچ‌های شبکه و سخت‌افزار روترهای دیتاسنتر خود مانیتورینگ کلی روی ترافیک شبکه داشته باشند که این لایه به صورت فنی خارج از محدوده دسترسی نرم‌افزاری هر ارائه‌دهنده سرویسی در دنیاست.
-          </div>
-
-          <div class="p-4 rounded-xl bg-slate-100 border border-slate-200 flex flex-col sm:flex-row items-center justify-between gap-4">
-            <div>
-              <div class="font-bold text-slate-900 text-xs mb-0.5">کانال رسمی پشتیبانی و پیگیری امنیتی</div>
-              <div class="text-[11px] text-slate-500">برای پرسش‌های امنیتی یا درخواست حذف فوری اطلاعات با آیدی پشتیبانی در ارتباط باشید:</div>
-            </div>
-            <a href="https://t.me/RoozanehHelp" target="_blank" rel="noopener noreferrer" class="px-4 py-2 rounded-xl bg-slate-900 hover:bg-slate-800 text-white font-semibold text-xs transition-colors shrink-0">
-              ارتباط با پشتیبانی روزنه نت (@RoozanehHelp)
-            </a>
-          </div>
-        </section>
-
+        </div>
       </div>
     </div>
   </main>
 
-  <!-- Corporate Footer -->
-  <footer class="border-t border-slate-200 bg-slate-100 py-12 relative z-10 text-slate-600 text-xs mt-16">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="flex flex-col md:flex-row items-center justify-between gap-6 pb-8 border-b border-slate-300">
-        <div class="flex items-center gap-3">
-          <div class="w-9 h-9 rounded-xl bg-brand-600 flex items-center justify-center text-white font-black text-sm">
-            R
-          </div>
-          <div>
-            <div class="text-slate-900 font-bold text-sm">روزنه نت (Roozaneh Net)</div>
-            <div class="text-slate-500 text-[11px]">مرکز شفافیت فنی، پایداری شبکه و باینری‌های متن‌باز رسمی</div>
-          </div>
+  <!-- Unified 4-Column Apple Light Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <a href="index.html" class="brand-link mb-4">
+            <img src="assets/brand/logo-rail.svg" alt="لوگوی روزنه نت" class="brand-logo" width="32" height="32">
+            <span class="brand-meta">
+              <span class="brand-name">روزنه نت</span>
+              <span class="brand-sub"><bdi>Roozaneh Net</bdi></span>
+            </span>
+          </a>
+          <p class="apple-card-desc mb-4">مرجع دانلود مستقیم باینری‌های رسمی گیت‌هاب و اپ‌استور برای کلاینت‌های <bdi>V2Ray</bdi>، <bdi>Xray</bdi> و <bdi>Sing-box</bdi> با زیرساخت ۵ کشور فعال.</p>
+          <span class="status-pill status-pill--ok">همگام‌سازی خودکار با گیت‌هاب فعال</span>
         </div>
-        
-        <div class="flex flex-wrap items-center justify-center gap-6 text-slate-600 text-xs font-medium">
-          <a href="index.html#downloads" class="hover:text-brand-600 transition-colors">دانلود کلاینت‌ها</a>
-          <a href="privacy.html" class="text-brand-700 font-bold">حفظ حریم خصوصی و شفافیت</a>
-          <a href="terms.html" class="hover:text-brand-600 transition-colors">قرارداد و شرایط خدمات</a>
-          <a href="https://t.me/RoozanehNet" target="_blank" rel="noopener noreferrer" class="hover:text-brand-600 transition-colors">کانال اطلاع‌رسانی</a>
-          <a href="https://t.me/RoozanehHelp" target="_blank" rel="noopener noreferrer" class="hover:text-brand-600 transition-colors">پشتیبانی ۲۴ ساعته</a>
-          <a href="https://github.com/roozaneh/v2ray-clients-download" target="_blank" rel="noopener noreferrer" class="hover:text-brand-600 transition-colors">مخزن رسمی گیت‌هاب</a>
+        <div>
+          <h3 class="footer-col-title">سرویس‌ها</h3>
+          <ul class="footer-links">
+            <li><a href="https://roozaneh.github.io/" target="_blank" rel="noopener noreferrer">هاب مرکزی روزنه نت</a></li>
+            <li><a href="https://roozaneh.github.io/kharid-vpn-filter-shekan/" target="_blank" rel="noopener noreferrer">خرید <bdi>VPN</bdi> پرسرعت</a></li>
+            <li><a href="https://roozaneh.github.io/v2ray-configs-iran/" target="_blank" rel="noopener noreferrer">کانفیگ‌های <bdi>V2Ray</bdi> ایران</a></li>
+            <li><a href="https://roozaneh.github.io/iran-tunnel-v2ray-netmeli/" target="_blank" rel="noopener noreferrer">تانل اینترنت ملی</a></li>
+            <li><a href="index.html">پرتال دانلود کلاینت‌ها</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3 class="footer-col-title">اپلیکیشن‌ها</h3>
+          <ul class="footer-links">
+            <li><a href="apps/v2rayng.html">دانلود <bdi>v2rayNG</bdi> اندروید</a></li>
+            <li><a href="apps/happ.html">دانلود <bdi>Happ</bdi> اندروید</a></li>
+            <li><a href="apps/streisand.html">دانلود <bdi>Streisand</bdi> آیفون</a></li>
+            <li><a href="apps/v2box.html">دانلود <bdi>V2Box</bdi> آیفون و مک</a></li>
+            <li><a href="apps/v2rayn.html">دانلود <bdi>v2rayN</bdi> ویندوز</a></li>
+            <li><a href="apps/hiddify.html">دانلود <bdi>Hiddify</bdi> چندسکویی</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3 class="footer-col-title">قوانین و پشتیبانی</h3>
+          <ul class="footer-links">
+            <li><a href="privacy.html">شفافیت فنی و حریم خصوصی</a></li>
+            <li><a href="terms.html">قرارداد سطح خدمات (<bdi>SLA</bdi>)</a></li>
+            <li><a href="https://t.me/RoozanehNetBot?start=dl_clients" target="_blank" rel="noopener noreferrer">ربات تست رایگان (<bdi>@RoozanehNetBot</bdi>)</a></li>
+            <li><a href="https://t.me/RoozanehHelp" target="_blank" rel="noopener noreferrer">پشتیبانی ۲۴ ساعته (<bdi>@RoozanehHelp</bdi>)</a></li>
+            <li><a href="https://t.me/RoozanehNet" target="_blank" rel="noopener noreferrer">کانال اطلاع‌رسانی (<bdi>@RoozanehNet</bdi>)</a></li>
+          </ul>
         </div>
       </div>
-      <div class="pt-8 flex flex-col md:flex-row items-center justify-between gap-4 text-slate-500 text-[11px]">
-        <p>© ۲۰۲۶ روزنه نت. تمامی حقوق محفوظ است. کلاینت‌های معرفی‌شده پروژه‌های مستقل متن‌باز هستند.</p>
-        <p>تضمین دانلود باینری‌های خام و دست‌نخورده رسمی از سورس‌های معتبر گیت‌هاب</p>
+      <div class="footer-bottom">
+        <span>© ۱۴۰۵ روزنه نت (<bdi>Roozaneh Net</bdi>) — کلاینت‌های معرفی‌شده پروژه‌های مستقل متن‌باز هستند.</span>
+        <span>تحلیل ترافیک با <bdi>GoatCounter</bdi> و <bdi>Microsoft Clarity</bdi> بدون ذخیره داده شخصی</span>
       </div>
     </div>
   </footer>

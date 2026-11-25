@@ -1,0 +1,55 @@
+# Roozaneh Net — Official V2Ray & Xray Client Download Hub (پرتال دانلود مستقیم کلاینت‌های روزنه نت)
+
+> Official, malware-free client download portal for V2Ray, Xray-core, and Sing-box applications across Android, iOS, Windows, macOS, and Linux. All Android/desktop binaries are mirrored directly from official upstream GitHub releases; iOS clients link directly to the official Apple App Store.
+
+## Canonical URLs & Sitemaps
+- Portal Home: https://roozaneh.github.io/v2ray-clients-download/
+- Sitemap: https://roozaneh.github.io/v2ray-clients-download/sitemap.xml
+- Transparency & Privacy Center: https://roozaneh.github.io/v2ray-clients-download/privacy.html
+- Terms of Service & SLA: https://roozaneh.github.io/v2ray-clients-download/terms.html
+- GitHub Repository: https://github.com/roozaneh/v2ray-clients-download
+
+## Dedicated Client Pages (apps/*.html)
+- v2rayNG (Android — Universal APK, Xray-core, Reality + Fragment): https://roozaneh.github.io/v2ray-clients-download/apps/v2rayng.html | Bot: https://t.me/RoozanehNetBot?start=app_v2rayng
+- Happ (Android — Modern UI, Xray/Sing-box): https://roozaneh.github.io/v2ray-clients-download/apps/happ.html | Bot: https://t.me/RoozanehNetBot?start=dl_clients
+- Streisand (iOS / iPadOS — Official App Store, Sing-box core): https://roozaneh.github.io/v2ray-clients-download/apps/streisand.html | Bot: https://t.me/RoozanehNetBot?start=app_streisand
+- V2Box (iOS / iPadOS / macOS — Official App Store): https://roozaneh.github.io/v2ray-clients-download/apps/v2box.html | Bot: https://t.me/RoozanehNetBot?start=app_streisand
+- v2rayN (Windows & macOS — Complete with Core, System Proxy & TUN): https://roozaneh.github.io/v2ray-clients-download/apps/v2rayn.html | Bot: https://t.me/RoozanehNetBot?start=dl_clients
+- NekoBox (Android — Low-latency Sing-box core for gaming/trading): https://roozaneh.github.io/v2ray-clients-download/apps/nekobox.html | Bot: https://t.me/RoozanehNetBot?start=dl_clients
+- Sing-box (Android — Official SagerNet Go client): https://roozaneh.github.io/v2ray-clients-download/apps/singbox.html | Bot: https://t.me/RoozanehNetBot?start=dl_clients
+- Hiddify (Cross-platform Android/Windows/macOS/Linux, Persian UI): https://roozaneh.github.io/v2ray-clients-download/apps/hiddify.html | Bot: https://t.me/RoozanehNetBot?start=dl_clients
+- NekoRay (Windows & Linux — Portable TUN Mode client): https://roozaneh.github.io/v2ray-clients-download/apps/nekoray.html | Bot: https://t.me/RoozanehNetBot?start=dl_clients
+
+## Active Server Locations (5 Countries)
+- Germany (آلمان)
+- Netherlands (هلند)
+- United Kingdom (انگلیس)
+- United States (آمریکا)
+- Turkey (ترکیه)
+
+## Unified Pricing & Service Plans (Toman)
+- Free Trial (تست رایگان): 2–3 GB traffic, 3-day validity, 0 Toman (instant delivery via @RoozanehNetBot)
+- Economy 1-Month (اقتصادی): 25 GB — 215,000 Toman
+- Standard 1-Month (استاندارد): 45 GB — 295,000 Toman
+- Pro VIP 1-Month (حرفه‌ای VIP — Most Popular): 75 GB — 395,000 Toman
+- Plus 1-Month (پلاس): 100 GB — 495,000 Toman
+- High-Volume 1-Month (ماهانه پرحجم): 150 GB — 695,000 Toman
+- Dedicated 3-Month (سه‌ماهه اختصاصی): 150 GB (90 days) — 890,000 Toman
+- Pay-As-You-Go (مصرف آزاد بدون انقضا): 8,000 Toman per GB (from 10 GB upward, no time expiry)
+
+## Core Guarantees & Policies
+- Multi-Device Simultaneous Use: Supported on all plans under fair-use policy (مصرف منصفانه و خانوادگی).
+- 2X Automatic SLA Compensation: Automatic up to 2X expiry extension for verified global outages exceeding 3 hours.
+- 24-Hour Money-Back Guarantee: Full refund under 2 GB initial usage if connectivity issues cannot be resolved; pro-rated refund above 2 GB.
+- 100% Data Rollover: Unused traffic transfers 100% to the next cycle on renewal (30-day post-expiry retention window).
+- 100% Manual Renewal: Zero auto-billing or recurring deductions.
+- Strict No-Logs Architecture: Xray `loglevel: "none"`, no netfilter/conntrack connection logs, encrypted in-memory DoH DNS.
+
+## Ecosystem & Support Channels
+- Main Hub: https://roozaneh.github.io/
+- Buy VPN & Plans Portal: https://roozaneh.github.io/kharid-vpn-filter-shekan/
+- Iran Operator Configs Portal: https://roozaneh.github.io/v2ray-configs-iran/
+- National Internet (Net-Meli) Tunnel Portal: https://roozaneh.github.io/iran-tunnel-v2ray-netmeli/
+- Telegram Bot (Tests & Subscriptions): https://t.me/RoozanehNetBot?start=dl_clients
+- 24/7 Technical Support: https://t.me/RoozanehHelp
+- Official Channel: https://t.me/RoozanehNet

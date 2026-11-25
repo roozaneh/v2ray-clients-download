@@ -1,24 +1,32 @@
 <!DOCTYPE html>
-<html lang="fa" dir="rtl" class="scroll-smooth">
+<html lang="fa" dir="rtl">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>قرارداد سطح خدمات مشترکین، شرایط استفاده و خط‌مشی مالی | روزنه نت</title>
-  <meta name="description" content="سند رسمی شرایط خدمات روزنه نت: توافق‌نامه سطح خدمات (SLA)، جبران خودکار تا دو برابر زمان قطعی، تمدید ۱۰۰٪ دستی، قانون عدم سوختن حجم (Data Rollover) و ضمانت عودت وجه ۲۴ ساعته.">
+  <meta name="description" content="سند رسمی شرایط خدمات روزنه نت: توافق‌نامه سطح خدمات (SLA)، جبران خودکار تا ۲ برابر زمان قطعی، تست رایگان ۳ روزه (۲ تا ۳ گیگابایت)، استفاده چنددستگاهی منصفانه، تمدید ۱۰۰٪ دستی، Data Rollover و ضمانت عودت وجه ۲۴ ساعته.">
   <link rel="canonical" href="https://roozaneh.github.io/v2ray-clients-download/terms.html">
-  
+
+  <link rel="icon" href="assets/brand/favicon.ico" sizes="any">
+  <link rel="icon" href="assets/brand/favicon.svg" type="image/svg+xml">
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/brand/favicon-32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="assets/brand/favicon-16.png">
+  <link rel="apple-touch-icon" href="assets/brand/apple-touch-icon.png">
+
   <!-- Open Graph -->
   <meta property="og:type" content="article">
   <meta property="og:title" content="قرارداد سطح خدمات مشترکین و شرایط استفاده | روزنه نت">
-  <meta property="og:description" content="ضوابط شفاف حقوقی، تعهدات پایداری شبکه (SLA)، جبران خودکار دو برابری اختلالات، تمدید دستی و ضمانت عودت وجه ۲۴ ساعته.">
+  <meta property="og:description" content="ضوابط شفاف حقوقی، تعهدات پایداری شبکه (SLA)، جبران خودکار ۲ برابری قطعی، تست ۳ روزه، استفاده چنددستگاهی، تمدید دستی و ضمانت عودت وجه ۲۴ ساعته.">
   <meta property="og:url" content="https://roozaneh.github.io/v2ray-clients-download/terms.html">
+  <meta property="og:image" content="https://roozaneh.github.io/og.png">
   <meta property="og:locale" content="fa_IR">
   <meta property="og:site_name" content="روزنه نت | Roozaneh Net">
 
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="قرارداد سطح خدمات مشترکین و شرایط استفاده | روزنه نت">
-  <meta name="twitter:description" content="ضوابط حقوقی شفاف، تعهد جبران اتوماتیک قطعی‌ها، قانون حفظ حجم و خط‌مشی استفاده منصفانه روزنه نت.">
+  <meta name="twitter:description" content="ضوابط حقوقی شفاف، جبران خودکار ۲ برابری قطعی بالای ۳ ساعت، قانون حفظ حجم و خط‌مشی استفاده منصفانه روزنه نت.">
+  <meta name="twitter:image" content="https://roozaneh.github.io/og.png">
 
   <!-- Structured Data: JSON-LD -->
   <script type="application/ld+json">
@@ -27,7 +35,7 @@
     "@type": "WebPage",
     "name": "قرارداد سطح خدمات مشترکین و شرایط استفاده منصفانه روزنه نت",
     "url": "https://roozaneh.github.io/v2ray-clients-download/terms.html",
-    "description": "سند رسمی شرایط خدمات، جبران خودکار اختلالات، تمدید دستی، قانون انتقال حجم و خط‌مشی عودت وجه شبکه روزنه نت.",
+    "description": "سند رسمی شرایط خدمات، جبران خودکار ۲ برابری اختلالات، تست رایگان ۳ روزه، استفاده چنددستگاهی، تمدید دستی، قانون انتقال حجم و خط‌مشی عودت وجه شبکه روزنه نت.",
     "publisher": {
       "@type": "Organization",
       "name": "روزنه نت",
@@ -37,432 +45,563 @@
   }
   </script>
 
-  <!-- Google Fonts: Vazirmatn -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
-  
-  <!-- Tailwind CSS CDN -->
-  <script src="https://cdn.tailwindcss.com"></script>
-  <script>
-    tailwind.config = {
-      darkMode: 'class',
-      theme: {
-        extend: {
-          colors: {
-            brand: {
-              50: '#ecfdf5',
-              100: '#d1fae5',
-              400: '#34d399',
-              500: '#10b981',
-              600: '#059669',
-              700: '#047857',
-              800: '#065f46',
-              900: '#064e3b',
-            }
-          },
-          fontFamily: {
-            sans: ['Vazirmatn', 'sans-serif'],
-          }
-        }
+  <link rel="stylesheet" href="assets/css/apple-ui.css">
+  <style>
+    .doc-hero {
+      padding-block: 44px 36px;
+      background-color: var(--bg-primary);
+      border-bottom: 1px solid var(--border-subtle);
+    }
+    .doc-hero-row {
+      display: flex;
+      flex-direction: column;
+      gap: 18px;
+    }
+    @media (min-width: 768px) {
+      .doc-hero-row {
+        flex-direction: row;
+        align-items: flex-end;
+        justify-content: space-between;
       }
     }
-  </script>
-
-  <style>
-    body {
-      font-family: 'Vazirmatn', sans-serif;
-      background-color: #f8fafc;
-      color: #334155;
+    .doc-title {
+      margin: 0 0 10px;
+      font-size: clamp(24px, 3.4vw, 34px);
+      font-weight: 900;
+      line-height: 1.3;
+      color: var(--ink-primary);
     }
-    .clean-card {
-      background: #ffffff;
-      border: 1px solid #e2e8f0;
-      box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.04), 0 1px 2px -1px rgba(0, 0, 0, 0.04);
-      transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+    .doc-subtitle {
+      margin: 0;
+      max-width: 740px;
+      font-size: 15px;
+      color: var(--ink-secondary);
+      line-height: 1.8;
     }
-    .clean-card:hover {
-      border-color: #cbd5e1;
+    .doc-main {
+      padding-block: 48px 72px;
+      background-color: var(--bg-secondary);
+    }
+    .doc-layout {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 28px;
+      align-items: start;
+    }
+    @media (min-width: 960px) {
+      .doc-layout {
+        grid-template-columns: 280px 1fr;
+      }
+    }
+    .doc-sidebar {
+      display: none;
+    }
+    @media (min-width: 960px) {
+      .doc-sidebar {
+        display: flex;
+        flex-direction: column;
+        gap: 14px;
+        position: sticky;
+        top: 88px;
+      }
+    }
+    .doc-nav-title {
+      font-size: 13px;
+      font-weight: 800;
+      color: var(--ink-primary);
+      padding-bottom: 10px;
+      margin-bottom: 10px;
+      border-bottom: 1px solid var(--border-subtle);
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .doc-nav {
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+    }
+    .doc-nav a {
+      padding: 7px 10px;
+      border-radius: 10px;
+      font-size: 13px;
+      color: var(--ink-secondary);
+      transition: background-color 0.15s ease, color 0.15s ease;
+    }
+    .doc-nav a:hover {
+      background: var(--bg-secondary);
+      color: var(--ink-primary);
+    }
+    .doc-sections {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+    .doc-section {
+      scroll-margin-top: 88px;
+    }
+    .doc-step-row {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 10px;
+      font-size: 12px;
+      font-weight: 700;
+      color: var(--accent);
+    }
+    .doc-step-num {
+      width: 24px;
+      height: 24px;
+      border-radius: 8px;
+      background: var(--accent-tint);
+      color: var(--accent);
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 800;
+    }
+    .doc-h2 {
+      margin: 0 0 12px;
+      font-size: 20px;
+      font-weight: 800;
+      color: var(--ink-primary);
+      line-height: 1.4;
+    }
+    .doc-p {
+      margin: 0 0 14px;
+      font-size: 14.5px;
+      color: var(--ink-secondary);
+      line-height: 1.85;
+    }
+    .doc-p:last-child {
+      margin-bottom: 0;
+    }
+    .doc-box {
+      background: var(--bg-secondary);
+      border: 1px solid var(--border-subtle);
+      border-radius: 14px;
+      padding: 16px;
+      font-size: 13.5px;
+      color: var(--ink-secondary);
+      line-height: 1.8;
+    }
+    .doc-box--ok {
+      background: var(--status-ok-bg);
+      border-color: rgba(22, 163, 74, 0.22);
+      color: var(--ink-primary);
+    }
+    .doc-box--tint {
+      background: var(--accent-tint);
+      border-color: rgba(0, 113, 227, 0.18);
+      color: var(--ink-primary);
+    }
+    .doc-box--warn {
+      background: var(--status-warn-bg);
+      border-color: rgba(180, 83, 9, 0.22);
+      color: var(--ink-primary);
+    }
+    .doc-box--danger {
+      background: #FEF2F2;
+      border-color: #FECACA;
+      color: var(--ink-primary);
+    }
+    .doc-box-title {
+      font-weight: 700;
+      color: var(--ink-primary);
+      margin-bottom: 6px;
+      display: block;
+    }
+    .doc-list {
+      margin: 8px 0 0;
+      padding-right: 18px;
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+      font-size: 13px;
+      color: var(--ink-secondary);
+    }
+    .doc-stack {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+    .doc-cta-strip {
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+      background: var(--bg-secondary);
+      border: 1px solid var(--border-hairline);
+      border-radius: 16px;
+      padding: 18px;
+    }
+    @media (min-width: 640px) {
+      .doc-cta-strip {
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+      }
     }
   </style>
 
   <!-- GoatCounter Analytics -->
   <script data-goatcounter="https://roozaneh.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
-    <!-- Microsoft Clarity Tracking -->
-    <script type=text/javascript>
-        (function(c,l,a,r,i,t,y){
-            c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
-            t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
-            y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
-        })(window, document, "clarity", "script", "zip7qlr39v");
-    </script>
+  <!-- Microsoft Clarity Tracking -->
+  <script type="text/javascript">
+    (function(c,l,a,r,i,t,y){
+      c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+      t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+      y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+    })(window, document, "clarity", "script", "zip7qlr39v");
+  </script>
 </head>
-<body class="min-h-screen text-slate-700 bg-slate-50 selection:bg-brand-500 selection:text-white">
+<body>
 
-  <!-- Header / Navigation -->
-  <header class="sticky top-0 z-50 backdrop-blur-xl bg-white/90 border-b border-slate-200/90 shadow-xs">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
-      
-      <!-- Logo & Breadcrumb -->
-      <div class="flex items-center gap-4">
-        <a href="index.html" class="flex items-center gap-3 group">
-          <div class="w-10 h-10 rounded-xl bg-brand-600 flex items-center justify-center text-white font-black text-lg shadow-sm">
-            R
-          </div>
-          <div>
-            <span class="text-base font-extrabold text-slate-900 tracking-tight block">روزنه نت</span>
-            <span class="text-[11px] text-slate-500 font-medium">قرارداد رسمی و شرایط سطح خدمات</span>
-          </div>
-        </a>
-      </div>
-
-      <!-- Quick Links -->
-      <nav class="hidden md:flex items-center gap-6 text-xs font-semibold text-slate-600">
-        <a href="index.html#downloads" class="hover:text-brand-600 transition-colors">دانلود کلاینت‌ها</a>
-        <a href="index.html#whitepaper" class="hover:text-brand-600 transition-colors">دانشنامه ضد DPI</a>
-        <a href="privacy.html" class="hover:text-brand-600 transition-colors">شفافیت فنی و حریم خصوصی</a>
-        <a href="https://t.me/RoozanehNet" target="_blank" rel="noopener noreferrer" class="hover:text-brand-600 transition-colors">کانال اطلاع‌رسانی</a>
+  <!-- Sticky Frosted Header -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="index.html" class="brand-link">
+        <img src="assets/brand/logo-rail.svg" alt="لوگوی روزنه نت" class="brand-logo" width="32" height="32">
+        <span class="brand-meta">
+          <span class="brand-name">روزنه نت</span>
+          <span class="brand-sub"><bdi>Roozaneh Net</bdi></span>
+        </span>
+      </a>
+      <nav class="nav-links" aria-label="منوی اصلی">
+        <a href="index.html#downloads" class="nav-link">دانلود کلاینت‌ها</a>
+        <a href="index.html#whitepaper" class="nav-link">دانشنامه ضد <bdi>DPI</bdi></a>
+        <a href="privacy.html" class="nav-link">حریم خصوصی و شفافیت</a>
+        <a href="terms.html" class="nav-link is-active">شرایط خدمات و <bdi>SLA</bdi></a>
       </nav>
-
-      <!-- Back to Portal Button -->
-      <div>
-        <a href="index.html" class="inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-slate-100 hover:bg-slate-200 text-slate-700 text-xs font-semibold border border-slate-200 transition-colors">
-          <span>بازگشت به پرتال اصلی</span>
-          <svg class="w-4 h-4 rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
-        </a>
+      <div class="header-actions">
+        <a href="https://t.me/RoozanehNetBot?start=dl_clients" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-sm">شروع در تلگرام</a>
+        <button type="button" class="mobile-menu-btn" aria-label="باز کردن منو" aria-expanded="false" onclick="document.getElementById('mobile-nav').classList.toggle('is-open')">☰</button>
+      </div>
+    </div>
+    <div id="mobile-nav" class="mobile-nav">
+      <div class="mobile-nav-list">
+        <a href="index.html#downloads" class="mobile-nav-link">دانلود کلاینت‌ها</a>
+        <a href="index.html#whitepaper" class="mobile-nav-link">دانشنامه ضد <bdi>DPI</bdi></a>
+        <a href="privacy.html" class="mobile-nav-link">حریم خصوصی و شفافیت</a>
+        <a href="terms.html" class="mobile-nav-link">شرایط خدمات و <bdi>SLA</bdi></a>
       </div>
     </div>
   </header>
 
-  <!-- Main Content Layout -->
-  <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-    
-    <!-- Hero / Breadcrumb Bar -->
-    <div class="mb-10">
-      <div class="flex items-center gap-2 text-xs text-slate-500 mb-3">
-        <a href="index.html" class="hover:text-brand-600 transition-colors">پرتال روزنه نت</a>
+  <!-- Hero / Breadcrumb -->
+  <section class="doc-hero">
+    <div class="container">
+      <nav class="breadcrumb" aria-label="مسیر صفحه">
+        <a href="index.html">پرتال روزنه نت</a>
         <span>/</span>
-        <span class="text-slate-800 font-medium">قرارداد سطح خدمات و شرایط استفاده مشترکین</span>
-      </div>
-      <div class="flex flex-col md:flex-row md:items-center justify-between gap-4 pb-6 border-b border-slate-200">
+        <span>قرارداد سطح خدمات و شرایط استفاده مشترکین</span>
+      </nav>
+      <div class="doc-hero-row">
         <div>
-          <h1 class="text-2xl sm:text-3xl font-black text-slate-900 tracking-tight mb-2">
-            قرارداد سطح خدمات مشترکین و شرایط استفاده (Terms of Service)
-          </h1>
-          <p class="text-xs sm:text-sm text-slate-600 max-w-3xl leading-relaxed">
-            مجموعه ضوابط شفاف، حقوق متقابل، تعهدات پایداری شبکه (SLA)، سازوکار جبران خودکار تا دو برابر زمان اختلال، تمدید ۱۰۰٪ دستی، قانون رسمی انتقال حجم و آیین‌نامه استفاده منصفانه.
+          <h1 class="doc-title">قرارداد سطح خدمات مشترکین و شرایط استفاده (<bdi>Terms of Service</bdi>)</h1>
+          <p class="doc-subtitle">
+            مجموعه ضوابط شفاف، حقوق متقابل، تعهدات پایداری شبکه (<bdi>SLA</bdi>)، سازوکار جبران خودکار تا ۲ برابر زمان اختلال، استفاده چنددستگاهی منصفانه، تمدید ۱۰۰٪ دستی، قانون رسمی انتقال حجم و ضمانت عودت وجه ۲۴ ساعته.
           </p>
         </div>
-        <div class="shrink-0 flex items-center gap-3">
-          <div class="px-3 py-1.5 rounded-lg bg-emerald-50 border border-emerald-200 text-emerald-800 text-[11px] font-semibold flex items-center gap-1.5">
-            <span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
-            نسخه سند: ۲.۴.۰ (بروزرسانی رسمی)
-          </div>
+        <div>
+          <span class="status-pill status-pill--ok">نسخه سند: ۲.۵.۰ (بروزرسانی رسمی)</span>
         </div>
       </div>
     </div>
+  </section>
 
-    <!-- Grid: Sticky Sidebar + Deep Content -->
-    <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
-      
-      <!-- Sticky Navigation Sidebar -->
-      <aside class="hidden lg:block lg:col-span-3 sticky top-28 space-y-2 text-xs">
-        <div class="clean-card rounded-2xl p-4">
-          <div class="font-bold text-slate-900 mb-3 pb-2 border-b border-slate-100 flex items-center gap-2">
-            <svg class="w-4 h-4 text-brand-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg>
-            سرفصل‌های قرارداد
-          </div>
-          <nav class="space-y-1.5 text-slate-600">
-            <a href="#definitions" class="block px-2.5 py-1.5 rounded-lg hover:bg-slate-100 hover:text-slate-900 transition-colors">۱. تعاریف و ماهیت خدمات</a>
-            <a href="#fair-use" class="block px-2.5 py-1.5 rounded-lg hover:bg-slate-100 hover:text-slate-900 transition-colors">۲. آیین‌نامه استفاده منصفانه (AUP)</a>
-            <a href="#sla" class="block px-2.5 py-1.5 rounded-lg hover:bg-slate-100 hover:text-slate-900 transition-colors">۳. توافق سطح خدمات و جبران خودکار (SLA)</a>
-            <a href="#rollover" class="block px-2.5 py-1.5 rounded-lg hover:bg-slate-100 hover:text-slate-900 transition-colors">۴. قانون عدم سوختن حجم (Data Rollover)</a>
-            <a href="#billing-refund" class="block px-2.5 py-1.5 rounded-lg hover:bg-slate-100 hover:text-slate-900 transition-colors">۵. تمدید دستی، تست و عودت وجه ۲۴ ساعته</a>
-            <a href="#disclaimer" class="block px-2.5 py-1.5 rounded-lg hover:bg-slate-100 hover:text-slate-900 transition-colors">۶. سلب مسئولیت کلاینت‌های متن‌باز</a>
-            <a href="#pricing-terms" class="block px-2.5 py-1.5 rounded-lg hover:bg-slate-100 hover:text-slate-900 transition-colors">۷. تعرفه‌ها و اصل عدم عطف‌به‌ماسبق</a>
-            <a href="#dispute-support" class="block px-2.5 py-1.5 rounded-lg hover:bg-slate-100 hover:text-slate-900 transition-colors">۸. کانال‌های رسمی و حل اختلاف</a>
-          </nav>
-        </div>
+  <!-- Main Content -->
+  <main class="doc-main">
+    <div class="container">
+      <div class="doc-layout">
 
-        <div class="p-4 rounded-2xl bg-amber-50/70 border border-amber-200/70 text-[11px] text-amber-900 leading-relaxed">
-          <div class="font-bold mb-1 flex items-center gap-1.5 text-amber-800">
-            <svg class="w-4 h-4 text-amber-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"/></svg>
-            تعهد واقع‌گرایی در روزنه نت
-          </div>
-          ما ادعای غیرفنی «۱۰۰٪ بدون حتی یک ثانیه قطعی در شرایط بحران زیرساخت ملی» ارائه نمی‌دهیم؛ اما با مانیتورینگ خودکار، در صورت بروز اختلال تاییدشده، تا دو برابر زمان قطعی را به صورت رایگان به اعتبار مشترکین اضافه می‌کنیم.
-        </div>
-      </aside>
-
-      <!-- Content Sections -->
-      <div class="lg:col-span-9 space-y-8 text-sm leading-relaxed text-slate-700">
-        
-        <!-- Section 1: Definitions -->
-        <section id="definitions" class="clean-card rounded-2xl p-6 sm:p-8 scroll-mt-28">
-          <div class="flex items-center gap-2.5 mb-4 text-brand-700 font-bold text-xs">
-            <span class="w-6 h-6 rounded-lg bg-brand-100 text-brand-700 flex items-center justify-center text-xs font-black">۱</span>
-            <span>بخش اول</span>
-          </div>
-          <h2 class="text-lg sm:text-xl font-bold text-slate-900 mb-4">تعاریف، اصطلاحات حقوقی و ماهیت خدمات</h2>
-          <p class="mb-4">
-            استفاده از خدمات پرتال روزنه نت، ربات تلگرامی و اشتراک‌های اتصال به منزله مطالعه دقیق و پذیرش آگاهانه مفاد این قرارداد است:
-          </p>
-          <div class="space-y-3 text-xs text-slate-600">
-            <div class="p-3.5 rounded-xl bg-slate-50 border border-slate-200">
-              <strong class="text-slate-900 block mb-1">روزنه نت (سرویس‌دهنده):</strong>
-              پلتفرم توزیع امن باینری‌های رسمی متن‌باز، ربات خودکار مدیریت اشتراک، زیرساخت سرورهای اختصاصی و کانفیگ‌های رمزنگاری‌شده ضد فیلترینگ.
+        <!-- Sticky Sidebar -->
+        <aside class="doc-sidebar">
+          <div class="apple-card">
+            <div class="doc-nav-title">
+              <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.75" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg>
+              <span>سرفصل‌های قرارداد</span>
             </div>
-            <div class="p-3.5 rounded-xl bg-slate-50 border border-slate-200">
-              <strong class="text-slate-900 block mb-1">مشترک (کاربر):</strong>
-              هر شخص حقیقی که جهت دسترسی امن به اینترنت آزاد اقدام به دریافت اشتراک تست، خرید پلن یا استفاده از آموزش‌ها و کلاینت‌های معرفی‌شده می‌نماید.
-            </div>
-            <div class="p-3.5 rounded-xl bg-slate-50 border border-slate-200">
-              <strong class="text-slate-900 block mb-1">کانفیگ اتصال (Subscription URL / Config):</strong>
-              لینک یا پیکربندی استاندارد مبتنی بر پروتکل‌های مدرن نظیر <bdi>VLESS Reality</bdi> جهت برقراری تونل امن میان دستگاه کاربر و سرورهای خارج از کشور.
-            </div>
+            <nav class="doc-nav" aria-label="سرفصل‌های شرایط خدمات">
+              <a href="#definitions">۱. تعاریف و ماهیت خدمات</a>
+              <a href="#fair-use">۲. استفاده منصفانه و چنددستگاهی</a>
+              <a href="#sla">۳. تعهد <bdi>SLA</bdi> و جبران خودکار ۲ برابری</a>
+              <a href="#rollover">۴. قانون عدم سوختن حجم (<bdi>Rollover</bdi>)</a>
+              <a href="#billing-refund">۵. تمدید دستی، تست ۳ روزه و عودت وجه</a>
+              <a href="#disclaimer">۶. سلب مسئولیت کلاینت‌های متن‌باز</a>
+              <a href="#pricing-terms">۷. تعرفه‌ها و اصل عدم عطف‌به‌ماسبق</a>
+              <a href="#dispute-support">۸. کانال‌های رسمی و حل اختلاف</a>
+            </nav>
           </div>
-        </section>
 
-        <!-- Section 2: Fair Use Policy -->
-        <section id="fair-use" class="clean-card rounded-2xl p-6 sm:p-8 scroll-mt-28">
-          <div class="flex items-center gap-2.5 mb-4 text-brand-700 font-bold text-xs">
-            <span class="w-6 h-6 rounded-lg bg-brand-100 text-brand-700 flex items-center justify-center text-xs font-black">۲</span>
-            <span>بخش دوم</span>
+          <div class="doc-box doc-box--warn">
+            <span class="doc-box-title">تعهد واقع‌گرایی در روزنه نت</span>
+            ما ادعای غیرفنی «۱۰۰٪ بدون حتی یک ثانیه قطعی در شرایط بحران زیرساخت ملی» ارائه نمی‌دهیم؛ اما با مانیتورینگ خودکار، در صورت بروز اختلال سراسری بالای ۳ ساعت، تا ۲ برابر زمان قطعی را به صورت رایگان به اعتبار مشترکین اضافه می‌کنیم.
           </div>
-          <h2 class="text-lg sm:text-xl font-bold text-slate-900 mb-3">آیین‌نامه استفاده منصفانه و حفظ سلامت شبکه (Acceptable Use Policy)</h2>
-          <p class="mb-4 text-slate-600">
-            سرعت بالا، پینگ پایدار و عدم مواجهه با چالش‌های کپچا در گوگل و کلودفلر، مستلزم «تمیز ماندن سلامت آدرس‌های آی‌پی سرورها» برای تمامی مشترکین است. بدین منظور ضوابط زیر به صورت شفاف تعریف و نظارت می‌گردند:
-          </p>
+        </aside>
 
-          <div class="grid grid-cols-1 md:grid-cols-2 gap-4 my-4">
-            <div class="p-4 rounded-xl bg-emerald-50/70 border border-emerald-200 text-xs">
-              <div class="font-bold text-emerald-900 mb-2 flex items-center gap-1.5">
-                <span class="w-4 h-4 rounded-full bg-emerald-200 text-emerald-800 flex items-center justify-center font-bold">✓</span>
-                استفاده‌های کاملاً مجاز و استاندارد
+        <!-- Document Sections -->
+        <div class="doc-sections">
+
+          <!-- Section 1 -->
+          <section id="definitions" class="apple-card doc-section">
+            <div class="doc-step-row">
+              <span class="doc-step-num">۱</span>
+              <span>بخش اول</span>
+            </div>
+            <h2 class="doc-h2">تعاریف، اصطلاحات حقوقی و ماهیت خدمات</h2>
+            <p class="doc-p">
+              استفاده از خدمات پرتال روزنه نت، ربات تلگرامی و اشتراک‌های اتصال به منزله مطالعه دقیق و پذیرش آگاهانه مفاد این قرارداد است:
+            </p>
+            <div class="doc-stack">
+              <div class="doc-box">
+                <span class="doc-box-title">روزنه نت (سرویس‌دهنده):</span>
+                پلتفرم توزیع امن باینری‌های رسمی متن‌باز، ربات خودکار مدیریت اشتراک، زیرساخت سرورهای اختصاصی در ۵ کشور و کانفیگ‌های رمزنگاری‌شده ضد فیلترینگ.
               </div>
-              <ul class="space-y-1.5 text-slate-700 list-disc list-inside">
-                <li>وب‌گردی عادی، مطالعه مقالات، تحقیق و آموزش</li>
-                <li>استریم ویدیو با کیفیت بالا در یوتیوب، توییچ و رسانه‌های جهانی</li>
-                <li>استفاده فعال از پیام‌رسان‌ها و شبکه‌های اجتماعی (تلگرام، اینستاگرام، توییتر/X و...)</li>
-                <li>ترید، فعالیت در صرافی‌های رمزنگاری‌شده و بازارهای مالی با آی‌پی استاتیک و تمیز</li>
-                <li>گیمینگ آنلاین با پینگ پایدار و تماس‌های صوتی و تصویری با کیفیت بالا</li>
-                <li>دانلود و آپلود فایل‌های شخصی و کاری در بستر وب</li>
-              </ul>
-            </div>
-
-            <div class="p-4 rounded-xl bg-red-50/70 border border-red-200 text-xs">
-              <div class="font-bold text-red-900 mb-2 flex items-center gap-1.5">
-                <span class="w-4 h-4 rounded-full bg-red-200 text-red-800 flex items-center justify-center font-bold">✕</span>
-                فعالیت‌های اکیداً ممنوع (Blacklist Trigger)
+              <div class="doc-box">
+                <span class="doc-box-title">مشترک (کاربر):</span>
+                هر شخص حقیقی که جهت دسترسی امن به اینترنت آزاد اقدام به دریافت اشتراک تست، خرید پلن یا استفاده از آموزش‌ها و کلاینت‌های معرفی‌شده می‌نماید.
               </div>
-              <ul class="space-y-1.5 text-slate-700 list-disc list-inside">
-                <li>ارسال ایمیل‌های اسپم تبلیغاتی انبوه (<bdi>Mass Spamming</bdi>) و ارسال غیرمجاز روی پورت ۲۵ و SMTP</li>
-                <li>حملات محروم‌سازی از سرویس (<bdi>DDoS / DoS</bdi>)، اسکن پورت و تست نفوذ خرابکارانه</li>
-                <li>اقدامات فیشینگ، سرقت اطلاعات هویتی و کلاهبرداری سایبری</li>
-                <li>دانلود و انتشار تورنت‌های نقض‌کننده کپی‌رایت شدید که منجر به ارسال اخطاریه <bdi>DMCA Abuse</bdi> از سوی دیتاسنتر شود</li>
-              </ul>
+              <div class="doc-box">
+                <span class="doc-box-title">کانفیگ اتصال (<bdi>Subscription URL / Config</bdi>):</span>
+                لینک یا پیکربندی استاندارد مبتنی بر پروتکل‌های مدرن نظیر <bdi>VLESS Reality</bdi> جهت برقراری تونل امن میان دستگاه کاربر و سرورهای خارج از کشور.
+              </div>
             </div>
-          </div>
+          </section>
 
-          <div class="p-3.5 rounded-xl bg-slate-100 text-slate-600 text-xs border border-slate-200">
-            <strong>ضمانت اجرایی:</strong> در صورت دریافت گزارش تخلف مستند از سوی دیتاسنترهای بین‌المللی مبنی بر سوءاستفاده یک اشتراک، جهت حفظ حقوق سایر مشترکین و جلوگیری از مسدود شدن کل سرور، اشتراک متخلف بدون بازگشت وجه مسدود خواهد گردید.
-          </div>
-        </section>
+          <!-- Section 2 -->
+          <section id="fair-use" class="apple-card doc-section">
+            <div class="doc-step-row">
+              <span class="doc-step-num">۲</span>
+              <span>بخش دوم</span>
+            </div>
+            <h2 class="doc-h2">آیین‌نامه استفاده منصفانه (<bdi>AUP</bdi>) و اتصال چنددستگاهی هم‌زمان</h2>
+            <p class="doc-p">
+              تمامی پلن‌های روزنه نت از <strong>اتصال چنددستگاهی هم‌زمان (استفاده شخصی و خانوادگی با مصرف منصفانه)</strong> پشتیبانی می‌کنند تا کاربر بتواند اشتراک خود را هم‌زمان روی گوشی، لپ‌تاپ و تبلت استفاده نماید. برای حفظ پایداری و تمیز ماندن <bdi>IP</bdi> سرورها (و جلوگیری از مواجهه با کپچای گوگل و کلودفلر)، اشتراک‌گذاری تجاری/گروهی خارج از خانواده و فعالیت‌های مخرب مجاز نیست:
+            </p>
 
-        <!-- Section 3: SLA & Automatic Compensation -->
-        <section id="sla" class="clean-card rounded-2xl p-6 sm:p-8 scroll-mt-28">
-          <div class="flex items-center gap-2.5 mb-4 text-brand-700 font-bold text-xs">
-            <span class="w-6 h-6 rounded-lg bg-brand-100 text-brand-700 flex items-center justify-center text-xs font-black">۳</span>
-            <span>بخش سوم</span>
-          </div>
-          <h2 class="text-lg sm:text-xl font-bold text-slate-900 mb-3">تعهد پایداری شبکه، شرایط سطح خدمات (SLA) و جبران خودکار اختلالات</h2>
-          <p class="mb-4 text-slate-600">
-            ما از دادن وعده‌های غیرواقعی نظیر «آپ‌تایم ۱۰۰٪ در سخت‌ترین اختلالات ملی» اجتناب می‌کنیم. زیرساخت اینترنت ایران در مقاطعی با اختلالات سخت‌افزاری، قطعی کابل‌های بین‌المللی یا فیلترینگ شدید مواجه می‌شود. با این حال، تعهدات دقیق و قابل راستی‌آزمایی ما به شرح زیر است:
-          </p>
-
-          <div class="space-y-3 text-xs">
-            <div class="p-4 rounded-xl bg-slate-50 border border-slate-200">
-              <strong class="text-slate-900 block mb-1">۱. زیرساخت ابری با پورت‌های پرسرعت تا ۱۰ گیگابیت:</strong>
-              نودهای منتخب شبکه روزنه نت بر روی سخت‌افزارهای مدرن با پورت‌های شبکه تا ۱۰ گیگابیت بر ثانیه و حافظه‌های پرسرعت NVMe در معتبرترین دیتاسنترهای اروپایی (<bdi>Hetzner</bdi>، <bdi>Google Cloud</bdi>، <bdi>Oracle Cloud</bdi>، <bdi>DigitalOcean</bdi> و <bdi>UtaServer</bdi>) میزبانی می‌شوند تا کوچک‌ترین گلوگاهی از سمت پردازش سرور ایجاد نگردد. ظرفیت ترافیکی در دسترس هر نود تابع بستر شبکه، پایداری مسیرهای بین‌المللی و خط‌مشی میزبانی دیتاسنتر است.
+            <div class="bento-grid bento-grid--2 mb-4">
+              <div class="doc-box doc-box--ok">
+                <span class="doc-box-title">استفاده‌های مجاز و استاندارد</span>
+                <ul class="doc-list">
+                  <li>اتصال هم‌زمان دستگاه‌های شخصی و اعضای خانواده (گوشی، آیفون، لپ‌تاپ) در چارچوب مصرف منصفانه</li>
+                  <li>وب‌گردی، تحقیق، آموزش و استریم ویدیو با کیفیت بالا</li>
+                  <li>استفاده از پیام‌رسان‌ها و شبکه‌های اجتماعی</li>
+                  <li>ترید و فعالیت در بازارهای مالی با <bdi>IP</bdi> تمیز و پایدار</li>
+                  <li>گیمینگ آنلاین و تماس‌های صوتی و تصویری</li>
+                </ul>
+              </div>
+              <div class="doc-box doc-box--danger">
+                <span class="doc-box-title">فعالیت‌های اکیداً ممنوع (<bdi>Blacklist Trigger</bdi>)</span>
+                <ul class="doc-list">
+                  <li>ارسال ایمیل‌های اسپم انبوه و ترافیک غیرمجاز روی پورت ۲۵ و <bdi>SMTP</bdi></li>
+                  <li>حملات <bdi>DDoS / DoS</bdi>، اسکن پورت و تست نفوذ خرابکارانه</li>
+                  <li>فیشینگ، سرقت هویت یا فروش مجدد و اشتراک‌گذاری عمومی یک کد برای ده‌ها نفر</li>
+                  <li>دانلود یا انتشار تورنت‌های نقض‌کننده کپی‌رایت منجر به اخطار <bdi>DMCA Abuse</bdi></li>
+                </ul>
+              </div>
             </div>
 
-            <div class="p-4 rounded-xl bg-slate-50 border border-slate-200">
-              <strong class="text-slate-900 block mb-1">۲. معماری چندمسیره و بهینه‌سازی مداوم فرگمنت:</strong>
-              در زمان اعمال محدودیت‌های شدید روی یک پروتکل یا فیلتر شدن یک دامنه پوششی، تیم فنی با مانیتورینگ مستمر مسیرهای جایگزین و تکنیک‌های خردسازی بسته‌های دست‌تکانی (<bdi>ClientHello Fragmentation</bdi>) نسبت به برقراری مجدد کانکشن پایدار در سریع‌ترین زمان اقدام می‌نماید.
+            <div class="doc-box">
+              <strong>ضمانت اجرایی:</strong> در صورت دریافت گزارش تخلف مستند از سوی دیتاسنترهای بین‌المللی یا نقض فاحش الگوی مصرف منصفانه چندکاربره، جهت حفظ حقوق سایر مشترکین و جلوگیری از مسدود شدن کل سرور، اشتراک متخلف بدون بازگشت وجه مسدود خواهد گردید.
             </div>
+          </section>
 
-            <div class="p-4 rounded-xl bg-emerald-50/70 border border-emerald-200">
-              <strong class="text-emerald-950 block mb-1 flex items-center gap-1.5">
-                <span class="w-2 h-2 rounded-full bg-emerald-600"></span>
-                ۳. سازوکار جبران خودکار تا دو برابر زمان قطعی (2X Automatic Compensation):
-              </strong>
-              <p class="text-slate-700 leading-relaxed">
-                سامانه پایش هوشمند ما قطعی‌های سرورها را به صورت اتوماتیک ثبت می‌کند. در صورتی که به دلیل اختلالات زیرساختی، اتصال مشترکین به طور سراسری برای <strong>بیش از ۳ ساعت</strong> قطع یا ناممکن گردد، سیستم به ازای مدت زمان قطعی، <strong>تا دو برابر (2X) مدت زمان اختلال</strong> را به عنوان هدیه جبرانی به صورت اتوماتیک به تاریخ انقضای پکیج تمامی مشترکین فعال اضافه می‌کند (برای مثال در صورت ۶ ساعت قطعی سراسری، ۱۲ ساعت به مدت اعتبار کلیه کاربران به صورت خودکار افزوده می‌شود) و نیازی به پیگیری دستی یا تیکت زدن از سوی مشترک نیست.
-              </p>
+          <!-- Section 3 -->
+          <section id="sla" class="apple-card doc-section">
+            <div class="doc-step-row">
+              <span class="doc-step-num">۳</span>
+              <span>بخش سوم</span>
             </div>
-          </div>
-        </section>
+            <h2 class="doc-h2">تعهد پایداری شبکه (<bdi>SLA</bdi>) و جبران خودکار ۲ برابری اختلالات</h2>
+            <p class="doc-p">
+              ما از دادن وعده‌های غیرواقعی نظیر «آپ‌تایم ۱۰۰٪ بدون قطعی در سخت‌ترین اختلالات ملی» اجتناب می‌کنیم. زیرساخت اینترنت در مقاطعی با اختلالات مخابراتی یا فیلترینگ شدید مواجه می‌شود؛ با این حال تعهدات دقیق و قابل راستی‌آزمایی ما به شرح زیر است:
+            </p>
+            <div class="doc-stack">
+              <div class="doc-box">
+                <span class="doc-box-title">۱. زیرساخت ابری در ۵ کشور فعال با پورت‌های تا ۱۰ گیگابیت:</span>
+                گره‌های فعال شبکه روزنه نت بر روی سخت‌افزارهای مدرن با پورت‌های تا ۱۰ گیگابیت بر ثانیه و حافظه‌های <bdi>NVMe</bdi> در دیتاسنترهای معتبر (<bdi>Hetzner</bdi>، <bdi>Google Cloud</bdi>، <bdi>Oracle Cloud</bdi>، <bdi>DigitalOcean</bdi> و <bdi>UtaServer</bdi>) در <strong>۵ لوکیشن فعال: آلمان، هلند، انگلیس، آمریکا و ترکیه</strong> میزبانی می‌شوند. ظرفیت ترافیکی در دسترس هر نود تابع بستر شبکه، پایداری مسیرهای بین‌المللی و خط‌مشی میزبانی دیتاسنتر است.
+              </div>
+              <div class="doc-box">
+                <span class="doc-box-title">۲. معماری چندمسیره و بهینه‌سازی مداوم فرگمنت:</span>
+                در زمان اعمال محدودیت روی یک مسیر یا دامنه پوششی، تیم فنی با مانیتورینگ مستمر مسیرهای جایگزین و تکنیک خردسازی بسته‌ها (<bdi>ClientHello Fragmentation</bdi>) نسبت به برقراری مجدد اتصال پایدار اقدام می‌نماید.
+              </div>
+              <div class="doc-box doc-box--ok">
+                <span class="doc-box-title">۳. سازوکار جبران خودکار تا ۲ برابر زمان قطعی (<bdi>2X Automatic Compensation</bdi>):</span>
+                سامانه پایش هوشمند ما قطعی سرورها را به صورت اتوماتیک ثبت می‌کند. در صورتی که به دلیل اختلالات زیرساختی، اتصال مشترکین به طور سراسری برای <strong>بیش از ۳ ساعت</strong> قطع یا ناممکن گردد، سیستم <strong>تا ۲ برابر (<bdi>2X</bdi>) مدت زمان اختلال</strong> را به عنوان هدیه جبرانی به صورت خودکار به تاریخ انقضای تمامی مشترکین فعال اضافه می‌کند (مثلاً برای ۶ ساعت قطعی سراسری، ۱۲ ساعت به اعتبار افزوده می‌شود) و نیازی به تیکت زدن نیست.
+              </div>
+            </div>
+          </section>
 
-        <!-- Section 4: Data Rollover & 30-Day Retention -->
-        <section id="rollover" class="clean-card rounded-2xl p-6 sm:p-8 scroll-mt-28">
-          <div class="flex items-center gap-2.5 mb-4 text-brand-700 font-bold text-xs">
-            <span class="w-6 h-6 rounded-lg bg-brand-100 text-brand-700 flex items-center justify-center text-xs font-black">۴</span>
-            <span>بخش چهارم</span>
-          </div>
-          <h2 class="text-lg sm:text-xl font-bold text-slate-900 mb-3">قانون رسمی عدم سوختن حجم (Data Rollover) و چرخه ۳۰ روزه نگهداری</h2>
-          <p class="mb-4 text-slate-600">
-            یکی از بارزترین اصول عدالت مالی در روزنه نت، عدم اتلاف هزینه پرداختی مشترکین است. حجمی که خریده‌اید دارایی شماست و نباید با پایان مدت اعتبار از بین برود:
-          </p>
-
-          <div class="p-4 rounded-xl bg-brand-50/70 border border-brand-200 text-xs space-y-3">
-            <div class="flex items-start gap-2.5">
-              <div class="w-5 h-5 rounded-md bg-brand-600 text-white flex items-center justify-center font-bold text-xs shrink-0 mt-0.5">★</div>
+          <!-- Section 4 -->
+          <section id="rollover" class="apple-card doc-section">
+            <div class="doc-step-row">
+              <span class="doc-step-num">۴</span>
+              <span>بخش چهارم</span>
+            </div>
+            <h2 class="doc-h2">قانون رسمی عدم سوختن حجم (<bdi>Data Rollover</bdi>) و چرخه ۳۰ روزه نگهداری</h2>
+            <p class="doc-p">
+              یکی از اصول بنیادین عدالت مالی در روزنه نت، عدم اتلاف هزینه پرداختی مشترکین است. حجمی که خریده‌اید دارایی شماست و نباید با پایان مدت اعتبار از بین برود:
+            </p>
+            <div class="doc-box doc-box--tint doc-stack">
               <div>
-                <strong class="text-brand-950 block mb-0.5">انتقال ۱۰۰٪ حجم مصرف‌نشده به دوره جدید:</strong>
+                <span class="doc-box-title">انتقال ۱۰۰٪ حجم مصرف‌نشده به دوره جدید:</span>
                 چنانچه پیش از تاریخ انقضا یا تا حداکثر ۳۰ روز پس از موعد انقضای اشتراک نسبت به تمدید سرویس اقدام نمایید، تمامی حجم باقی‌مانده از دوره گذشته عیناً به حجم بسته جدید افزوده شده و نمی‌سوزد.
               </div>
-            </div>
-            <div class="flex items-start gap-2.5">
-              <div class="w-5 h-5 rounded-md bg-brand-600 text-white flex items-center justify-center font-bold text-xs shrink-0 mt-0.5">★</div>
-              <div>
-                <strong class="text-brand-950 block mb-0.5">پاکسازی قطعی پس از مهلت ۳۰ روزه:</strong>
+              <div style="border-top: 1px solid rgba(0, 113, 227, 0.14); padding-top: 10px;">
+                <span class="doc-box-title">پاکسازی قطعی پس از مهلت ۳۰ روزه:</span>
                 در صورتی که ۳۰ روز تمام از موعد انقضای اکانت سپری شود و تمدیدی صورت نگیرد، جهت بهینه‌سازی دیتابیس و اجرای تعهدات حریم خصوصی، شناسه کاربری و نگاشت اشتراک به صورت خودکار و دائمی پاکسازی (<bdi>Purge</bdi>) خواهد شد.
               </div>
             </div>
-          </div>
-        </section>
+          </section>
 
-        <!-- Section 5: Manual Renewal, Free Trial & 24h Refund -->
-        <section id="billing-refund" class="clean-card rounded-2xl p-6 sm:p-8 scroll-mt-28">
-          <div class="flex items-center gap-2.5 mb-4 text-brand-700 font-bold text-xs">
-            <span class="w-6 h-6 rounded-lg bg-brand-100 text-brand-700 flex items-center justify-center text-xs font-black">۵</span>
-            <span>بخش پنجم</span>
-          </div>
-          <h2 class="text-lg sm:text-xl font-bold text-slate-900 mb-3">شفافیت مالی، تمدید ۱۰۰٪ دستی، کانفیگ تست و ضمانت ۲۴ ساعته عودت وجه</h2>
-          <p class="mb-4 text-slate-600">
-            ما هیچ‌گونه فرایند مبهم، کارمزد پنهان یا کسر هزینه خودکار نداریم. همه چیز تحت کنترل کامل و اراده مستقیم مشترک است:
-          </p>
-
-          <div class="space-y-3 text-xs">
-            <div class="p-4 rounded-xl bg-slate-50 border border-slate-200">
-              <strong class="text-slate-900 block mb-1">۱. تمدید کاملاً دستی و اختیاری (Zero Auto-Billing):</strong>
-              در روزنه نت هیچ‌گونه اشتراک خودکار، کسر وجه دوره‌ای از حساب بانکی یا بدهکار کردن کاربر وجود ندارد. هرگونه تمدید سرویس صرفاً به صورت ۱۰۰٪ دستی توسط خود مشترک از طریق ربات تلگرام، ارتباط با پشتیبانی یا درگاه‌های معین سایت صورت می‌پذیرد.
+          <!-- Section 5 -->
+          <section id="billing-refund" class="apple-card doc-section">
+            <div class="doc-step-row">
+              <span class="doc-step-num">۵</span>
+              <span>بخش پنجم</span>
             </div>
-
-            <div class="p-4 rounded-xl bg-slate-50 border border-slate-200">
-              <strong class="text-slate-900 block mb-1">۲. دریافت کانفیگ تست ۲ تا ۳ گیگابایتی رایگان:</strong>
-              پیش از پرداخت هرگونه وجه، تمامی متقاضیان می‌توانند با مراجعه به ربات تلگرام روزنه نت، کانفیگ تست هدیه دریافت نموده و عملکرد، سرعت استریم و پینگ را روی اینترنت همراه و خانگی خود بررسی نمایند.
-            </div>
-
-            <div class="p-4 rounded-xl bg-amber-50/70 border border-amber-200">
-              <strong class="text-amber-950 block mb-1">۳. ضمانت عودت وجه در ۲۴ ساعت اولیه (Money-Back Guarantee):</strong>
-              <p class="text-slate-700 leading-relaxed mb-2">
+            <h2 class="doc-h2">تمدید ۱۰۰٪ دستی، تست رایگان ۳ روزه و ضمانت ۲۴ ساعته عودت وجه</h2>
+            <p class="doc-p">
+              ما هیچ‌گونه فرایند مبهم، کارمزد پنهان یا کسر هزینه خودکار نداریم. همه چیز تحت کنترل کامل و اراده مستقیم مشترک است:
+            </p>
+            <div class="doc-stack">
+              <div class="doc-box">
+                <span class="doc-box-title">۱. تمدید ۱۰۰٪ دستی و اختیاری (<bdi>Zero Auto-Billing</bdi>):</span>
+                در روزنه نت هیچ‌گونه اشتراک خودکار، کسر وجه دوره‌ای از حساب بانکی یا بدهکار کردن کاربر وجود ندارد. هرگونه تمدید سرویس صرفاً به صورت ۱۰۰٪ دستی توسط خود مشترک از طریق ربات تلگرام یا پشتیبانی انجام می‌شود.
+              </div>
+              <div class="doc-box">
+                <span class="doc-box-title">۲. تست رایگان ۳ روزه با ۲ تا ۳ گیگابایت ترافیک:</span>
+                پیش از پرداخت هرگونه وجه، تمامی متقاضیان می‌توانند با مراجعه به ربات تلگرام روزنه نت (<bdi>@RoozanehNetBot</bdi>)، اشتراک تست هدیه با حجم <strong>۲ تا ۳ گیگابایت و اعتبار ۳ روزه</strong> دریافت نموده و سرعت، پینگ و کیفیت را روی اینترنت همراه و خانگی خود بررسی نمایند.
+              </div>
+              <div class="doc-box doc-box--warn">
+                <span class="doc-box-title">۳. ضمانت عودت وجه در ۲۴ ساعت اولیه (<bdi>Money-Back Guarantee</bdi>):</span>
                 در صورتی که پس از خرید سرویس، به علت محدودیت‌های خاص شبکه یا ناسازگاری منطقه مخابراتی مشترک موفق به برقراری ارتباط پایدار نشود و راهنمایی‌های تیم پشتیبانی ۲۴ ساعته نیز به نتیجه نرسد، وجه پرداختی ظرف ۲۴ ساعت مسترد می‌گردد:
-              </p>
-              <ul class="space-y-1 text-slate-600 list-disc list-inside">
-                <li>اگر حجم مصرف‌شده روی اکانت <strong>زیر ۲ گیگابایت</strong> باشد (صرفاً در حد تست اولیه)، ۱۰۰٪ کل مبلغ به حساب کاربر بازگردانده می‌شود.</li>
-                <li>در صورتی که حجم مصرفی <strong>بیش از ۲ گیگابایت</strong> باشد، تنها هزینه ترافیک مصرف‌شده محاسبه و کسر گردیده و مابقی مبلغ عودت داده خواهد شد.</li>
-              </ul>
+                <ul class="doc-list">
+                  <li>اگر حجم مصرف‌شده روی اکانت <strong>زیر ۲ گیگابایت</strong> باشد، ۱۰۰٪ کل مبلغ به حساب کاربر بازگردانده می‌شود.</li>
+                  <li>در صورتی که حجم مصرفی <strong>بیش از ۲ گیگابایت</strong> باشد، تنها هزینه ترافیک مصرف‌شده کسر گردیده و مابقی مبلغ عودت داده خواهد شد.</li>
+                </ul>
+              </div>
             </div>
-          </div>
-        </section>
+          </section>
 
-        <!-- Section 6: Open-Source Disclaimer -->
-        <section id="disclaimer" class="clean-card rounded-2xl p-6 sm:p-8 scroll-mt-28">
-          <div class="flex items-center gap-2.5 mb-4 text-brand-700 font-bold text-xs">
-            <span class="w-6 h-6 rounded-lg bg-brand-100 text-brand-700 flex items-center justify-center text-xs font-black">۶</span>
-            <span>بخش ششم</span>
-          </div>
-          <h2 class="text-lg sm:text-xl font-bold text-slate-900 mb-3">سلب مسئولیت حقوقی کلاینت‌های متن‌باز شخص ثالث و مجوزها</h2>
-          <p class="mb-4 text-slate-600">
-            نرم‌افزارهای کلاینت معرفی‌شده در این پرتال (از جمله <bdi>v2rayNG</bdi>، <bdi>Happ</bdi>، <bdi>Streisand</bdi>، <bdi>v2rayN</bdi>، <bdi>Sing-box</bdi> و <bdi>FoXray</bdi>) پروژه‌های نرم‌افزاری مستقل و عمومی هستند که تحت مجوزهای متن‌باز بین‌المللی (نظیر GPL-3.0، MIT و Apache 2.0) منتشر می‌شوند:
-          </p>
-          <ul class="space-y-2 text-xs list-disc list-inside text-slate-600">
-            <li>روزنه نت یک پایگاه مستقل آموزشی، میرور رسمی باینری‌ها و ارائه‌دهنده تونل‌های واسط است و مالکیتی بر روی کد یا حقوق انحصاری کلاینت‌های متن‌باز شخص ثالث ندارد.</li>
-            <li>مسئولیت تغییرات کد پایه، رابط کاربری کلاینت‌ها یا باگ‌های احتمالی درون هسته برنامه‌ها بر عهده تیم‌های توسعه‌دهنده اصلی آن‌هاست. روزنه نت متعهد است صرفاً آخرین نسخه‌های رسمی، دست‌نخورده و بدون بدافزار این ابزارها را به صورت مستقیم از سورس‌های معتبر گیت‌هاب بازنشر نماید.</li>
-          </ul>
-        </section>
-
-        <!-- Section 7: Pricing & Non-Retroactivity -->
-        <section id="pricing-terms" class="clean-card rounded-2xl p-6 sm:p-8 scroll-mt-28">
-          <div class="flex items-center gap-2.5 mb-4 text-brand-700 font-bold text-xs">
-            <span class="w-6 h-6 rounded-lg bg-brand-100 text-brand-700 flex items-center justify-center text-xs font-black">۷</span>
-            <span>بخش هفتم</span>
-          </div>
-          <h2 class="text-lg sm:text-xl font-bold text-slate-900 mb-3">تعرفه‌ها، تغییرات قرارداد و اصل عدم عطف‌به‌ماسبق</h2>
-          <p class="mb-4 text-slate-600">
-            حفظ ثبات و شفافیت در مناسبات مالی با مشترکین، اصل اساسی اعتماد در روزنه نت است:
-          </p>
-          <div class="space-y-3 text-xs text-slate-600">
-            <div class="p-3.5 rounded-xl bg-slate-50 border border-slate-200">
-              <strong class="text-slate-900 block mb-1">اصل عدم عطف‌به‌ماسبق تغییر تعرفه‌ها:</strong>
-              در صورت تغییر هزینه‌های ارزی دیتاسنترها یا به‌روزرسانی قیمت بسته‌ها، مشترکینی که پلن فعال دارند تحت هیچ شرایطی مشمول پرداخت مابه‌التفاوت نخواهند شد و تا آخرین روز از دوره خریداری‌شده با همان شرایط و قیمت قبلی از سرویس استفاده خواهند کرد.
+          <!-- Section 6 -->
+          <section id="disclaimer" class="apple-card doc-section">
+            <div class="doc-step-row">
+              <span class="doc-step-num">۶</span>
+              <span>بخش ششم</span>
             </div>
-            <div class="p-3.5 rounded-xl bg-slate-50 border border-slate-200">
-              <strong class="text-slate-900 block mb-1">به‌روزرسانی مفاد قرارداد:</strong>
-              در صورت ایجاد تغییرات در این قرارداد، نسخه جدید با ذکر شماره نگارش و تاریخ انتشار در این صفحه قرار گرفته و موارد مهم در کانال اطلاع‌رسانی رسمی اعلام خواهد شد.
+            <h2 class="doc-h2">سلب مسئولیت حقوقی کلاینت‌های متن‌باز شخص ثالث و مجوزها</h2>
+            <p class="doc-p">
+              نرم‌افزارهای کلاینت معرفی‌شده در این پرتال (از جمله <bdi>v2rayNG</bdi>، <bdi>Happ</bdi>، <bdi>Streisand</bdi>، <bdi>V2Box</bdi>، <bdi>v2rayN</bdi>، <bdi>Sing-box</bdi>، <bdi>NekoBox</bdi>، <bdi>Hiddify</bdi> و <bdi>NekoRay</bdi>) پروژه‌های مستقل هستند که تحت مجوزهای متن‌باز بین‌المللی (نظیر <bdi>GPL-3.0</bdi>، <bdi>MIT</bdi> و <bdi>Apache 2.0</bdi>) یا به‌صورت رایگان در اپ‌استور منتشر می‌شوند:
+            </p>
+            <ul class="doc-list">
+              <li>روزنه نت یک پایگاه مستقل آموزشی، میرور مستقیم لینک‌های رسمی و ارائه‌دهنده زیرساخت اتصال است و مالکیتی بر کد پایه کلاینت‌های شخص ثالث ندارد.</li>
+              <li>مسئولیت تغییرات کد پایه و رابط کاربری کلاینت‌ها بر عهده توسعه‌دهندگان اصلی آن‌هاست. روزنه نت متعهد است صرفاً آخرین نسخه‌های رسمی و بدون دستکاری این ابزارها را مستقیم از مخازن گیت‌هاب و اپ‌استور لینک‌دهی نماید.</li>
+            </ul>
+          </section>
+
+          <!-- Section 7 -->
+          <section id="pricing-terms" class="apple-card doc-section">
+            <div class="doc-step-row">
+              <span class="doc-step-num">۷</span>
+              <span>بخش هفتم</span>
             </div>
-          </div>
-        </section>
+            <h2 class="doc-h2">تعرفه‌ها، تغییرات قرارداد و اصل عدم عطف‌به‌ماسبق</h2>
+            <p class="doc-p">
+              حفظ ثبات و شفافیت در مناسبات مالی با مشترکین، اصل اساسی اعتماد در روزنه نت است:
+            </p>
+            <div class="doc-stack">
+              <div class="doc-box">
+                <span class="doc-box-title">اصل عدم عطف‌به‌ماسبق تغییر تعرفه‌ها:</span>
+                در صورت تغییر هزینه‌های ارزی دیتاسنترها یا به‌روزرسانی قیمت بسته‌ها، مشترکینی که پلن فعال دارند تحت هیچ شرایطی مشمول پرداخت مابه‌التفاوت نخواهند شد و تا آخرین روز دوره خریداری‌شده با همان شرایط و قیمت قبلی از سرویس استفاده خواهند کرد.
+              </div>
+              <div class="doc-box">
+                <span class="doc-box-title">به‌روزرسانی مفاد قرارداد:</span>
+                در صورت ایجاد تغییرات در این قرارداد، نسخه جدید با ذکر شماره نگارش و تاریخ انتشار در این صفحه قرار گرفته و موارد مهم در کانال اطلاع‌رسانی رسمی اعلام خواهد شد.
+              </div>
+            </div>
+          </section>
 
-        <!-- Section 8: Support & Dispute Resolution -->
-        <section id="dispute-support" class="clean-card rounded-2xl p-6 sm:p-8 scroll-mt-28">
-          <div class="flex items-center gap-2.5 mb-4 text-brand-700 font-bold text-xs">
-            <span class="w-6 h-6 rounded-lg bg-brand-100 text-brand-700 flex items-center justify-center text-xs font-black">۸</span>
-            <span>بخش هشتم</span>
-          </div>
-          <h2 class="text-lg sm:text-xl font-bold text-slate-900 mb-3">کانال‌های رسمی، رسیدگی به شکایات و فرآیند حل اختلاف</h2>
-          <p class="mb-4 text-slate-600">
-            ما بر این باوریم که هرگونه ابهام یا نارضایتی از طریق گفتگو و پیگیری حرفه‌ای در کوتاه‌ترین زمان قابل حل است:
-          </p>
-
-          <div class="space-y-3 text-xs mb-4">
-            <div class="p-3.5 rounded-xl bg-slate-50 border border-slate-200">
-              <strong class="text-slate-900 block mb-1">مکانیزم حل اختلاف محترمانه:</strong>
+          <!-- Section 8 -->
+          <section id="dispute-support" class="apple-card doc-section">
+            <div class="doc-step-row">
+              <span class="doc-step-num">۸</span>
+              <span>بخش هشتم</span>
+            </div>
+            <h2 class="doc-h2">کانال‌های رسمی، رسیدگی به شکایات و فرآیند حل اختلاف</h2>
+            <p class="doc-p">
+              ما بر این باوریم که هرگونه ابهام یا نارضایتی از طریق گفتگو و پیگیری حرفه‌ای در کوتاه‌ترین زمان قابل حل است:
+            </p>
+            <div class="doc-box mb-4">
+              <span class="doc-box-title">مکانیزم حل اختلاف محترمانه:</span>
               در صورت بروز هرگونه مشکل فنی، مالی یا مغایرت کارکرد سرویس، مشترک گرامی می‌تواند با ارائه شناسه اشتراک خود به کارشناسان پشتیبانی، درخواست بررسی و رفع عیب ثبت نماید. اولویت اول تیم فنی، رفع مشکل و برقراری اتصال است؛ و در صورت عدم امکان فنی، فرآیند عودت وجه بر اساس بخش پنجم اعمال می‌گردد.
             </div>
-          </div>
-
-          <div class="p-4 rounded-xl bg-slate-100 border border-slate-200 flex flex-col sm:flex-row items-center justify-between gap-4">
-            <div>
-              <div class="font-bold text-slate-900 text-xs mb-0.5">پشتیبانی و ارتباط با کارشناسان روزنه نت</div>
-              <div class="text-[11px] text-slate-500">پاسخگویی سریع جهت امور فنی، کانفیگ‌ها و ضمانت بازگشت وجه:</div>
+            <div class="doc-cta-strip">
+              <div>
+                <div class="doc-box-title" style="font-size: 14px; margin-bottom: 2px;">پشتیبانی و ارتباط با کارشناسان روزنه نت</div>
+                <div style="font-size: 12.5px; color: var(--ink-secondary);">پاسخگویی سریع جهت امور فنی، کانفیگ‌ها و ضمانت بازگشت وجه:</div>
+              </div>
+              <a href="https://t.me/RoozanehHelp" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-sm">
+                ارسال پیام به پشتیبانی (<bdi>@RoozanehHelp</bdi>)
+              </a>
             </div>
-            <a href="https://t.me/RoozanehHelp" target="_blank" rel="noopener noreferrer" class="px-4 py-2 rounded-xl bg-brand-600 hover:bg-brand-700 text-white font-semibold text-xs transition-colors shrink-0">
-              ارسال پیام به پشتیبانی (@RoozanehHelp)
-            </a>
-          </div>
-        </section>
+          </section>
 
+        </div>
       </div>
     </div>
   </main>
 
-  <!-- Corporate Footer -->
-  <footer class="border-t border-slate-200 bg-slate-100 py-12 relative z-10 text-slate-600 text-xs mt-16">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="flex flex-col md:flex-row items-center justify-between gap-6 pb-8 border-b border-slate-300">
-        <div class="flex items-center gap-3">
-          <div class="w-9 h-9 rounded-xl bg-brand-600 flex items-center justify-center text-white font-black text-sm">
-            R
-          </div>
-          <div>
-            <div class="text-slate-900 font-bold text-sm">روزنه نت (Roozaneh Net)</div>
-            <div class="text-slate-500 text-[11px]">مرکز شفافیت فنی، پایداری شبکه و باینری‌های متن‌باز رسمی</div>
-          </div>
+  <!-- Unified 4-Column Apple Light Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <a href="index.html" class="brand-link mb-4">
+            <img src="assets/brand/logo-rail.svg" alt="لوگوی روزنه نت" class="brand-logo" width="32" height="32">
+            <span class="brand-meta">
+              <span class="brand-name">روزنه نت</span>
+              <span class="brand-sub"><bdi>Roozaneh Net</bdi></span>
+            </span>
+          </a>
+          <p class="apple-card-desc mb-4">مرجع دانلود مستقیم باینری‌های رسمی گیت‌هاب و اپ‌استور برای کلاینت‌های <bdi>V2Ray</bdi>، <bdi>Xray</bdi> و <bdi>Sing-box</bdi> با زیرساخت ۵ کشور فعال.</p>
+          <span class="status-pill status-pill--ok">همگام‌سازی خودکار با گیت‌هاب فعال</span>
         </div>
-        
-        <div class="flex flex-wrap items-center justify-center gap-6 text-slate-600 text-xs font-medium">
-          <a href="index.html#downloads" class="hover:text-brand-600 transition-colors">دانلود کلاینت‌ها</a>
-          <a href="privacy.html" class="hover:text-brand-600 transition-colors">حفظ حریم خصوصی و شفافیت</a>
-          <a href="terms.html" class="text-brand-700 font-bold">قرارداد و شرایط خدمات</a>
-          <a href="https://t.me/RoozanehNet" target="_blank" rel="noopener noreferrer" class="hover:text-brand-600 transition-colors">کانال اطلاع‌رسانی</a>
-          <a href="https://t.me/RoozanehHelp" target="_blank" rel="noopener noreferrer" class="hover:text-brand-600 transition-colors">پشتیبانی ۲۴ ساعته</a>
-          <a href="https://github.com/roozaneh/v2ray-clients-download" target="_blank" rel="noopener noreferrer" class="hover:text-brand-600 transition-colors">مخزن رسمی گیت‌هاب</a>
+        <div>
+          <h3 class="footer-col-title">سرویس‌ها</h3>
+          <ul class="footer-links">
+            <li><a href="https://roozaneh.github.io/" target="_blank" rel="noopener noreferrer">هاب مرکزی روزنه نت</a></li>
+            <li><a href="https://roozaneh.github.io/kharid-vpn-filter-shekan/" target="_blank" rel="noopener noreferrer">خرید <bdi>VPN</bdi> پرسرعت</a></li>
+            <li><a href="https://roozaneh.github.io/v2ray-configs-iran/" target="_blank" rel="noopener noreferrer">کانفیگ‌های <bdi>V2Ray</bdi> ایران</a></li>
+            <li><a href="https://roozaneh.github.io/iran-tunnel-v2ray-netmeli/" target="_blank" rel="noopener noreferrer">تانل اینترنت ملی</a></li>
+            <li><a href="index.html">پرتال دانلود کلاینت‌ها</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3 class="footer-col-title">اپلیکیشن‌ها</h3>
+          <ul class="footer-links">
+            <li><a href="apps/v2rayng.html">دانلود <bdi>v2rayNG</bdi> اندروید</a></li>
+            <li><a href="apps/happ.html">دانلود <bdi>Happ</bdi> اندروید</a></li>
+            <li><a href="apps/streisand.html">دانلود <bdi>Streisand</bdi> آیفون</a></li>
+            <li><a href="apps/v2box.html">دانلود <bdi>V2Box</bdi> آیفون و مک</a></li>
+            <li><a href="apps/v2rayn.html">دانلود <bdi>v2rayN</bdi> ویندوز</a></li>
+            <li><a href="apps/hiddify.html">دانلود <bdi>Hiddify</bdi> چندسکویی</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3 class="footer-col-title">قوانین و پشتیبانی</h3>
+          <ul class="footer-links">
+            <li><a href="privacy.html">شفافیت فنی و حریم خصوصی</a></li>
+            <li><a href="terms.html">قرارداد سطح خدمات (<bdi>SLA</bdi>)</a></li>
+            <li><a href="https://t.me/RoozanehNetBot?start=dl_clients" target="_blank" rel="noopener noreferrer">ربات تست رایگان (<bdi>@RoozanehNetBot</bdi>)</a></li>
+            <li><a href="https://t.me/RoozanehHelp" target="_blank" rel="noopener noreferrer">پشتیبانی ۲۴ ساعته (<bdi>@RoozanehHelp</bdi>)</a></li>
+            <li><a href="https://t.me/RoozanehNet" target="_blank" rel="noopener noreferrer">کانال اطلاع‌رسانی (<bdi>@RoozanehNet</bdi>)</a></li>
+          </ul>
         </div>
       </div>
-      <div class="pt-8 flex flex-col md:flex-row items-center justify-between gap-4 text-slate-500 text-[11px]">
-        <p>© ۲۰۲۶ روزنه نت. تمامی حقوق محفوظ است. کلاینت‌های معرفی‌شده پروژه‌های مستقل متن‌باز هستند.</p>
-        <p>تضمین دانلود باینری‌های خام و دست‌نخورده رسمی از سورس‌های معتبر گیت‌هاب</p>
+      <div class="footer-bottom">
+        <span>© ۱۴۰۵ روزنه نت (<bdi>Roozaneh Net</bdi>) — کلاینت‌های معرفی‌شده پروژه‌های مستقل متن‌باز هستند.</span>
+        <span>تحلیل ترافیک با <bdi>GoatCounter</bdi> و <bdi>Microsoft Clarity</bdi> بدون ذخیره داده شخصی</span>
       </div>
     </div>
   </footer>
