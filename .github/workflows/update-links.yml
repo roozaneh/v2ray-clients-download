@@ -40,6 +40,29 @@ jobs:
             git add README.md index.html releases.json apps/
             git commit -m "chore(releases): auto-sync latest direct download links [skip ci]"
             git push origin main
+
+            echo "Waiting 30s for GitHub Pages before IndexNow ping..."
+            sleep 30
+            status=$(curl -s -o /tmp/indexnow_resp.txt -w "%{http_code}" -X POST "https://api.indexnow.org/indexnow" \
+              -H "Content-Type: application/json; charset=utf-8" \
+              -d '{
+                "host": "roozaneh.github.io",
+                "key": "113949291c66a76e696870c210f8eee4",
+                "keyLocation": "https://roozaneh.github.io/113949291c66a76e696870c210f8eee4.txt",
+                "urlList": [
+                  "https://roozaneh.github.io/v2ray-clients-download/",
+                  "https://roozaneh.github.io/v2ray-clients-download/apps/v2rayng.html",
+                  "https://roozaneh.github.io/v2ray-clients-download/apps/v2rayn.html",
+                  "https://roozaneh.github.io/v2ray-clients-download/apps/streisand.html",
+                  "https://roozaneh.github.io/v2ray-clients-download/apps/v2box.html",
+                  "https://roozaneh.github.io/v2ray-clients-download/apps/happ.html",
+                  "https://roozaneh.github.io/v2ray-clients-download/apps/hiddify.html",
+                  "https://roozaneh.github.io/v2ray-clients-download/apps/nekoray.html",
+                  "https://roozaneh.github.io/v2ray-clients-download/apps/nekobox.html",
+                  "https://roozaneh.github.io/v2ray-clients-download/apps/singbox.html"
+                ]
+              }')
+            echo "IndexNow HTTP Status: $status"
           else
             echo "All release links are already up-to-date. No commit needed."
           fi
