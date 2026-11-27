@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-11-26T21:05:26.181304+00:00",
+  "last_updated": "2026-11-27T07:18:41.286015+00:00",
   "clients": {
     "v2rayNG": {
       "repo": "2dust/v2rayNG",
@@ -11,11 +11,11 @@
     },
     "Happ": {
       "repo": "Happ-proxy/happ-android",
-      "tag": "4.11.2",
+      "tag": "4.12.0",
       "asset_name": "Happ.apk",
-      "download_url": "https://github.com/Happ-proxy/happ-android/releases/download/4.11.2/Happ.apk",
+      "download_url": "https://github.com/Happ-proxy/happ-android/releases/download/4.12.0/Happ.apk",
       "size_mb": 66.14,
-      "updated_at": "2026-11-16T07:25:15Z"
+      "updated_at": "2026-11-27T06:21:36Z"
     },
     "NekoBox": {
       "repo": "MatsuriDayo/NekoBoxForAndroid",
@@ -27,11 +27,11 @@
     },
     "SingBox": {
       "repo": "SagerNet/sing-box",
-      "tag": "v1.14.4",
-      "asset_name": "SFA-1.14.4-universal.apk",
-      "download_url": "https://github.com/SagerNet/sing-box/releases/download/v1.14.4/SFA-1.14.4-universal.apk",
-      "size_mb": 121.4,
-      "updated_at": "2026-10-23T15:21:49Z"
+      "tag": "v1.14.5",
+      "asset_name": "SFA-1.14.5-universal.apk",
+      "download_url": "https://github.com/SagerNet/sing-box/releases/download/v1.14.5/SFA-1.14.5-universal.apk",
+      "size_mb": 121.0,
+      "updated_at": "2026-11-26T17:03:07Z"
     },
     "Hiddify_Android": {
       "repo": "hiddify/hiddify-app",
