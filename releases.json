@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-11-27T20:50:05.442200+00:00",
+  "last_updated": "2026-11-28T06:51:25.295836+00:00",
   "clients": {
     "v2rayNG": {
       "repo": "2dust/v2rayNG",
@@ -27,11 +27,11 @@
     },
     "SingBox": {
       "repo": "SagerNet/sing-box",
-      "tag": "v1.14.5",
-      "asset_name": "SFA-1.14.5-universal.apk",
-      "download_url": "https://github.com/SagerNet/sing-box/releases/download/v1.14.5/SFA-1.14.5-universal.apk",
-      "size_mb": 121.0,
-      "updated_at": "2026-11-26T17:03:07Z"
+      "tag": "v1.14.6",
+      "asset_name": "SFA-1.14.6-universal.apk",
+      "download_url": "https://github.com/SagerNet/sing-box/releases/download/v1.14.6/SFA-1.14.6-universal.apk",
+      "size_mb": 122.61,
+      "updated_at": "2026-11-27T16:35:33Z"
     },
     "Hiddify_Android": {
       "repo": "hiddify/hiddify-app",
